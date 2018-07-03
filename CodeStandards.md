@@ -12,29 +12,28 @@ This guide will follow the below format to address both generalities and details
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [itgroove Coding Style Guide](#itgroove-coding-style-guide)
-  - [1. General](#1-general)
-  - [2. Comments](#2-comments)
-  - [3. Naming Schemes](#3-naming-schemes)
-    - [3.1 Variable Names](#31-variable-names)
-    - [3.2 Function and Method Names](#32-function-and-method-names)
-  - [4. Readability](#4-readability)
-    - [4.1 Spacing](#41-spacing)
-    - [4.2 Braces](#42-braces)
-    - [4.3 Lines](#43-lines)
-  - [Maintainability](#maintainability)
-  - [6. Classes](#6-classes)
-  - [7. Errors](#7-errors)
-  - [8. Portability](#8-portability)
-  - [9. Repository](#9-repository)
-  - [10. Best Practices](#10-best-practices)
-    - [10.1 Work out loud](#101-work-out-loud)
-    - [10.1 DRY - Don't repeat yourself](#101-dry---dont-repeat-yourself)
-    - [10.2 YAGNI - You ain't gonna need it](#102-yagni---you-aint-gonna-need-it)
-    - [10.3 KISS - Keep it simple silly](#103-kiss---keep-it-simple-silly)
-    - [10.4 Fail fast, fail often](#104-fail-fast-fail-often)
-    - [10.6 POLA - Principle of least astonishment](#106-pola---principle-of-least-astonishment)
-    - [10.7 Should I use cool new feature "X"?](#107-should-i-use-cool-new-feature-x)
+- [1. General](#1-general)
+- [2. Comments](#2-comments)
+- [3. Naming Schemes](#3-naming-schemes)
+  - [3.1 Variable Names](#31-variable-names)
+  - [3.2 Function and Method Names](#32-function-and-method-names)
+- [4. Readability](#4-readability)
+  - [4.1 Spacing](#41-spacing)
+  - [4.2 Braces](#42-braces)
+  - [4.3 Lines](#43-lines)
+- [5. Maintainability](#5-maintainability)
+- [6. Classes](#6-classes)
+- [7. Errors](#7-errors)
+- [8. Portability](#8-portability)
+- [9. Repository](#9-repository)
+- [10. Best Practices](#10-best-practices)
+  - [10.1 Work out loud](#101-work-out-loud)
+  - [10.1 DRY - Don't repeat yourself](#101-dry---dont-repeat-yourself)
+  - [10.2 YAGNI - You ain't gonna need it](#102-yagni---you-aint-gonna-need-it)
+  - [10.3 KISS - Keep it simple silly](#103-kiss---keep-it-simple-silly)
+  - [10.4 Fail fast, fail often](#104-fail-fast-fail-often)
+  - [10.6 POLA - Principle of least astonishment](#106-pola---principle-of-least-astonishment)
+  - [10.7 Should I use cool new feature "X"?](#107-should-i-use-cool-new-feature-x)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -133,7 +132,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Classes shouldn't be bigger then 5 member variables and a few hundred lines of code.
 * Files shouldn't be longer then 500 lines of code so you can navigate effectively.
 
-## Maintainability
+## 5. Maintainability
 
 *In principle :*
 
