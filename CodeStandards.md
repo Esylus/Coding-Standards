@@ -8,13 +8,43 @@ This guide will follow the below format to address both generalities and details
 
 *In practice :* Specific implementation details required by itgroove of it's developers.
 
-<!-- Table of contents -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [itgroove Coding Style Guide](#itgroove-coding-style-guide)
+  - [1. General](#1-general)
+  - [2. Comments](#2-comments)
+  - [3. Naming Schemes](#3-naming-schemes)
+    - [3.1 Variable Names](#31-variable-names)
+    - [3.2 Function and Method Names](#32-function-and-method-names)
+  - [4. Readability](#4-readability)
+    - [4.1 Spacing](#41-spacing)
+    - [4.2 Braces](#42-braces)
+    - [4.3 Lines](#43-lines)
+  - [Maintainability](#maintainability)
+  - [6. Classes](#6-classes)
+  - [7. Errors](#7-errors)
+  - [8. Portability](#8-portability)
+  - [9. Repository](#9-repository)
+  - [10. Best Practices](#10-best-practices)
+    - [10.1 Work out loud](#101-work-out-loud)
+    - [10.1 DRY - Don't repeat yourself](#101-dry---dont-repeat-yourself)
+    - [10.2 YAGNI - You ain't gonna need it](#102-yagni---you-aint-gonna-need-it)
+    - [10.3 KISS - Keep it simple silly](#103-kiss---keep-it-simple-silly)
+    - [10.4 Fail fast, fail often](#104-fail-fast-fail-often)
+    - [10.6 POLA - Principle of least astonishment](#106-pola---principle-of-least-astonishment)
+    - [10.7 Should I use cool new feature "X"?](#107-should-i-use-cool-new-feature-x)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 
 ## 1. General 
 
 *Why have coding standards?* 
 
-* To maximize code readability and maintainability by making a development teams code base look like a single person has written it.
+* To maximize code readability and maintainability by making a teams code base look like a single person has written it.
 * To speed up writing code. Simple rules to follow means you won't have to make continuous judgements about how code looks / presents.
 * To read each others code faster and discern patterns visually without having to read each token.
 * To encapsulate the shared experience of many developers so we can learn from each others mistakes. 
@@ -129,9 +159,10 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Want code to run on different environments and not fail on systems with a different design then anticipated.
 * Parametrize such vars and configure them for the hosting environment outside of the application such as on the application server or in database. 
 
-## 9. Testing
+## 9. Repository
 
-## 10. Repository
+* itgroove practices continuous integration and continous deployment via Visual Studio Team Services
+* Policies will be forthcoming 
 
 ## 10. Best Practices
 
@@ -162,7 +193,6 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 ### 10.6 POLA - Principle of least astonishment
 * Choose a solution that everyone can understand.
 * A component of a system should behave in a way a user expects it to, users should not be astonished by it's behavior. 
-*
 
 ### 10.7 Should I use cool new feature "X"?
 * Will everyone on my team understand the code? 
