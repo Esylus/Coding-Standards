@@ -32,17 +32,29 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ## 3. Naming Schemes
 
+*In principle :*
+
+1. Names should tell you why it's there, what it does, how to use it.
+1. Use whole, pronounceable English words - no abbreviations. Ex. Does 'blendCol' mean blend color or blend column?  
+1. Ensure names are sufficiently different so you don't mistake a name for another similar one. 
+1. Disallowed words: anything to general, to vague ex. Manager, Processor, Data, Info.
+
 ### 3.1 Variables
 ### 3.2 Functions
 ### 3.3 Classes
 
 ## 4. Readability
 
+*In principle :*
+
+1. Point 1
+1. Point 1
+1. Point 1
+
 ### 4.1 Spacing
 ### 4.2 Braces
 ### 4.3 Lines
-
-## 5. Cluster Sizes
+### 4.4 Cluster Sizes
 
 ## 6. Classes
 
@@ -56,7 +68,10 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ## 10. Best Practices
 
-### 10.1 DRY Principle: Don't repeat yourself
+### 10.1 Work out loud
+* Information should be shared in a timely manner with other team members, regardless of whether that information is deemed relevent. 
+
+### 10.1 DRY - Don't repeat yourself
 * This principle summarizes the essense of what it means to write good code, in all languages, at all levels.
 * Every piece of knowledge should have a single, unambiguous, authoritative representation within a system 
 * If you see the same code twice, wrap it in a function and maximize reusability. 
@@ -69,22 +84,17 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 ### 10.3 KISS - Keep it simple silly
 * Less is more! The simplest solution is more then sufficient.
 * Write as little code as possible, less to read, less to understand, less bugs to show up and have to fix.
-* Either code belongs in the app or doesn't - Don't leave commented out code, it will confuse people. Place it in the Git log.
+* Either code belongs in the app or doesn't - Don't leave commented out code, it will confuse people. 
 * Refactor whenever you see the need and have the chance. 
 
 ### 10.4 Fail fast, fail often
-*
-*
-*
-
-### 10.5 Do not hinder your fellow developer
-*
-*
-*
+* Write defensively - always think about what can go wrong, what will happen on invalid input, what might fail, what will help you catch many bugs before they happen
+* Check input on nonsensical input or invalid states as early as possible.
+* Use error response's or message's that will make the exact problem clear to your caller.
 
 ### 10.6 POLA - Principle of least astonishment
-* Choose a solution that everyone can understand
-* A component of a system should behave in a way a user expects it to behave, users should not be astonished by it's behavior. 
+* Choose a solution that everyone can understand.
+* A component of a system should behave in a way a user expects it to, users should not be astonished by it's behavior. 
 *
 
 ### 10.7 Should I use cool new feature "X"?
