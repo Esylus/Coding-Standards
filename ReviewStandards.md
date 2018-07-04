@@ -3,6 +3,26 @@
 The purpose of this style guide is to create standards to adhere to while conducting code base reviews. 
 
 
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [itgroove Code Review Standards](#itgroove-code-review-standards)
+  - [1. General code review concepts](#1-general-code-review-concepts)
+  - [2. Code review procedure](#2-code-review-procedure)
+  - [3 Reviewer Responsibilities](#3-reviewer-responsibilities)
+  - [4 Author Responsibilities](#4-author-responsibilities)
+  - [5 Conflict resolution](#5-conflict-resolution)
+  - [Use the style guide!](#use-the-style-guide)
+  - [5 Key points for Reviewer to consider](#5-key-points-for-reviewer-to-consider)
+  - [5 Key points for Author to consider](#5-key-points-for-author-to-consider)
+  - [Author checklist](#author-checklist)
+  - [Reviewer Checklist](#reviewer-checklist)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 <!-- Table of contents -->
 ## 0. Terms 
 * Author - Developer who writes the changelist.
