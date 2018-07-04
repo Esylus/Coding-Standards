@@ -1,21 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [itgroove Code Review Standards](#itgroove-code-review-standards)
-  - [1. General code review concepts](#1-general-code-review-concepts)
-  - [2. Code review procedure](#2-code-review-procedure)
-  - [3 Reviewer Responsibilities](#3-reviewer-responsibilities)
-  - [4 Author Responsibilities](#4-author-responsibilities)
-  - [5 Conflict resolution](#5-conflict-resolution)
-  - [Use the style guide!](#use-the-style-guide)
-  - [5 Key points for Reviewer to consider](#5-key-points-for-reviewer-to-consider)
-  - [5 Key points for Author to consider](#5-key-points-for-author-to-consider)
-  - [Author checklist](#author-checklist)
-  - [Reviewer Checklist](#reviewer-checklist)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # itgroove Code Review Standards
 
 The purpose of this style guide is to create standards to adhere to while conducting code base reviews. 
@@ -39,13 +21,14 @@ The purpose of this style guide is to create standards to adhere to while conduc
 * The reviewer should prioritize creating a positive, beneficial code review experience for the author.
 * The author should approach the review as an opportunity to learn something and keep an open-mind. 
 * A good code reviewer not only finds bugs but provides conscientious feedback to help teammates improve. 
+* Code reviews shares knowledge across the team and allows other developers to become familiar with your work. 
 
 ## 2. Code review procedure
 
 *In principle :*
 
-1. Author creates a changelist that they want to push to the repository. 
-1. Author initiates code review request and selects / is assigned a reviewer. 
+1. Author believes a specific changelist is finished and they are ready to move it forwards to the repository. 
+1. Author initiates code review request and selects / is assigned a reviewer (two reviewers?). 
 1. Reviewer reviews submitted changelist according to Reviewer Checklist and returns to the author for modification if required.
 1. Author modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
 1. Reviewer signs off on the changelist (LGTM) and code is pulled into codebase.  
@@ -94,6 +77,10 @@ The purpose of this style guide is to create standards to adhere to while conduc
 1. Point 1
 
 ## Author checklist
+*Don't waste time in the review with style issues and errors* 
+
+* Have I ensured the code conforms to the style guide with working unit tests? 
+
 * Does my code compile without errors and run without exceptions in happy path conditions?
 * Have I checked this code to see if it triggers compiler or static analysis warnings?
 * Have I covered this code with appropriate tests, and are those tests currently green?
@@ -101,6 +88,12 @@ The purpose of this style guide is to create standards to adhere to while conduc
 * Have I run our suite of security tests/checks to make sure I'm not opening vulnerabilities?
 
 ## Reviewer Checklist
+* Does this changelist solve the problem it was supposed to solve? 
+* Does this change-set make sense in the current architecture?
+* Can any of the code be written more efficiently?
+* Is the code easy to understand?
+* Does it increase or decrease technical debt?
+
 * Does this code read like prose?
 * Does the understanding of the desired behavior match the requirements/stories for this work?
 * Do the methods do what the name of the method claims that they'll do? Same for classes?
