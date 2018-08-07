@@ -112,6 +112,7 @@ itGroove has chosen the "documentation.js" framework to document it's code. All 
 *  
 * 
 
+
 ## 4. Readability
 
 1. The indenting style of code conveys logical structure and flow.

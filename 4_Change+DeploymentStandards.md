@@ -16,11 +16,24 @@ The purpose of this style guide is to create standards to adhere to while change
 
 *In principle :*
 
-1. Point 1
-1. Point 1
-1. Point 1
+* Point 1
+* Point 1
+* Point 1
 
-### 2.1 Inline Documentation
+### 4. VSTS Branching Strategy
+* Master branch: ...
+* Next branch: ...
+* Test branch: ...
+* Integration branch: ...
+* Feature branches: ...
+
+### 5. VSTS Deployment Strategy
+* Deployment Branches
+* Production branch
+
+### 6. Azure Deployement Strategy
+
+### 7. Database Changes 
 
 ### 2.2 Inline Documentation
 
