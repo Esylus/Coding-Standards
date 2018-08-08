@@ -63,28 +63,28 @@ $ npm install -g documentation
 
 Below are several ways to run the documentation generator to achieve different output formats:
 
-# generate markdown docs for index.js and files it references
+generate markdown docs for index.js and files it references
 documentation build index.js -f md
 
-# generate html docs for all files in src
+**generate html docs for all files in src**
 documentation build src/** -f html -o docs
 
-# document index.js, ignoring any files it requires or imports
+**document index.js, ignoring any files it requires or imports**
 documentation build index.js -f md --shallow
 
-# build and serve HTML docs for app.js
+**build and serve HTML docs for app.js**
 documentation serve app.js
 
-# build, serve, and live-update HTML docs for app.js
+**build, serve, and live-update HTML docs for app.js**
 documentation serve --watch app.js
 
-# validate JSDoc syntax in util.js
+**validate JSDoc syntax in util.js**
 documentation lint util.js
 
-# update the API section of README.md with docs from index.js
+**update the API section of README.md with docs from index.js**
 documentation readme index.js --section=API
 
-# build docs for all values exported by index.js
+**build docs for all values exported by index.js**
 documentation build --document-exported index.js
 
 Commands:
@@ -94,19 +94,19 @@ Commands:
   readme [input..]  inject documentation into your README.md
 
 
-### Basic Application Documentation Requirements 
+### 3.0 Basic Application Documentation Requirements 
 
 * All projects should cover the below points in their documentation. 
 
-# Project Title
+**Project Title**
 
 One Paragraph of project description goes here
 
-## Getting Started
+**Getting Started**
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+**Prerequisites**
 
 What things you need to install the software and how to install them
 
@@ -114,7 +114,7 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
-### Installing
+**Installing**
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -132,11 +132,11 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+**Running the tests**
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+**Break down into end to end tests**
 
 Explain what these tests test and why
 
@@ -144,7 +144,7 @@ Explain what these tests test and why
 Give an example
 ```
 
-### And coding style tests
+**And coding style tests**
 
 Explain what these tests test and why
 
@@ -152,35 +152,35 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
+**Deployment**
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
+**Built With**
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+**Contributing**
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
+**Versioning**
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Authors
+**Authors**
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+**License**
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+**Acknowledgments**
 
 * Hat tip to anyone whose code was used
 * Inspiration
