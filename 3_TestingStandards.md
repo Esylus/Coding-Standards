@@ -5,6 +5,27 @@ The purpose of this style guide is to create standards surrounding testing of co
 
 <!-- Table of contents -->
 
+//---------------------------------------------------------------------------
+The various layers of testing analogy
+
+A car manufacturer does not produce the car as a whole car. Each component of the car is manufactured separately, like seats, steering, mirror, break, cable, engine, car frame, wheels etc. The manufacturer has multiple layers of testing that are perfomed to ensure any issus are found and addressed. 
+
+Unit testing - After manufacturing each seperate item, the item is tested independently as to whether it is working the way it was designed to work.
+
+Integration testing - Now, when each part is assembled with another part, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of each component and whether both components are working together as expected.
+
+Once all the parts are assembled and the car is ready, it is tested further.
+
+System testing - The manufacturer needs to check different aspects of the car as per the requirements defined. Such as if the car can be driven smoothly, breaks, shifts gears and if other functionality is working properly, like does the car show any sign of fatigue after being driven for 2500 miles continuously, or whether the car passes basic saftey tests like crashing and not hurting the occupants.
+
+End-to-end testing - The car then needs to be driven in real-world scenarios - traffic, city streets, evasive maneovers, rain/snow/hail/sleet, getting rear-ended, smooth roads vs bumpy roads etc.. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring outside of the car under test.
+
+Acceptance Testing - The car then needs to be driven by users in a focus group to find out how consumers feel about the capabilities of the product. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?  
+
+Regression Testing - The car has been approved. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue within the motor. They now want to ensure that they have not created a new issue in the vehicle by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
+
+//---------------------------------------------------------------------------
+
 ## 1. General Testing Principles 
 
   - "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham
@@ -85,25 +106,7 @@ Best practices for continuous integration testing. https://techbeacon.com/6-best
 
 * During the process of manufacturing a ballpoint pen, the cap, the body, the tail, the ink cartridge and the ballpoint are produced separately and unit tested separately. When two or more units are ready, they are assembled and Integration Testing is performed. When the complete pen is integrated, System Testing is performed.
 
-//---------------------------------------------------------------------------
-Elements of Testing Analogy
-A car manufacturer does not produce the car as a whole car. Each component of the car is manufactured separately, like seats, steering, mirror, break, cable, engine, car frame, wheels etc. The manufacturer has multiple layers of testing that are perfomed to ensure any issus are found and addressed. 
 
-Unit testing - After manufacturing each seperate item, it is tested independently as to whether it is working the way it is supposed to work.
-
-Integration testing - Now, when each part is assembled with another part, that assembled combination is checked if assembling has not produced any side effect to the functionality of each component and whether both components are working together as expected.
-
-Once all the parts are assembled and the car is ready, it is tested further.
-
-System testing - The manufacturer needs to check different aspects of the car as per the requirements defined such as if the car can be driven smoothly, breaks, shifts gears and if other functionality is working properly, like car does not show any sign of tiredness after being driven for 2500 miles continuously, or the car passes basic saftey tests like crashing and not hurting the occupant.
-
-End-to-end testing - The car then needs to be driven in real-world scenarios - traffic, city streets, evasive maneovers, rain/snow/hail/sleet, getting rear-ended, smooth roads vs bumpy roads etc.. End-to-end testing involves testing the unit with respect to other environment variables that are occuring outside of the car that has been developed.
-
-Acceptance Testing - The car then needs to be driven by users in a focus group to find out how consumers feel about the capabilities of the product. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?  
-
-Regression Testing - The car is approved. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue within the motor. They now want to ensure that they have not created a new issue in the vehicle by fixing the motor. They procede to run all the tests again. 
-
-//---------------------------------------------------------------------------
 
 
 ### 2.2 End-To-End Testing
@@ -131,13 +134,13 @@ Regression Testing - The car is approved. In the future, the manufacturer finds 
 
 ### 2.3 Regression Testing 
 
+* Regression : "when you fix one bug, you introduce several new bugs". 
+
 * Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. Ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
 
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious one too.
 
 * Regression means retesting the unchanged parts of the application. 
-
-* Regression : "when you fix one bug, you introduce several new bugs". 
 
 * Regression tests methodology - Re-run the previous tests. Compare the current results with previously executed test results. 
 
@@ -174,6 +177,6 @@ End-to-End testing is typically performed by a technical QA team, whereas User A
 
 ### 2.4 3rd Party Testing
 
-* Here is the first general guideline
-* Here is the second general guideline
+* Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
+
 

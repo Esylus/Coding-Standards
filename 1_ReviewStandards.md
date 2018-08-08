@@ -63,9 +63,6 @@ The purpose of this style guide is to create standards to adhere to while conduc
 1. Start reviewing immediately - treat code reviews as high priority.
 1. Maximum turnaround time on a review should be one business day. If you can't do this, decline review. 
 1. Do not drown the author in a sea of notes! Keep all points short and sweet. 
-1. 
-1. 
-
 
 ## 4 Author Responsibilities
 

@@ -33,10 +33,8 @@ The purpose of this style guide is to create standards to adhere to while change
 
 ### 6. Azure Deployement Strategy
 
+* Fill this in with policies surrounding Azure
+
 ### 7. Database Changes 
 
-### 2.2 Inline Documentation
-
-### 2.3 Inline Documentation
-
-### 2.4 Inline Documentation
+* Fill this in with polices surround changing databases
