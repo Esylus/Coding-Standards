@@ -7,8 +7,8 @@ The purpose of this style guide is to create standards to adhere to while creati
 
 ## 1. General 
 
-* itGroove has selected Documentation.js (https://documentation.js.org/) as its documentation generator. 
-* It's used to generate documentation from comments within your code. documentation processes JavaScript comments
+* itGroove has selected Documentation.js (https://documentation.js.org/) as its code documentation generator. 
+* It's used to generate documentation from comments within your code. Documentation.js processes JavaScript comments
 in the JSDoc format. JSDoc is not code however. It's a simple and standard syntax for writing documentation.
 
 JSDoc lets you specify absolutely everything about your code: use @name to say what something is called, @kind for whether it's a function or a class, @param for its parameters, and so on. But writing all of that explicitly is tedious, so where it can, `documentation` automatically populates @name, @kind, and @memberof tags based on its reading of the code.
@@ -78,23 +78,17 @@ documentation serve app.js
 **build, serve, and live-update HTML docs for app.js**
 documentation serve --watch app.js
 
-**validate JSDoc syntax in util.js**
-documentation lint util.js
-
-**update the API section of README.md with docs from index.js**
-documentation readme index.js --section=API
-
-**build docs for all values exported by index.js**
-documentation build --document-exported index.js
-
 Commands:
   serve [input..]   generate, update, and display HTML documentation
   build [input..]   build documentation
   lint [input..]    check for common style and uniformity mistakes
   readme [input..]  inject documentation into your README.md
 
+## 3.0 Semantic Versioning + Commitizen
 
-### 3.0 Basic Application Documentation Requirements 
+* Should details about this go in here? 
+
+## 4.0 Basic Application Documentation Requirements 
 
 * All projects should cover the below points in their documentation. 
 
