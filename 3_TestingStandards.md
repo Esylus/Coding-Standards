@@ -1,6 +1,6 @@
 # itgroove Testing Standards
 
-The purpose of this style guide is to create standards surrounding testing of code. 
+Objective: The purpose of this style guide is to create standards surrounding testing of code. 
 
 
 <!-- Table of contents -->
@@ -19,6 +19,8 @@ Once all the parts are assembled and the car is ready, it is tested further.
 System testing - The manufacturer needs to check different aspects of the car as per the requirements defined. Such as if the car can be driven smoothly, breaks, shifts gears and if other functionality is working properly, like does the car show any sign of fatigue after being driven for 2500 miles continuously, or whether the car passes basic saftey tests like crashing and not hurting the occupants.
 
 End-to-end testing - The car then needs to be driven in real-world scenarios - traffic, city streets, evasive maneovers, rain/snow/hail/sleet, getting rear-ended, smooth roads vs bumpy roads etc.. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring outside of the car under test.
+
+Load testing - The engineers want to know where the point of failure is for the car. They drive it faster then it was designed to drive and let the engine run hotter then it is supposed to. The purpose of these tests is to find the products breaking point so they understand exactly how far a given system can be pushed and explore the outer limits of performance capacity. 
 
 Acceptance Testing - The car then needs to be driven by users in a focus group to find out how consumers feel about the capabilities of the product. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?  
 
@@ -179,4 +181,12 @@ End-to-End testing is typically performed by a technical QA team, whereas User A
 
 * Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
 
+### 2.5 Load Testing 
 
+Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
+
+Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
+
+Load testing best practices:
+1- Clear browser cache and cookies before recording traffic. 
+2- Start recording a new scenario from the 

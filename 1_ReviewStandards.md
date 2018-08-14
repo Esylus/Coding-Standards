@@ -1,8 +1,6 @@
 # itgroove Code Review Standards
 
-The purpose of this style guide is to create standards to adhere to while conducting code base reviews. 
-
-
+Objective: The purpose of this style guide is to create standards to adhere to while conducting code base reviews. 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -31,68 +29,61 @@ The purpose of this style guide is to create standards to adhere to while conduc
 * Changelist - A set of recommended changes to source code that the author wants to merge into a repository.
 * LGTM - Shorthand for "Looks good to me".
 
-## 1. General code review concepts
+## 1. Overview of the Code Review 
 
 *Code Reviews are both a technical and social process. The seasoned reviewer will not only seek out bugs / issues but will also recognize opporutunities to praise the work and offer conscientious feedback to help teamates improve*
 
 * Code reviews are an opportunity to share knowledge and make informed engineering decisions.
-* The wise code reviewer will pick their battles and not try to attack all aspects of code in a single review. 
+* The wise code reviewer will pick their battles and not try to attack all aspects of an authors code in a single review. 
 * Each review, the reviewer should strive to raise the level of the authors code a single grade level. ex. from a D grade to a C grade. 
 * Raising the level from a D to an A+ will happen incrementally over several reviews and relies on rapport and trust between co-workers.  
 * The reviewer should prioritize creating a positive, beneficial code review experience for the author.
-* The author should approach the review as an opportunity to learn something and keep an open-mind. 
-* A good code reviewer not only finds bugs but provides conscientious feedback to help teammates improve. 
+* The author should approach the review as an opportunity to learn something and always keep an open-mind. 
+* A good code reviewer not only finds bugs but provides conscientious feedback to help fellow teammates improve. 
 * Code reviews shares knowledge across the team and allows other developers to become familiar with your work. 
 
-## 2. Code review procedure
+## 2. Procedure
 
-*In principle :*
+1. An author believes a specific changelist is finished and they are ready to move it forwards to the repository. 
+2. The author initiates a code review request and selects / is assigned a reviewer (two reviewers?). 
+3. Reviewer reviews the submitted changelist according to the established Reviewer Checklist.
+4. If reviewer finds issue that needs addressing, he writes a note about it, then rereads the note to ensure it is worded in a clear, non-accusatory way.  
+4. Author reads the note, modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
+5. Reviewer verifies that the author has addressed the note properly and when satisfied, signs off on the changelist (LGTM) and code is pulled into codebase.  
 
-1. Author believes a specific changelist is finished and they are ready to move it forwards to the repository. 
-1. Author initiates code review request and selects / is assigned a reviewer (two reviewers?). 
-1. Reviewer reviews submitted changelist according to Reviewer Checklist and returns to the author for modification if required.
-1. Author modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
-1. Reviewer signs off on the changelist (LGTM) and code is pulled into codebase.  
+## itGroove Style Guide + Coding Standards
 
-## 3 Reviewer Responsibilities
+* It is a waste of time to argue about different styles as their is no right answer. 
+* If there is a conflict, refer to the style guide. If the guide doesn't cover it, it's not worth arguing over. 
+* In order to modify the style guide, a submission has to be sent to the GitHub which will be reviewed. 
 
-*In principle :*
+## 3. Reviewers Responsibilities
 
 1. Focus on high-level / conceptual improvements in the code - leave minor syntax errors for a linter. 
-1. Refer to a style guide for all style issues - don't argue about personal preferences.
-1. Start reviewing immediately - treat code reviews as high priority.
-1. Maximum turnaround time on a review should be one business day. If you can't do this, decline review. 
-1. Do not drown the author in a sea of notes! Keep all points short and sweet. 
+2. on't argue about personal style preferences, use the established company style guide.
+3. Start reviewing the submission immediately - treat code reviews as high priority.
+4. Maximum turnaround time on a review should be one business day. If you can't do this, decline the review. 
+5. Do not drown the author in a sea of notes! Keep all points short and sweet. 
 
-## 4 Author Responsibilities
+## 4. Author Responsibilities
 
 1. Break code into smaller, digestable chunks for review. 
 1. The reviewer can return the first small chunk allowing you to make modifications while they review the second chunk. 
 1. Do not submit in large projects and have to wait for it to be sent back.
 1. Point 1
 
-## 5 Conflict resolution 
+## 5. Conflict resolution & stalemates
 
 1. Beware of unconstructive stalemates. If the tone of the conversation is getting tense or hostile, take action! 
-1. Point 1
-1. Point 1
-
-## Use the style guide!
-* It is a waste of time to argue about different styles as their is no right answer. 
-* If there is a conflict, refer to the style guide. If the guide doesn't cover it, it's not worth arguing over. 
-* In order to modify the style guide, a submission has to be sent to the GitHub which will be reviewed. 
-
-## 5 Key points for Reviewer to consider 
-
-1. Point 1
-1. Point 1
-1. Point 1
-
-## 5 Key points for Author to consider 
-
-1. Point 1
-1. Point 1
-1. Point 1
+* Is the tone of discussion getrowing tense or hostile? 
+* Are requested changes and notes per review round not trending downwards? 
+* Is there lots of pushback or an unusually high number of notes? 
+1. Make sure to communicate. Meet in person or a video chat.. Keep the lines of communication open!
+1. Is there a larger problem around application design? Should you open it up to the team for discussion? 
+1. Eventually you must concede or escalate as the longer the conflict goes on the more damaging it is to the relationship.
+* Concede - Is this point really so bad you need to fight about it? 
+* Escalate - Do you need to look to a higher power in the company to solve the stalemate? 
+1. After a stalemate - take some space and have a break. Discuss with a manager. Study conflict resolution. Do better next time. 
 
 ## Author checklist
 *Don't waste time in the review with style issues and errors* 
@@ -119,3 +110,10 @@ The purpose of this style guide is to create standards to adhere to while conduc
 * Is this code introducing any new dependencies between classes/components/modules and, if so, is it necessary to do that?
 * Is this code idiomatic, taking full advantage of the language, frameworks, and tools that we use?
 * Is anything here a re-implementation of existing functionality the developer may not be aware of?
+
+## Helpful tools in code review
+
+1. Unit Tests / Integration tests - to ensure code behaves as expected and hasn't broken anything.
+2. Continuous Integration - to ensure the code builds.
+3. Code Formatter - To verify whitespace matches the teams chosen styles.
+4. Code Linters - To idenitfy unused imports or vars.  

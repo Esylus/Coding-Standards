@@ -1,6 +1,6 @@
 # itgroove Coding Style Guide
 
-The purpose of this style guide is to create a collaborative coding style baseline for itgroove. 
+Objective: The purpose of this style guide is to create a collaborative coding style baseline for itgroove. 
 
 This guide will follow the below format to address both generalities and details:
 
@@ -109,7 +109,7 @@ itGroove has chosen the "documentation.js" framework to document it's code. All 
 * To help name class, describe to someone in less then 25 words without using if, and, or, but - the name will be in that sentence somewhere.
 
 ### 3.3 Object Names
-*  
+*  Do we need anything for this? PascalCase? 
 * 
 
 
