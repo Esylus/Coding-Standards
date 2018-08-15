@@ -6,24 +6,23 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [0. Terms](#0-terms)
-- [1. General code review concepts](#1-general-code-review-concepts)
-- [2. Code review procedure](#2-code-review-procedure)
-- [3 Reviewer Responsibilities](#3-reviewer-responsibilities)
-- [4 Author Responsibilities](#4-author-responsibilities)
-- [5 Conflict resolution](#5-conflict-resolution)
-- [Use the style guide!](#use-the-style-guide)
-- [5 Key points for Reviewer to consider](#5-key-points-for-reviewer-to-consider)
-- [5 Key points for Author to consider](#5-key-points-for-author-to-consider)
-- [Author checklist](#author-checklist)
-- [Reviewer Checklist](#reviewer-checklist)
+- [0. Code Review Terms](#0-code-review-terms)
+- [1. Overview of the Code Review](#1-overview-of-the-code-review)
+- [2. Code Review Procedure](#2-code-review-procedure)
+- [3. itGroove Style Guide / Coding Standards](#3-itgroove-style-guide--coding-standards)
+- [4. Reviewers Responsibilities](#4-reviewers-responsibilities)
+- [5. Authors Responsibilities](#5-authors-responsibilities)
+- [6. Conflict resolution & stalemates](#6-conflict-resolution--stalemates)
+- [7. Author checklist](#7-author-checklist)
+- [8. Reviewer Checklist](#8-reviewer-checklist)
+- [9. Helpful tools in code review](#9-helpful-tools-in-code-review)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 <!-- Table of contents -->
 
-## 0. Review Terms  
+## 0. Code Review Terms  
 * Author - Developer who writes the changelist.
 * Reviewer - Developer who reviews the authors changelist.
 * Changelist - A set of recommended changes to source code that the author wants to merge into a repository.
