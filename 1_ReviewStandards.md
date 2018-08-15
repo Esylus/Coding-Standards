@@ -4,17 +4,17 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  
 
 - [0. Code Review Terms](#0-code-review-terms)
 - [1. Code Review Overview](#1-code-review-overview)
 - [2. Code Review Procedure](#2-code-review-procedure)
 - [3. itGroove Style Guide / Coding Standards](#3-itgroove-style-guide--coding-standards)
-- [4. Reviewers Responsibilities](#4-reviewers-responsibilities)
-- [5. Authors Responsibilities](#5-authors-responsibilities)
-- [7. Author checklist](#7-author-checklist)
-- [8. Reviewer Checklist](#8-reviewer-checklist)
-- [6. Conflict resolution & stalemates](#6-conflict-resolution--stalemates)
+- [4. Authors Responsibilities](#4-authors-responsibilities)
+- [5. Author checklist](#5-author-checklist)
+- [6. Reviewers Responsibilities](#6-reviewers-responsibilities)
+- [7. Reviewer Checklist](#7-reviewer-checklist)
+- [8. Conflict resolution & stalemates](#8-conflict-resolution--stalemates)
 - [9. Helpful tools in code review](#9-helpful-tools-in-code-review)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -47,8 +47,8 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 2. The author initiates a code review request and selects / is assigned a reviewer (or two reviewers? - managements call). 
 3. Reviewer reviews the submitted changelist according to the established Reviewer Checklist.
 4. If reviewer finds issue that needs addressing, he writes a note about it, then rereads the note to ensure it is worded in a clear, non-accusatory way.  
-4. Author reads the note, modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
-5. Reviewer verifies that the author has addressed the note properly and when satisfied, signs off on the changelist (LGTM) and code is pulled into codebase.  
+5. Author reads the note, modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
+6. Reviewer verifies that the author has addressed the note properly and when satisfied, signs off on the changelist (LGTM) and code is pulled into codebase.  
 
 ## 3. itGroove Style Guide / Coding Standards
 
@@ -57,27 +57,17 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * If there is a style conflict, refer to the itGroove style guide. If the guide doesn't cover the issue, it's not worth arguing over. 
 * In order to modify the style guide, a submission has to be sent to the GitHub which will be reviewed by management. 
 
-## 4. Reviewers Responsibilities
-
-1. Focus on high-level / conceptual improvements in the code - leave minor syntax errors for a linter. 
-2. Don't argue about personal style preferences, use the established company style guide.
-3. Start reviewing the submission immediately - treat code reviews as high priority.
-4. If you need to note something that is out of scope of the current review, do so but don't let it obstruct the review that is in scope. 
-4. Maximum turnaround time on a review should be one business day. If you can't do this, decline the review. 
-5. Do not drown the author in a sea of notes! Keep all points short and sweet. 
-6. Verify that the defects are actually fixed. 
-
-## 5. Authors Responsibilities
+## 4. Authors Responsibilities
 
 1. Ensure the code has conformed to itGroove standards - style guide, linter, unit tests and/or other tests.
-2. Make each commit contain an isolated chunk of work. This makes it clearer for the reviewer what your intention was per commit.   
+2. Make each commit contain an isolated chunk of work. This makes it clearer for the reviewer what your intention was per commit.  
 3. Break large code into smaller, sensible chunks for review so as not to overwhelm the reviewer.  
 4. The reviewer can return the first small chunk allowing you to make modifications while they review the second chunk. 
 5. Remember that reviewers are reviewing your code, not you as a person. Try not to take offence to the review. 
 6. Follow up on feedback. Make sure you revise what was discussed in your code review.
 7. If you don't agree with a given comment, don't be afraid to challenge it. Productive discussions are beneficial for all parties.  
 
-## 7. Author checklist
+## 5. Author checklist
 
 * Have I ensured the code conforms to the itGroove style guide? 
 * Does my code compile without errors and run without exceptions in happy path conditions?
@@ -86,7 +76,17 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Have I run our performance/load/smoke tests to make sure nothing I've introduced is a performance killer?
 * Have I run our suite of security tests/checks to make sure I'm not opening vulnerabilities?
 
-## 8. Reviewer Checklist
+## 6. Reviewers Responsibilities
+
+1. Focus on high-level / conceptual improvements in the code - leave minor syntax errors for a linter. 
+2. Don't argue about personal style preferences, use the established company style guide.
+3. Start reviewing the submission immediately - treat code reviews as high priority.
+4. If you need to note something that is out of scope of the current review, do so but don't let it obstruct the review that is in scope. 
+5. Maximum turnaround time on a review should be one business day. If you can't do this, decline the review. 
+6. Do not drown the author in a sea of notes! Keep all points short and sweet. 
+7. Verify that the defects are actually fixed. 
+
+## 7. Reviewer Checklist
 
 * Does this changelist solve the problem it was supposed to solve? 
 * Does this change-set make sense in the current architecture?
@@ -100,7 +100,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Is this code idiomatic, taking full advantage of the language, frameworks, and tools that we use?
 * Is anything here a re-implementation of existing functionality the developer may not be aware of?
 
-## 6. Conflict resolution & stalemates
+## 8. Conflict resolution & stalemates
 
 * Beware of unconstructive stalemates. If the tone of the conversation is getting tense or hostile, take action! 
 * Are requested changes and notes per review round not trending downwards? 
