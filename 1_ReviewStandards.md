@@ -34,27 +34,27 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 
 * Code reviews are an opportunity to share knowledge and make informed engineering decisions.
 * The wise code reviewer will pick their battles and not try to attack all aspects of an authors code in a single review. 
-* Each review, the reviewer should strive to raise the level of the authors code a single grade level. ex. from a D grade to a C grade. 
-* Raising the level from a D to an A+ will happen incrementally over several reviews and relies on rapport and trust between co-workers.  
+* Each review, the reviewer should strive to raise the level of the authors code a single grade. ex. from a D grade to a C grade. 
+* Raising the level from a D to an A+ happens incrementally over many reviews and relies on rapport / trust between co-workers.  
 * The reviewer should prioritize creating a positive, beneficial code review experience for the author.
-* The author should approach the review as an opportunity to learn something and always keep an open mind. 
-* A good code reviewer not only finds bugs but provides conscientious feedback to help fellow teammates improve. 
+* The author should approach the review as an opportunity to learn something and always keep an open mind.  
 * Code reviews shares knowledge across the team and allows other developers to become familiar with your work. 
 
 ## 2. Code Review Procedure
 
-1. An author believes a specific changelist is finished, has gone through the author checklist and they are ready to move it forwards to the repository. 
+1. An author believes a specific changelist is finished, has gone through the author checklist and they are ready to review. 
 2. The author initiates a code review request and selects / is assigned a reviewer (or two reviewers? - managements call). 
 3. Reviewer reviews the submitted changelist according to the established Reviewer Checklist.
-4. If reviewer finds issue that needs addressing, he writes a note about it, then rereads the note to ensure it is worded in a clear, non-accusatory way.  
+4. If reviewer finds an issue, he writes a note, then rereads the note to ensure it is worded in a clear, non-accusatory way.  
 5. Author reads the note, modifies the change list and resubmits to the reviewer who ensures changes were implemented correctly.
-6. Reviewer verifies that the author has addressed the note properly and when satisfied, signs off on the changelist (LGTM) and code is pulled into codebase.  
+6. Reviewer verifies that the author has addressed the note properly then signs off on the changelist (LGTM).  
+7. Code is pulled into codebase.
 
 ## 3. itGroove Style Guide / Coding Standards
 
 * It is non-productive to argue about different style preferences as there is no ultimate correct way to write code. 
 * An itGroove style guide has been created to maximize code readability and maintainability.
-* If there is a style conflict, refer to the itGroove style guide. If the guide doesn't cover the issue, it's not worth arguing over. 
+* If there is a style conflict, refer to the style guide. If the guide doesn't cover the issue, it's not worth arguing over. 
 * In order to modify the style guide, a submission has to be sent to the GitHub which will be reviewed by management. 
 
 ## 4. Authors Responsibilities
@@ -65,7 +65,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 4. The reviewer can return the first small chunk allowing you to make modifications while they review the second chunk. 
 5. Remember that reviewers are reviewing your code, not you as a person. Try not to take offence to the review. 
 6. Follow up on feedback. Make sure you revise what was discussed in your code review.
-7. If you don't agree with a given comment, don't be afraid to challenge it. Productive discussions are beneficial for all parties.  
+7. If you don't agree with a given comment, gently challenge it. Productive discussions are beneficial for all parties.  
 
 ## 5. Author checklist
 
@@ -81,7 +81,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 1. Focus on high-level / conceptual improvements in the code - leave minor syntax errors for a linter. 
 2. Don't argue about personal style preferences, use the established company style guide.
 3. Start reviewing the submission immediately - treat code reviews as high priority.
-4. If you need to note something that is out of scope of the current review, do so but don't let it obstruct the review that is in scope. 
+4. If you need to note something out of scope of the current review, do so but don't let it obstruct the review that is in scope. 
 5. Maximum turnaround time on a review should be one business day. If you can't do this, decline the review. 
 6. Do not drown the author in a sea of notes! Keep all points short and sweet. 
 7. Verify that the defects are actually fixed. 
