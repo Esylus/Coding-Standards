@@ -7,14 +7,14 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [0. Code Review Terms](#0-code-review-terms)
-- [1. Overview of the Code Review](#1-overview-of-the-code-review)
+- [1. Code Review Overview](#1-code-review-overview)
 - [2. Code Review Procedure](#2-code-review-procedure)
 - [3. itGroove Style Guide / Coding Standards](#3-itgroove-style-guide--coding-standards)
 - [4. Reviewers Responsibilities](#4-reviewers-responsibilities)
 - [5. Authors Responsibilities](#5-authors-responsibilities)
-- [6. Conflict resolution & stalemates](#6-conflict-resolution--stalemates)
 - [7. Author checklist](#7-author-checklist)
 - [8. Reviewer Checklist](#8-reviewer-checklist)
+- [6. Conflict resolution & stalemates](#6-conflict-resolution--stalemates)
 - [9. Helpful tools in code review](#9-helpful-tools-in-code-review)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -28,7 +28,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Changelist - A set of recommended changes to source code that the author wants to merge into a repository.
 * LGTM - Shorthand for "Looks good to me".
 
-## 1. Overview of the Code Review 
+## 1. Code Review Overview
 
 *Code Reviews are both a technical and social process. The seasoned reviewer will not only seek out bugs / issues but will also recognize opporutunities to praise the work and offer conscientious feedback to help teamates improve*
 
@@ -77,18 +77,6 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 6. Follow up on feedback. Make sure you revise what was discussed in your code review.
 7. If you don't agree with a given comment, don't be afraid to challenge it. Productive discussions are beneficial for all parties.  
 
-## 6. Conflict resolution & stalemates
-
-* Beware of unconstructive stalemates. If the tone of the conversation is getting tense or hostile, take action! 
-* Are requested changes and notes per review round not trending downwards? 
-* Is there lots of pushback or an unusually high number of notes? 
-* Make sure to communicate. Meet in person or a video chat.. Keep the lines of communication open!
-* Is there a larger problem around application design? Should you open it up to the team for discussion? 
-* Eventually you must concede or escalate as the longer the conflict goes on the more damaging it is to the relationship.
-* Concede - Is this point really so bad you need to fight about it? 
-* Escalate - Do you need to look to a higher power in the company to solve the stalemate? 
-* After a stalemate - take some space and have a break. Discuss with a manager. Study conflict resolution. Do better next time. 
-
 ## 7. Author checklist
 
 * Have I ensured the code conforms to the itGroove style guide? 
@@ -111,6 +99,18 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Is this code introducing any new dependencies between classes/components/modules and, if so, is it necessary to do that?
 * Is this code idiomatic, taking full advantage of the language, frameworks, and tools that we use?
 * Is anything here a re-implementation of existing functionality the developer may not be aware of?
+
+## 6. Conflict resolution & stalemates
+
+* Beware of unconstructive stalemates. If the tone of the conversation is getting tense or hostile, take action! 
+* Are requested changes and notes per review round not trending downwards? 
+* Is there lots of pushback or an unusually high number of notes? 
+* Make sure to communicate. Meet in person or a video chat.. Keep the lines of communication open!
+* Is there a larger problem around application design? Should you open it up to the team for discussion? 
+* Eventually you must concede or escalate as the longer the conflict goes on the more damaging it is to the relationship.
+* Concede - Is this point really so bad you need to fight about it? 
+* Escalate - Do you need to look to a higher power in the company to solve the stalemate? 
+* After a stalemate - take some space and have a break. Discuss with a manager. Study conflict resolution. Do better next time. 
 
 ## 9. Helpful tools in code review
 
