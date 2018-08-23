@@ -9,7 +9,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 - [0. Code Review Terms](#0-code-review-terms)
 - [1. Code Review Overview](#1-code-review-overview)
 - [2. Code Review Procedure](#2-code-review-procedure)
-- [3. itGroove Style Guide](#3-itgroove-style-guide)
+- [3. Style Guide](#3-style-guide)
 - [4. Authors Responsibilities](#4-authors-responsibilities)
 - [5. Author Checklist](#5-author-checklist)
 - [6. Reviewers Responsibilities](#6-reviewers-responsibilities)
@@ -29,7 +29,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 
 ## 1. Code Review Overview
 
-*Code Reviews are a process that is both technical and social. The seasoned reviewer will not only seek out bugs / issues but will also recognize opportunities to praise the work and offer conscientious feedback to help teamates improve.*
+*Code reviews are a process that is both technical and social. The seasoned reviewer will not only seek out bugs / issues but will also recognize opportunities to praise the work and offer conscientious feedback to help teamates improve.*
 
 * Code reviews are an opportunity to share knowledge and make informed engineering decisions.
 * The wise code reviewer will pick their battles and not try to attack all aspects of an authors code in a single review. 
@@ -49,7 +49,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 6. Reviewer verifies that the author has addressed the note properly then signs off on the changelist.  
 7. Code is pulled into codebase.
 
-## 3. itGroove Style Guide
+## 3. Style Guide
 
 * It is non-productive to argue about different style preferences as there is no ultimate correct way to write code. 
 * An itGroove style guide has been implemented to maximize code readability and maintainability.
