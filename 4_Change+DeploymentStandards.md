@@ -1,6 +1,11 @@
+
+# itgroove Change Control and Deployment Standards
+
+Objective: This document has been written to create standards to adhere to while changeing code bases and deploying projects. 
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** 
 
 - [itgroove Change Control and Deployment Standards](#itgroove-change-control-and-deployment-standards)
   - [1. General Deployment Strategy](#1-general-deployment-strategy)
@@ -17,11 +22,6 @@
   - [Semantic-Release Setup](#semantic-release-setup)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# itgroove Change Control and Deployment Standards
-
-Objective: This document has been written to create standards to adhere to while changeing code bases and deploying projects. 
-
 
 ## 1. General Deployment Strategy
 
