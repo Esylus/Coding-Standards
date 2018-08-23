@@ -1,6 +1,6 @@
 # itgroove Coding Style Guide
 
-Objective: The purpose of this style guide is to create a collaborative coding style baseline for itgroove. 
+Objective: This document has been written to create a collaborative coding style baseline for itgroove.  
 
 This guide will follow the below format to address both generalities and details:
 

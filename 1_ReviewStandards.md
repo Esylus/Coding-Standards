@@ -1,6 +1,6 @@
 # itgroove Code Review Standards
 
-Objective: The purpose of this style guide is to create standards to adhere to while conducting code base reviews. 
+Objective: This document has been written to create standards to adhere to while conducting code base reviews. 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

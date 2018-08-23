@@ -1,3 +1,7 @@
+# itgroove Documentation Standards
+
+Objective: This document has been written to create standards for itGroove support documentation.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
@@ -13,12 +17,6 @@
   - [4.0 GraphQL Documentation](#40-graphql-documentation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# itgroove Documentation Standards
-
-Objective: The purpose of this style guide is to create standards for itGroove support documentation. 
-
-<!-- Table of contents -->
 
 ## 1. Types Of Documentation  
 

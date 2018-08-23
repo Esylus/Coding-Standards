@@ -1,11 +1,27 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [itgroove Change Control and Deployment Standards](#itgroove-change-control-and-deployment-standards)
+  - [1. General Deployment Strategy](#1-general-deployment-strategy)
+  - [VSTS Continuous Integration Strategy](#vsts-continuous-integration-strategy)
+  - [VSTS Continuous Delivery Strategy](#vsts-continuous-delivery-strategy)
+  - [VSTS Branching strategy](#vsts-branching-strategy)
+    - [7. Database Changes](#7-database-changes)
+    - [Making Database Changes](#making-database-changes)
+  - [Commitizen + Semantic Versioning](#commitizen--semantic-versioning)
+  - [How does it work?](#how-does-it-work)
+    - [Semantic Versioning Summary](#semantic-versioning-summary)
+    - [What if I don't want to use Commitizen?](#what-if-i-dont-want-to-use-commitizen)
+- [Setting up Semantic-Release](#setting-up-semantic-release)
+  - [Semantic-Release Setup](#semantic-release-setup)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # itgroove Change Control and Deployment Standards
 
-Objective: The purpose of this style guide is to create standards to adhere to while changeing code bases and deploying. 
+Objective: This document has been written to create standards to adhere to while changeing code bases and deploying projects. 
 
-<!-- This guide will cover Continuous Integration, Contiuous Deployment details -->
-<!-- This guide will also cover how to handle database changes for apps with relational databases -->
-
-<!-- Table of contents -->
 
 ## 1. General Deployment Strategy
 
