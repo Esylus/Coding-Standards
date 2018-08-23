@@ -111,7 +111,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 ### 5.1 System Testing Guidelines
 
-**FIND SOME GUIDELINES AND PUT HERE**
+**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
 ## 6. End-To-End Testing
 
@@ -128,43 +128,46 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Manual end-to-end testing is more common due to the need of dealing with external interfaces. 
 * End-to-end testing can be automated but the effort to do this is both extensive and transitory. Writing test scripts to perform a thorough test is typically as expensive as simply spending the hours to manually perform it and system changes (bug fixes, new features) require script re-writes to match.
 
-** MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0 **
+**MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0**
+**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
 ## 7. Load Testing
 
-* Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
+* Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions.
+* Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
 
-Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
+### 7.1 Load Testing Guidlines
 
 Load testing best practices:
 1- Clear browser cache and cookies before recording traffic. 
 2- Start recording a new scenario from the 
 
+**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
+
 ## 8. Acceptance Testing
 
-End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
-
-* Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
+* Project is submitted to the client or a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
 * User Acceptance Testing is typically performed by a business user.
 
-User Acceptance Test is a phase in a typical software development process.
+**FIND SOME MORE INFO ABOUT ACCEPTANCE TESTING**
 
-From the other side, End-To-End test is one of the approaches to testing the complex applications which involves all layers of the application to interact with each other during test execution.
+### 8.1 Acceptance Testing Guidlines
 
-It means that you can execute End-to-End test in User Acceptance Test phase, and you can't consider those two terms as one, that has the same meaning.
- The perspectives are different, and while some duplication of effort could happen, the defects identified may vary.
+**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
 ## 9. Regression Testing 
 
 * Regression : "when you fix one bug, you introduce several new bugs". 
-
 * Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. Ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
-
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious one too.
-
 * Regression means retesting the unchanged parts of the application. 
-
 * Regression tests methodology - Re-run the previous tests. Compare the current results with previously executed test results. 
+
+* Understand what kind of changes have been made to the software
+* Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
+* Take a look at your test cases and determine if you will have to do a full, partial or unit regression. Identify the ones that will fit your situation
+* Schedule the time and test away!s
+
 
 * Various types of regression tests: 
   1- Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on teh unit to be tested are blocked so that the unit can be tested individually without any discrepency.
@@ -173,14 +176,11 @@ It means that you can execute End-to-End test in User Acceptance Test phase, and
 
   3- Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
 
+### 9.1 Regression Testing Guidlines 
+
 * Process as outlined in https://www.softwaretestinghelp.com/regression-testing-tools-and-methods/
   1- Prepare a Test suite for Regression considering the points mentioned in “How to select Regression Test suite”?
   2- Automate all the test cases of the test suite.
   3- Update the Regression suite whenever it is required like if any new defect which is not covered in the test case is found, and a test case for the same should be updated in the test suite so that the testing is not missed for the same next time. Regression test suite should be managed properly by continuously updating the test cases.
   4- Execute the Regression test cases whenever there is any change in the code, the bug is fixed, new functionality is added, an enhancement to the existing functionality is done etc.
   5- Create a test execution Report which includes Pass/Fail status of the executed test cases.
-
-* Understand what kind of changes have been made to the software
-* Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
-* Take a look at your test cases and determine if you will have to do a full, partial or unit regression. Identify the ones that will fit your situation
-* Schedule the time and test away!
