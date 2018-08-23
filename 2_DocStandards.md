@@ -163,18 +163,20 @@ The most common tags are listed below.
 * After applying the JSDoc syntax, there are different ways to run the documentation generator to achieve different output formats.
 * Below are two examples, many other types of output formats can be found on the Documentation.js webpage. 
 
-**generate markdown docs for index.js and files it references**
+```
+**generate markdown docs for index.js and files it references**  
 documentation build index.js -f md
 
-**build and serve HTML docs for app.js**
+**build and serve HTML docs for app.js**  
 documentation serve app.js
+```
 
-## 3.0 Swagger 
+## 3.0 Swagger Documents
 
 * The role of documentation with a REST API is to explain the individual endpoints, what function they perform, and the parameters a developer can pass to them.  
 * The usage of Swagger within itGroove projects is currently being investigated. 
 
-## 4.0 GraphQL Documentation
+## 4.0 GraphQL Documents
 
 * With a GraphQL API, you describe the data types, fields, and the interaction points between them, and a developer can assemble an appropriate query to get the information they need.
 * Playground allows you to...
