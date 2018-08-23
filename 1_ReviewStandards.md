@@ -45,7 +45,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 2. The author initiates a code review request and is assigned a reviewer. 
 3. Reviewer reviews the submitted changelist according to the established Reviewer Checklist.
 4. If reviewer finds an issue, he writes a note, then rereads the note to ensure it is worded in a clear, non-accusatory way.  
-5. Author reads the note, modifies the change list and resubmits. The reviewer ensures changes were implemented correctly.
+5. Author reads the note, modifies the change list and resubmits. The reviewer ensures changes were done correctly.
 6. Reviewer verifies that the author has addressed the note properly then signs off on the changelist.  
 7. Code is pulled into codebase.
 
@@ -106,7 +106,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Beware of unconstructive stalemates - take action!  
 * Always be sure to communicate. Meet in person or a video chat.. Keep the lines of communication open!
 * Is there a larger problem around application design? Should you open it up to the team for discussion? 
-* The longer the conflict goes on the more damaging it is to the relationship Eventually one must concede or escalate the issue.
+* The longer the conflict goes on the more damaging it is to the relationship. The issue must be condeced or escalated.
 * Concede - Is this point really so bad you need to fight about it? 
 * Escalate - Do you need to look to a higher power in the company to solve the stalemate? 
 * After a stalemate - take some space and have a break. Discuss with a manager. Study conflict resolution. Reconnect, talk through what happened, reconcile.  
