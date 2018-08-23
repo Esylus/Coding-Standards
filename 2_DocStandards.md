@@ -6,11 +6,10 @@ Objective: This document has been written to create standards for itGroove suppo
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
-- [1. Types Of Documentation](#1-types-of-documentation)
-- [2. Project Documentation Requirements](#2-project-documentation-requirements)
+- [1. Documentation Types Overview](#1-documentation-types-overview)
+- [2. Project ReadMe Requirements](#2-project-readme-requirements)
 - [3. Documentation.js](#3-documentationjs)
   - [3.1 Common tags](#31-common-tags)
-  - [3.2 Installation](#32-installation)
   - [2.3 Usage Examples](#23-usage-examples)
 - [3.0 Swagger](#30-swagger)
 - [4.0 GraphQL Documentation](#40-graphql-documentation)
