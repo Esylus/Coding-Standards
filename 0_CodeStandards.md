@@ -53,6 +53,11 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ## 2. Comments
 
+We want code documentation to have some rules without being too suffocating. This means:
+- Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
+- Functions that aren't self-explained will need a comment block on them.
+- Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
+
 1. Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
 2. Every comment represents a failure to express yourself clearly in code.
 3. Since devs can't be relied on to always accurately update comments, inevitably code comments evolve into lies.
