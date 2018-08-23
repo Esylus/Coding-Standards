@@ -19,24 +19,23 @@ Objective: This document has been written to create standards for itGroove suppo
 
 ## 1. Types Of Documentation  
 
-Project Documentation: 
+**Project Documentation:** 
 * All projects require a readme file to explain the basics of getting up and running with the app. A template is supplied in this document as a starting point.  
 
-Code Documentation: 
+**Code Documentation:** 
 * itGroove has selected Documentation.js (https://documentation.js.org/) as its primary code documentation generator. 
 * It's used to generate documentation from comments within your code. Documentation.js processes JavaScript comments
 in the JSDoc format. JSDoc is not code however. It's a simple and standard syntax for writing documentation.
 
-
-Express Documentation: 
+**Express Documentation:** 
 * itGroove has selected Documentation.js (https://swagger.io/solutions/api-documentation/) as its endpoint documentation generator.
 * The usage of Swagger within itGroove projects is currently being investigated and will be added to this document at a later date.   
 
-File Comment Documentation: 
+**File Comment Documentation:** 
 * Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
 * Functions that aren't self-explained will need a comment block on them
 
-GraphQL Documentation:
+**GraphQL Documentation:**
 * Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
 
 ## 2. Project Documentation Requirements
