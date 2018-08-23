@@ -6,6 +6,7 @@ Objective: This document has been written to create standards surrounding testin
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
+- [1. The Various Testing Layers Analogy](#1-the-various-testing-layers-analogy)
 - [1. General Testing Principles](#1-general-testing-principles)
 - [1. VSTS testing branch](#1-vsts-testing-branch)
 - [2. Unit Testing](#2-unit-testing)
