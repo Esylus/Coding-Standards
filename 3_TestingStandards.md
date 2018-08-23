@@ -23,8 +23,7 @@ Objective: This document has been written to create standards surrounding testin
 
 ## 1. General Testing Principles 
 
-* itGroove adheres to the principles outlined in "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham
-* Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
+* itGroove adheres to the principles outlined in "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham. Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
 
 1. Testing finds defects. While testing can show that defects are present, it cannot prove that there are no defects at all. One can never assume that there are no defects or the application is 100 percent bug free even if thorough testing is done.
 
@@ -32,13 +31,13 @@ Objective: This document has been written to create standards surrounding testin
 
 3. Test early. To find defects early, testing activities shall be started as early as possible in the software life cycle and shall be focused on defined objectives. The cost of testing will be much less if the defects are found as early as possible rather than later in the development life cycle.
 
-4. Defect clustering. Testing efforts shall be focused proportionally to the expected and later observed defect density of modules. A small number of modules usually contains most of the defects discovered during pre-release testing. Use the Pareto principle of 80:20, that is 80 percent of defects are due to 20 percent of code. If we find one defect in a particular module/area there is pretty high chance of getting many more there.
+4. Defect clustering. Testing efforts shall be focused proportionally to the expected and later observed defect density of modules. A small number of modules usually contains most of the defects discovered during pre-release testing. Use the Pareto principle of 80:20, that is 80%  of defects are due to 20% of code. If we find one defect in a particular module/area there is pretty high chance of finding more there.
 
-5. Pesticide Paradox. If the same kinds of tests are repeated again and again, eventually the same set of test cases will no longer be able to find any new bugs. To overcome this “Pesticide Paradox”, test cases need to be regularly reviewed and revised, and new and different tests need to be written to exercise different parts of the software or system to find potentially more defects.
+5. Pesticide Paradox. If the same kinds of tests are repeated over and over again, eventually these tests will no longer be able to find any new bugs. To overcome this “Pesticide Paradox”, test cases need to be regularly reviewed, revised and enhanced to exercise different parts of the software to find potentially more defects.
 
-6. Testing is context dependent. Testing is done differently in different contexts. For example, safety – critical software is tested differently from an e-commerce site. Testing effort should be based on what is to be tested while testing focus will depend on what is more important for that type of application.
+6. Testing is context dependent. Testing is conducted differently for different application types. For example, safety critical software is tested differently from an e-commerce site. Testing efforts should be based on what is to be tested while testing focus will depend on what is most important for that type of application.
 
-7. Absence-of-errors fallacy. If the system built is unusable and does not fulfil the user’s needs and expectations then finding and fixing defects does not help. As said, if the product does not meet user’s requirements – explicitly mentioned and implicitly implied, that is if it is not fit for use, there is no point in testing it. 
+7. Absence-of-errors fallacy. If the system built is unusable and does not fulfil the user’s needs and expectations then finding and fixing defects does not help. If the product does not meet user requirements that may be explicitly mentioned and implicitly implied, that is if it is not fit for use, there is no point in testing it. 
 
 ## 2. The Various Testing Layers Analogy 
 
