@@ -17,28 +17,33 @@ Objective: This document has been written to create standards for itGroove suppo
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 1. Types Of Documentation  
+## 1. Documentation Types Overview  
 
-**Project Documentation:** 
-* All projects require a readme file to explain the basics of getting up and running with the app. A template is supplied in this document as a starting point.  
+**Project ReadMe:** 
+* All projects require a readMe file to explain the basics of getting up and running with the app. 
+* An itGroove readMe template is supplied in this document as a starting point for any project.  
 
 **Code Documentation:** 
 * itGroove has selected Documentation.js (https://documentation.js.org/) as its primary code documentation generator. 
-* It's used to generate documentation from comments within your code. Documentation.js processes JavaScript comments
-in the JSDoc format. JSDoc is not code however. It's a simple and standard syntax for writing documentation.
+* It's used to generate documentation from comments within your code. 
+* Documentation.js processes JavaScript comments in the JSDoc format, a simple and standard syntax for writing documentation.
 
-**Express Documentation:** 
-* itGroove has selected Documentation.js (https://swagger.io/solutions/api-documentation/) as its endpoint documentation generator.
-* The usage of Swagger within itGroove projects is currently being investigated and will be added to this document at a later date.   
-
-**File Comment Documentation:** 
-* Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
-* Functions that aren't self-explained will need a comment block on them
+**Rest Endpoint Documentation:** 
+* itGroove has selected Swagger Documentation (https://swagger.io/solutions/api-documentation/) as its REST endpoint documentation generator.
+* The usage of Swagger within itGroove projects is currently being investigated and will be detailed in this document at a later date.   
 
 **GraphQL Documentation:**
-* Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
+* itGroove has selected GraphQL (https://graphql.org/) as query language for it's API's.
+* GraphQL is self-documenting in that you describe the data types, fields and interaction points between them. 
+* Playground then lets you interactively explore the schema of a GraphQL server and run queries against it at the same time.
+* Dynamically generated documentation can be generated from the GraphQL schema's to be used in a webpage. 
 
-## 2. Project Documentation Requirements
+**File Comment Documentation:** 
+* Files should have a comment block at the top with a quick description and anything a reader might need to know. 
+* This is not necessary for files such as schemas and tests.
+* Functions that aren't self-explained will need a comment block on them beyond the Documentation.js syntax.
+
+## 2. Project ReadMe Requirements
 
 *All projects should cover the below points in their documentation.* 
 
@@ -116,6 +121,7 @@ Any special acknowledgemnets that could include:
 
 ## 3. Documentation.js
 
+* For complete instructions on installation and usage, please visit (https://documentation.js.org/). 
 * Documentation.js, using the syntax of JSDoc, lets you specify absolutely everything about your code: use @name to say what something is called, @kind for whether it's a function or a class, @param for its parameters, and so on. But writing all of that explicitly is tedious, so where it can, `documentation` automatically populates @name, @kind, and @memberof tags based on its reading of the code.
 * Syntax for comments in code begin with /** and end with a */. This is required syntax for documentation.js to identify the comments and gather them for the documentation output. 
 
@@ -153,42 +159,28 @@ The most common tags are listed below.
 * @example - you can use the @example tag to add inline code examples with your
   documentation
 
-### 3.2 Installation
-
-Globally install `documentation` using the [npm](https://www.npmjs.com/) package manager:
-
-```sh
-$ npm install -g documentation
-```
-
 ### 2.3 Usage Examples
 
-Below are several ways to run the documentation generator to achieve different output formats:
+* After applying the JSDoc syntax, there are different ways to run the documentation generator to achieve different output formats.
+* Below are two examples, many other types of output formats can be found on the Documentation.js webpage. 
 
 **generate markdown docs for index.js and files it references**
 documentation build index.js -f md
 
-**generate html docs for all files in src**
-documentation build src/** -f html -o docs
-
-**document index.js, ignoring any files it requires or imports**
-documentation build index.js -f md --shallow
-
 **build and serve HTML docs for app.js**
 documentation serve app.js
 
-**build, serve, and live-update HTML docs for app.js**
-documentation serve --watch app.js
-
-Commands:
-  serve [input..]   generate, update, and display HTML documentation
-  build [input..]   build documentation
-  lint [input..]    check for common style and uniformity mistakes
-  readme [input..]  inject documentation into your README.md
-
 ## 3.0 Swagger 
 
+* The role of documentation with a REST API is to explain the individual endpoints, what function they perform, and the parameters a developer can pass to them.  
+* The usage of Swagger within itGroove projects is currently being investigated. 
+
 ## 4.0 GraphQL Documentation
+
+* With a GraphQL API, you describe the data types, fields, and the interaction points between them, and a developer can assemble an appropriate query to get the information they need.
+* Playground allows you to...
+* This autogenerates explanatory text based on the three main entry types into a GraphQL schema: Query, Mutation, and Subscription.
+* GraphQL offers a lot of positives on the documentation front for simple APIs. For example, keeping documentation in sync with API changes is easy, as once a field, type, or query changes in code, so do the docs.
 
 
 
