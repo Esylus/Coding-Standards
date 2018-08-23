@@ -6,8 +6,8 @@ Objective: This document has been written to create standards surrounding testin
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
-- [1. The Various Testing Layers Analogy](#1-the-various-testing-layers-analogy)
-- [2. General Testing Principles](#2-general-testing-principles)
+- [1. General Testing Principles](#1-general-testing-principles)
+- [2. The Various Testing Layers Analogy](#2-the-various-testing-layers-analogy)
 - [3. Unit Testing](#3-unit-testing)
   - [3.1 Unit Test Names](#31-unit-test-names)
   - [3.2 Unit Testing Guidlines](#32-unit-testing-guidlines)
@@ -21,7 +21,26 @@ Objective: This document has been written to create standards surrounding testin
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 1. The Various Testing Layers Analogy 
+## 1. General Testing Principles 
+
+* itGroove adheres to the principles outlined in "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham
+* Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
+
+1. Testing finds defects. While testing can show that defects are present, it cannot prove that there are no defects at all. One can never assume that there are no defects or the application is 100 percent bug free even if thorough testing is done.
+
+2. Exhaustive testing is impossible. Testing everything (all combinations of inputs and preconditions) is not feasible except for trivial cases. Instead of exhaustive testing, risk analysis and priorities should be used to focus testing efforts.
+
+3. Test early. To find defects early, testing activities shall be started as early as possible in the software life cycle and shall be focused on defined objectives. The cost of testing will be much less if the defects are found as early as possible rather than later in the development life cycle.
+
+4. Defect clustering. Testing efforts shall be focused proportionally to the expected and later observed defect density of modules. A small number of modules usually contains most of the defects discovered during pre-release testing. Use the Pareto principle of 80:20, that is 80 percent of defects are due to 20 percent of code. If we find one defect in a particular module/area there is pretty high chance of getting many more there.
+
+5. Pesticide Paradox. If the same kinds of tests are repeated again and again, eventually the same set of test cases will no longer be able to find any new bugs. To overcome this “Pesticide Paradox”, test cases need to be regularly reviewed and revised, and new and different tests need to be written to exercise different parts of the software or system to find potentially more defects.
+
+6. Testing is context dependent. Testing is done differently in different contexts. For example, safety – critical software is tested differently from an e-commerce site. Testing effort should be based on what is to be tested while testing focus will depend on what is more important for that type of application.
+
+7. Absence-of-errors fallacy. If the system built is unusable and does not fulfil the user’s needs and expectations then finding and fixing defects does not help. As said, if the product does not meet user’s requirements – explicitly mentioned and implicitly implied, that is if it is not fit for use, there is no point in testing it. 
+
+## 2. The Various Testing Layers Analogy 
 
 *Let's first get an overview of the various software testing practices by comparing with the building of a vehicle in a factory.*
 
@@ -41,28 +60,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **Regression Testing:** The car has been approved and is in production. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue. They now want to ensure that they have not created any side effects by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
 
-## 2. General Testing Principles 
 
-  - "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham
-  - Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
-
-* Principle 1: Testing shows presence of defects. Testing can show that defects are present, but cannot prove that there are no defects. In other words, one can never assume that there are no defects or the application is 100 percent bug free even if thorough testing is done.
-
-* Principle 2: Exhaustive testing is impossible. Testing everything (all combinations of inputs and preconditions) is not feasible except for trivial cases. Instead of exhaustive testing, risk analysis and priorities should be used to focus testing efforts.
-
-* Principle 3: Early testing. To find defects early, testing activities shall be started as early as possible in the software or system development life cycle, and shall be focused on defined objectives. The cost of testing quality will be much less if the defects are found as early as possible rather than later in the development life cycle.
-
-* Principle 4: Defect clustering. Testing effort shall be focused proportionally to the expected and later observed defect density of modules. A small number of modules usually contains most of the defects discovered during pre-release testing, or is responsible for most of the operational failures. The Pareto principle of 80:20 works here, that is 80 percent of defects are due to 20 percent of code! This information could prove to be very helpful while testing, if we find one defect in a particular module/area there is pretty high chance of getting many more there itself.
-
-* Principle 5: Pesticide Paradox. If the same kinds of tests are repeated again and again, eventually the same set of test cases will no longer be able to find any new bugs. To overcome this “Pesticide Paradox”, test cases need to be regularly reviewed and revised, and the new and different tests need to be written to exercise different parts of the software or system to find potentially more defects.
-
-* Principle 6: Testing is context dependent. Testing is done differently in different contexts. For example, safety – critical software is tested differently from an e-commerce site. Testing effort should be based on what is to be tested while testing focus will depend on what is more important for that type of application.
-
-* Principle 7: Absence-of-errors fallacy. If the system built is unusable and does not fulfil the user’s needs and expectations then finding and fixing defects does not help. As said, if the product does not meet user’s requirements – explicitly mentioned and implicitly implied, that is if it is not fit for use, there is no point in testing, finding defects and fixing it. 
-
-* Arrange / Act / Assert 
-
-* Testing frameworks - Jest 
 
 ## 3. Unit Testing 
 
