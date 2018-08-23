@@ -10,10 +10,11 @@ Objective: This document has been written to create itgroove standards surroundi
 - [2. The Various Testing Layers Analogy](#2-the-various-testing-layers-analogy)
 - [3. Unit Testing](#3-unit-testing)
   - [3.1 Unit Test Names](#31-unit-test-names)
-  - [3.2 Unit Testing Guidlines](#32-unit-testing-guidlines)
+  - [3.2 Unit Test Guidelines](#32-unit-test-guidelines)
 - [4. Integration Testing](#4-integration-testing)
-  - [4.1 Integration Teting Guidlines](#41-integration-teting-guidlines)
+  - [4.1 Integration Testing Guidelines](#41-integration-testing-guidelines)
 - [5. System Testing](#5-system-testing)
+  - [5.1 System Testing Guidelines](#51-system-testing-guidelines)
   - [6. End-To-End Testing](#6-end-to-end-testing)
 - [7. Load Testing](#7-load-testing)
 - [8. Acceptance Testing](#8-acceptance-testing)
@@ -49,7 +50,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **Integration tests:** When each individual module is combined with another, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of each component and whether both components are working together as expected.
 
-**System tests:** Once all the parts are assembled and the car is ready to drive, the manufacturer needs to check different aspects of the car as a whole in a controlled environment and confirm the requirements have been met. Can the car can be driven smoothly, break quickly, shifts gears fluidly? Is system functionality working properly - does the car accelerate quickly and corneer efficiently? Does the car pass basic saftey requirements like crashing and not hurting the occupants?
+**System tests:** Once all the parts are assembled and the car is ready to drive, the manufacturer needs to check different aspects of the car as a whole in a controlled environment and confirm the requirements have been met. Can the car can be driven smoothly, break quickly, shifts gears fluidly? Is system functionality working properly - does the car accelerate quickly and corner efficiently? Does the car pass basic saftey requirements like crashing and not hurting the occupants?
 
 **End-to-end tests:** The car is then driven in real-world scenarios - traffic, city streets, evasive maneovers, getting rear-ended, smooth roads vs bumpy roads, freezing / wet / hot weather. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring around the car under test.
 
@@ -59,65 +60,59 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **Regression Tests:** The car has been approved and is in production. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue. They now want to ensure that they have not created any side effects by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
 
-
-
 ## 3. Unit Testing 
 
-* Unit tests are short, quick and automated tests that ensure a specific part of your program works. They test specific functionality of a method or class that have a clear pass/fail condition. By writing unit tests, developers can make sure their code works, before passing it to QA for further testing.
-* The test only fails when a new bug is introduced into the system or requirements change. 
-* When the test fails, it should be easy to understand the reason for the failure. 
+* Unit tests are short, quick and automated tests that ensure a specific module in your program works. 
+* They will test specific functionality of a method or class and have a clear pass / fail condition. 
+* By writing unit tests, developers can make sure their code works and continues to work as they make changes to it in the future.
+* The test only fails when a new bug is introduced into the system or the requirements change. If it fails, it should be easy to understand why.
 
 ### 3.1 Unit Test Names
-* Use the scenario tested and expected result as part of of the test method name. State name of method being tested, inputs then outputs expected in the name. ex. Multiply_PassOnePositiveAndOneNegative_ReturnCorrectAnswer(); 
 
-### 3.2 Unit Testing Guidlines 
-1. Test only one thing per test to create a readable, reliable test. Do not create long, fragile and complex unit tests that test everything in a single method. 
-2. Unit tests should be self-sufficient. Great unit tests should be isolated and avoid dependencies (databases,environment settings etc.). A single test should not depend on other tests before it or the execution order of tests in general. Running the test 1000 times should return the same same result every time. Initialize and clean the test suite after every test run.   
-3. Test should be deterministic. It is unacceptable to have a test that passes only some of the time. A test should either pass all the time or fail until fixed! Having a unit test that only works some of the time is comperable to not having a test at all. Never use randomized data in a unit test as it creates uncertainty and makes it impossible to recreate the test.  
-4. Naming conventions. To know why the test failed, you need to be able to understand it at a glance. 
+*  State the name of the method being tested, inputs used and outputs expected.
+```
+ Multiply_PassOnePositiveAndOneNegative_ReturnCorrectAnswer(); 
+ FindMatchingNumber_PassUserInteger_ReturnMatchingInteger();
+```
+
+### 3.2 Unit Test Guidelines 
+
+1. Test only one thing per test to create a readable, reliable test. Do not create long and complex tests that test everything in a single method. 
+2. Unit tests should be self-sufficient, isolated and avoid dependencies (databases, environment settings). A single test should not depend on other tests before it or the execution order of tests in general. Initialize and clean the test suite after every test run.   
+3. Test should be deterministic. It's unacceptable to have a test that passes unreliably - a test should either pass all the time or fail until fixed. Running the test 1000 times should return the same same result every time. Never use randomized data in a unit test as it creates uncertainty and impossible to recreate the test.  
+4. Naming conventions. To know why the test failed, you need to be able to understand it at a glance. Use proper test naming conventions.  
 5. Do repeat yourself. In writing tests, readability is of high importance. If tests are similarily structured, it makes it very easy to read through a suite of tests and know exactly what each piece is testing. 
-6. Test results, not implementation. Having the inner workings of code change should not fail a unit test if the code produces the same output result. The unit test is not meant to test the inner workings of a method, just it's output. Implementaion naturally will grow and change as the project evolves. Private methods are part of the internal mechanics of a class and should only be tested if there is a very good reason to do so. Otherewise trivial refactoring can cause complication errors and failures in the tests. 
+6. Test results and not implementation. Changing the inner workings of a method should not fail a unit test if the code produces the same output result. Implementaion will naturally grow and change as the project evolves. Private methods are part of the internal mechanics of a class and should only be tested if there is a very good reason to do so. Otherewise trivial refactoring can cause complication errors and failures in the tests. 
 7. Avoid overspecification. While it seems logical to create well-defined, controlled, strict tests that observe exact process flow, it can "lock" the scenario under test and prevent it from changing in ways that do not affect the result. 
 8. Use an isolation framework. Dependencies hinder the ability to write unit tests. When dependencies need a complex setup for the automated test to run, the result is fragile tests. A mocking framework has a set of API's for creating and using fake objects without the user needing to maintain details of the specific test.  
 
-
 ## 4. Integration Testing
 
-* If a test is an integration test if it is using a database, network, external system (a queue or a mail server) or reads/writes file or performs other I/O. 
+* When combining two or more key modules together, integration tests should be written to ensure the modules all work fluidly together as a system. For example, an integration test could call a REST endpoint which calls a service which calls a test database to insert, then retrieve some information. If all the parts are working correctly, the integration test will pass. If any one of the modules is not configured properly, the test will fail and the developer will have to determine why.   
 
-* Integration testing is a testing approach to test the integration among two or more objects that should work and interact together. 
+### 4.1 Integration Testing Guidelines
 
-### 4.1 Integration Teting Guidlines
-
-Best practices for continuous integration testing. https://techbeacon.com/6-best-practices-integration-testing-ci-environment
 1. Run unit tests before integration tests. Unit tests indicate whether the inner workings of a code base are operating properly which is a pre-req to ensuring that the various modules will function properly together. 
 2. Don't test business logic with integration testing. Unit tests are for business logic and should be fast and not hinder a developers time. Intgeration testing takes longer and shouldn't be run as often as unit tests.
 3. Be clear about how integration is different than unit testing. 
-* Encapsulation - Unit tests are encapsulated while integration rely on external resources. 
-* Complexity - Unit tests target small and distinct parts of code while integration are mero complex and often require setup/teardown. 
+* Encapsulation - Unit tests are encapsulated while integration tests rely on external resources. 
+* Complexity - Unit tests target small and distinct parts of code while integration are more complex and often require a global setup / teardown. 
 * Test failure - When a unit test fails, there is clearly a bug in the business logic. When integration fails, it's likely environmental issues that need to be addressed.  
-4. Keep your testing suites separate. Integration tests should not be run together with unit tests. Unit tests need to be run frequently and should not be inconvenient to run. By keeping test suites separate, developers feel free to run quick unit tests. Long and tedious integration tests holud be reserved for the build server in a seperate suite to be run less frequently. 
-5. Log extensively. Since unit tests have specific scope and test small pieces of code, if they fail it is clear why. Integration tests can span several modules, devices and components. If these tests fails, it's more complex to understand why. Exhaustive logging is the only way to analyze a failure ad discover where the problem lies. Use a logging framework that can be controlled via flags that allow for minimal logging during passing tests and more when a test fails. 
-6. Don't stop at integration tests. Integration is simply how specific modules work together. The actual usage of your application goes beyond this involving virtualization tools, databases, mail servers, DNS servers, proxy servers etc.. The end users experience depends on both your application and how it's deployed in a production environment and works with all the other peripheral components. So once you have validated your high-level architecture with integration testing, make sure you run systems tests that accurately simulate your production environment. 
+4. Keep your testing suites separate. Integration tests should not be run together with unit tests. Unit tests need to be run frequently and should not be inconvenient to run. By keeping test suites separate, developers feel free to run quick unit tests. Long and tedious integration tests should be reserved for the build server in a seperate suite to be run less frequently. 
+5. Log extensively. Since unit tests have specific scope and test small pieces of code, it is clear why they fail. Integration tests can span several modules, devices and components. If these tests fails it's more complex to understand why. Exhaustive logging is the only way to analyze a failure and discover where the problem lies. Use a logging framework that can be controlled via flags that allow for minimal logging during passing tests and more when a test fails.  
 
 ## 5. System Testing 
 
-* Validates the software system but doesn't look outside of it.
-* Looks at system features (viewing each feature as a subsystem).
-* Follows integration testing. 
-* Is easier to automate thought manual system testing is still a widespread practice.
+* Once the application has been completed by having all its modules/components integrated, system tests are run which attempt to accurately reproduce your production environment while remaining in a safe, predictable development environment. The purpose of these tests are to validate functionality as a whole. They will test the various features as subsystems of an application and ensure user requirements have been met. It also tests how separte features interoperate as parts of a product.
 
-* System testing means testing the system as a whole. All the modules/components are intergrated in order to verify if the system works as expected or not. 
+### 5.1 System Testing Guidelines
 
-* If an app has three modules - A, B, C then testing done on any two modules, either A + B, B + C, C + A would be integration testing. Integrating all three modules and testing it as a complete system is termed as system testing. 
-
-* System testing precedes end-to-end testing. It checks whether the functionality of the system meets the requirments and it looks at how separate features interoperates as parts of a product. 
-
-* During the process of manufacturing a ballpoint pen, the cap, the body, the tail, the ink cartridge and the ballpoint are produced separately and unit tested separately. When two or more units are ready, they are assembled and Integration Testing is performed. When the complete pen is integrated, System Testing is performed.
+**FIND SOME GUIDELINES AND PUT HERE**
 
 ### 6. End-To-End Testing
 
-
+ The actual usage of your application goes beyond this involving virtualization tools, databases, mail servers, DNS servers, proxy servers etc..  So once you have validated your high-level architecture with integration testing, make sure you run systems tests that accurately simulate your production environment.
+The end users experience depends on both your application and how it's deployed in a production environment and works with all the other peripheral components.
 End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
 
 * End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
@@ -143,7 +138,7 @@ End-to-End testing is typically performed by a technical QA team, whereas User A
 
 ## 7. Load Testing
 
-Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
+* Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
 
 Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
 
