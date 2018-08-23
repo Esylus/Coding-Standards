@@ -15,7 +15,8 @@ Objective: This document has been written to create itgroove standards surroundi
   - [4.1 Integration Testing Guidelines](#41-integration-testing-guidelines)
 - [5. System Testing](#5-system-testing)
   - [5.1 System Testing Guidelines](#51-system-testing-guidelines)
-  - [6. End-To-End Testing](#6-end-to-end-testing)
+- [6. End-To-End Testing](#6-end-to-end-testing)
+- [6. End-To-End Testing Guidelines](#6-end-to-end-testing-guidelines)
 - [7. Load Testing](#7-load-testing)
 - [8. Acceptance Testing](#8-acceptance-testing)
 - [9. Regression Testing](#9-regression-testing)
@@ -66,6 +67,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * They will test specific functionality of a method or class and have a clear pass / fail condition. 
 * By writing unit tests, developers can make sure their code works and continues to work as they make changes to it in the future.
 * The test only fails when a new bug is introduced into the system or the requirements change. If it fails, it should be easy to understand why.
+* Unit testing is typically performed by the development team.
 
 ### 3.1 Unit Test Names
 
@@ -80,7 +82,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 1. Test only one thing per test to create a readable, reliable test. Do not create long and complex tests that test everything in a single method. 
 2. Unit tests should be self-sufficient, isolated and avoid dependencies (databases, environment settings). A single test should not depend on other tests before it or the execution order of tests in general. Initialize and clean the test suite after every test run.   
 3. Test should be deterministic. It's unacceptable to have a test that passes unreliably - a test should either pass all the time or fail until fixed. Running the test 1000 times should return the same same result every time. Never use randomized data in a unit test as it creates uncertainty and impossible to recreate the test.  
-4. Naming conventions. To know why the test failed, you need to be able to understand it at a glance. Use proper test naming conventions.  
+4. Use naming conventions. To know why the test failed, you need to be able to understand it at a glance.   
 5. Do repeat yourself. In writing tests, readability is of high importance. If tests are similarily structured, it makes it very easy to read through a suite of tests and know exactly what each piece is testing. 
 6. Test results and not implementation. Changing the inner workings of a method should not fail a unit test if the code produces the same output result. Implementaion will naturally grow and change as the project evolves. Private methods are part of the internal mechanics of a class and should only be tested if there is a very good reason to do so. Otherewise trivial refactoring can cause complication errors and failures in the tests. 
 7. Avoid overspecification. While it seems logical to create well-defined, controlled, strict tests that observe exact process flow, it can "lock" the scenario under test and prevent it from changing in ways that do not affect the result. 
@@ -88,7 +90,8 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 ## 4. Integration Testing
 
-* When combining two or more key modules together, integration tests should be written to ensure the modules all work fluidly together as a system. For example, an integration test could call a REST endpoint which calls a service which calls a test database to insert, then retrieve some information. If all the parts are working correctly, the integration test will pass. If any one of the modules is not configured properly, the test will fail and the developer will have to determine why.   
+* When combining two or more key modules together, integration tests should be written to ensure the modules all work fluidly together as a system. For example, an integration test could call a REST endpoint which calls a service which calls a test database to insert, then retrieve some information. If all the parts are working correctly, the integration test will pass. If any one of the modules is not configured properly, the test will fail and the developer will have to determine why.  
+* Integration testing is typically performed by the development team or a closely related QA team. 
 
 ### 4.1 Integration Testing Guidelines
 
@@ -104,37 +107,28 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 ## 5. System Testing 
 
 * Once the application has been completed by having all its modules/components integrated, system tests are run which attempt to accurately reproduce your production environment while remaining in a safe, predictable development environment. The purpose of these tests are to validate functionality as a whole. They will test the various features as subsystems of an application and ensure user requirements have been met. It also tests how separte features interoperate as parts of a product.
+* System testing is typically performed by the development team or a closely related QA team.
 
 ### 5.1 System Testing Guidelines
 
 **FIND SOME GUIDELINES AND PUT HERE**
 
-### 6. End-To-End Testing
+## 6. End-To-End Testing
 
- The actual usage of your application goes beyond this involving virtualization tools, databases, mail servers, DNS servers, proxy servers etc..  So once you have validated your high-level architecture with integration testing, make sure you run systems tests that accurately simulate your production environment.
-The end users experience depends on both your application and how it's deployed in a production environment and works with all the other peripheral components.
-End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
-
-* End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
-
-* Validates both the software system, all interconnected systems and external interfaces.
-* Looks at backend and hardware to cover all functionality that the user experiences when using an application.
-* Follows system testing.
-* Manual end-to-end testing is more common due to the need of dealing with external interfaces. 
-
-* End-to-end testing is the verification of a fully functional system's ability to respond to its user interface with appropriate activity at all the extremities of its connections.
-
-* Software systems are composed of a multitude of functional modules that must communicate command and data information to each other. Even if the interfaces into and out of a code module have been verified to meet their specifications, they may encounter content and timing issues in real world usage. 
-
+* The actual usage of an application goes beyond system testing by involving virtualization tools, databases, mail servers, DNS servers, proxy servers etc.. Software systems are composed of a multitude of functional modules that must communicate command and data information to each other. Even if the interfaces into and out of a code module have been verified to meet their specifications, they may encounter content and timing issues in real world usage.  
+* Thus once the high-level architecture is validated through integration and system testing, End-to-End tests are used to test the application within its final production environment.
 * End-to-end tests verify the use of the system controls to retrieve, manipulate and store data results in the intended activities at the database and API points of the system. They test message content integrity (did the the correct info get transferred throughout the chain) and operational timing (did content pieces/control get where they needed to be in the proper order). 
-
+* End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
+* End-to-End testing is typically performed by a technical QA team.
 * The downside is cost. With its extreme setup and overall control and monitoring requirements, this is easily the most expensive and time-consuming software quality test method. 
 
+## 6. End-To-End Testing Guidelines
+
+* End-To-End tests should validate both the software system, all interconnected systems and external interfaces. They should look at backend and hardware to cover all functionality that the user experiences when using an application. 
+* Manual end-to-end testing is more common due to the need of dealing with external interfaces. 
 * End-to-end testing can be automated but the effort to do this is both extensive and transitory. Writing test scripts to perform a thorough test is typically as expensive as simply spending the hours to manually perform it and system changes (bug fixes, new features) require script re-writes to match.
 
-
-* Here is the first general guideline
-* Here is the second general guideline
+** MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0 **
 
 ## 7. Load Testing
 
@@ -151,6 +145,7 @@ Load testing best practices:
 End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
 
 * Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
+* User Acceptance Testing is typically performed by a business user.
 
 User Acceptance Test is a phase in a typical software development process.
 
