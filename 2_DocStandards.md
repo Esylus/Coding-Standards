@@ -1,10 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  
+
+- [itgroove Documentation Standards](#itgroove-documentation-standards)
+  - [1. Types Of Documentation](#1-types-of-documentation)
+  - [2. Project Documentation Requirements](#2-project-documentation-requirements)
+  - [3. Documentation.js](#3-documentationjs)
+    - [3.1 Common tags](#31-common-tags)
+    - [3.2 Installation](#32-installation)
+    - [2.3 Usage Examples](#23-usage-examples)
+  - [3.0 Swagger](#30-swagger)
+  - [4.0 GraphQL Documentation](#40-graphql-documentation)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # itgroove Documentation Standards
 
 Objective: The purpose of this style guide is to create standards for itGroove support documentation. 
 
 <!-- Table of contents -->
 
-## 1. Documentation Types Overview 
+## 1. Types Of Documentation  
 
 Project Documentation: 
 * All projects require a readme file to explain the basics of getting up and running with the app. A template is supplied in this document as a starting point.  
@@ -102,7 +118,7 @@ Any special acknowledgemnets that could include:
 * Inspiration
 * etc
 
-## 2. Documentation.js
+## 3. Documentation.js
 
 * Documentation.js, using the syntax of JSDoc, lets you specify absolutely everything about your code: use @name to say what something is called, @kind for whether it's a function or a class, @param for its parameters, and so on. But writing all of that explicitly is tedious, so where it can, `documentation` automatically populates @name, @kind, and @memberof tags based on its reading of the code.
 * Syntax for comments in code begin with /** and end with a */. This is required syntax for documentation.js to identify the comments and gather them for the documentation output. 
@@ -125,7 +141,7 @@ function addOne(age) {
 * Any number is a description of the input.
 * Returns is a return value. These won't have a name, just a description.
 
-### 2.1 Common tags
+### 3.1 Common tags
 
 [usejsdoc.com](http://usejsdoc.org/index.html) covers all available tags in the
 JSDoc syntax, and is a great reference.
@@ -141,7 +157,7 @@ The most common tags are listed below.
 * @example - you can use the @example tag to add inline code examples with your
   documentation
 
-### 2.2 Installation
+### 3.2 Installation
 
 Globally install `documentation` using the [npm](https://www.npmjs.com/) package manager:
 
@@ -174,9 +190,9 @@ Commands:
   lint [input..]    check for common style and uniformity mistakes
   readme [input..]  inject documentation into your README.md
 
-## Swagger 
+## 3.0 Swagger 
 
-## GraphQL Documentation
+## 4.0 GraphQL Documentation
 
 
 
