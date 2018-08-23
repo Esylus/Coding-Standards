@@ -1,6 +1,6 @@
 # itgroove Testing Standards
 
-Objective: This document has been written to create standards surrounding testing of code.
+Objective: This document has been written to create itgroove standards surrounding testing of code.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -41,23 +41,23 @@ Objective: This document has been written to create standards surrounding testin
 
 ## 2. The Various Testing Layers Analogy 
 
-*Let's first get an overview of the various software testing practices by comparing with the building of a vehicle in a factory.*
+*There are many different types of testing that get employed on a piece of software. Let's first get an overview of the various software testing practices by comparing with the building of a vehicle in a factory.*
 
 A car manufacturer does not produce a car as a whole car all at once. Each component of the car is manufactured separately, like seats, steering, mirrors, breaks, cables, the engine, car frame, wheels etc. The manufacturer performs many types of tests along the way to quickly find and address any issues that present during the build. 
 
-**Unit testing:** After manufacturing each seperate module, the module is tested in isolation as to whether it is working reliably the way it was designed to work.
+**Unit tests:** After manufacturing each seperate module, the module is tested in isolation as to whether it is working reliably the way it was designed to work.
 
-**Integration testing:** When each individual module is combined with another, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of each component and whether both components are working together as expected.
+**Integration tests:** When each individual module is combined with another, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of each component and whether both components are working together as expected.
 
-**System testing:** Once all the parts are assembled and the car is ready to drive, the manufacturer needs to check different aspects of the car as a whole in a controlled environment and confirm the requirements have been met. Can the car can be driven smoothly, break quickly, shifts gears fluidly? Is system functionality working properly - does the car accelerate quickly and corneer efficiently? Does the car pass basic saftey requirements like crashing and not hurting the occupants?
+**System tests:** Once all the parts are assembled and the car is ready to drive, the manufacturer needs to check different aspects of the car as a whole in a controlled environment and confirm the requirements have been met. Can the car can be driven smoothly, break quickly, shifts gears fluidly? Is system functionality working properly - does the car accelerate quickly and corneer efficiently? Does the car pass basic saftey requirements like crashing and not hurting the occupants?
 
-**End-to-end testing:** The car is then driven in real-world scenarios - traffic, city streets, evasive maneovers, getting rear-ended, smooth roads vs bumpy roads, freezing / wet / hot weather. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring around the car under test.
+**End-to-end tests:** The car is then driven in real-world scenarios - traffic, city streets, evasive maneovers, getting rear-ended, smooth roads vs bumpy roads, freezing / wet / hot weather. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring around the car under test.
 
-**Load testing:** The engineers want to know where the point of failure is for the car. They drive it faster then it was designed to drive and let the engine run hotter then it is supposed to. The purpose of these tests is to find the products breaking point so they understand exactly how far a given car can be pushed and explore the outer limits of performance capacity. 
+**Load tests:** The engineers want to know where the point of failure is for the car. They drive it faster then it was designed to drive and let the engine run hotter then it is supposed to. The purpose of these tests is to find the products breaking point so they understand exactly how far a given car can be pushed and explore the outer limits of performance capacity. 
 
-**Acceptance Testing:** The car then needs to be driven by real-world users in a focus group to find out how consumers feel about the capabilities of the product and get feedback. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?    
+**Acceptance Tests:** The car then needs to be driven by real-world users in a focus group to find out how consumers feel about the capabilities of the product and get feedback. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?    
 
-**Regression Testing:** The car has been approved and is in production. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue. They now want to ensure that they have not created any side effects by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
+**Regression Tests:** The car has been approved and is in production. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue. They now want to ensure that they have not created any side effects by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
 
 
 
