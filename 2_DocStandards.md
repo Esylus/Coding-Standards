@@ -6,15 +6,14 @@ Objective: This document has been written to create standards for itGroove suppo
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
-- [itgroove Documentation Standards](#itgroove-documentation-standards)
-  - [1. Types Of Documentation](#1-types-of-documentation)
-  - [2. Project Documentation Requirements](#2-project-documentation-requirements)
-  - [3. Documentation.js](#3-documentationjs)
-    - [3.1 Common tags](#31-common-tags)
-    - [3.2 Installation](#32-installation)
-    - [2.3 Usage Examples](#23-usage-examples)
-  - [3.0 Swagger](#30-swagger)
-  - [4.0 GraphQL Documentation](#40-graphql-documentation)
+- [1. Types Of Documentation](#1-types-of-documentation)
+- [2. Project Documentation Requirements](#2-project-documentation-requirements)
+- [3. Documentation.js](#3-documentationjs)
+  - [3.1 Common tags](#31-common-tags)
+  - [3.2 Installation](#32-installation)
+  - [2.3 Usage Examples](#23-usage-examples)
+- [3.0 Swagger](#30-swagger)
+- [4.0 GraphQL Documentation](#40-graphql-documentation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

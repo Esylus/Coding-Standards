@@ -6,20 +6,19 @@ Objective: This document has been written to create standards surrounding testin
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
-- [itgroove Testing Standards](#itgroove-testing-standards)
-  - [1. General Testing Principles](#1-general-testing-principles)
-  - [1. VSTS testing branch](#1-vsts-testing-branch)
-  - [2. Unit Testing](#2-unit-testing)
-    - [Test Names](#test-names)
-    - [Unit Testing Guidlines](#unit-testing-guidlines)
-    - [2.1 Integration Testing](#21-integration-testing)
-    - [2.1 System Testing](#21-system-testing)
-    - [2.2 End-To-End Testing](#22-end-to-end-testing)
-    - [2.3 Regression Testing](#23-regression-testing)
-    - [Acceptance Testing](#acceptance-testing)
-    - [Acceptance Testing vs End-to-end testing](#acceptance-testing-vs-end-to-end-testing)
-    - [2.4 3rd Party Testing](#24-3rd-party-testing)
-    - [2.5 Load Testing](#25-load-testing)
+- [1. General Testing Principles](#1-general-testing-principles)
+- [1. VSTS testing branch](#1-vsts-testing-branch)
+- [2. Unit Testing](#2-unit-testing)
+  - [Test Names](#test-names)
+  - [Unit Testing Guidlines](#unit-testing-guidlines)
+  - [2.1 Integration Testing](#21-integration-testing)
+  - [2.1 System Testing](#21-system-testing)
+  - [2.2 End-To-End Testing](#22-end-to-end-testing)
+  - [2.3 Regression Testing](#23-regression-testing)
+  - [Acceptance Testing](#acceptance-testing)
+  - [Acceptance Testing vs End-to-end testing](#acceptance-testing-vs-end-to-end-testing)
+  - [2.4 3rd Party Testing](#24-3rd-party-testing)
+  - [2.5 Load Testing](#25-load-testing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

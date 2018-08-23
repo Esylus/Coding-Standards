@@ -7,7 +7,6 @@ Objective: This document has been written to create standards to adhere to while
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents** 
 
-- [itgroove Change Control and Deployment Standards](#itgroove-change-control-and-deployment-standards)
   - [1. General Deployment Strategy](#1-general-deployment-strategy)
   - [VSTS Continuous Integration Strategy](#vsts-continuous-integration-strategy)
   - [VSTS Continuous Delivery Strategy](#vsts-continuous-delivery-strategy)
