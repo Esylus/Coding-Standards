@@ -7,19 +7,17 @@ Objective: This document has been written to create standards surrounding testin
 **Table of Contents**  
 
 - [1. The Various Testing Layers Analogy](#1-the-various-testing-layers-analogy)
-- [1. General Testing Principles](#1-general-testing-principles)
-- [1. VSTS testing branch](#1-vsts-testing-branch)
-- [2. Unit Testing](#2-unit-testing)
-  - [Test Names](#test-names)
-  - [Unit Testing Guidlines](#unit-testing-guidlines)
-  - [2.1 Integration Testing](#21-integration-testing)
-  - [2.1 System Testing](#21-system-testing)
-  - [2.2 End-To-End Testing](#22-end-to-end-testing)
-  - [2.3 Regression Testing](#23-regression-testing)
-  - [Acceptance Testing](#acceptance-testing)
-  - [Acceptance Testing vs End-to-end testing](#acceptance-testing-vs-end-to-end-testing)
-  - [2.4 3rd Party Testing](#24-3rd-party-testing)
-  - [2.5 Load Testing](#25-load-testing)
+- [2. General Testing Principles](#2-general-testing-principles)
+- [3. Unit Testing](#3-unit-testing)
+  - [3.1 Unit Test Names](#31-unit-test-names)
+  - [3.2 Unit Testing Guidlines](#32-unit-testing-guidlines)
+- [4. Integration Testing](#4-integration-testing)
+  - [4.1 Integration Teting Guidlines](#41-integration-teting-guidlines)
+- [5. System Testing](#5-system-testing)
+  - [6. End-To-End Testing](#6-end-to-end-testing)
+- [7. Load Testing](#7-load-testing)
+- [8. Acceptance Testing](#8-acceptance-testing)
+- [9. Regression Testing](#9-regression-testing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -43,7 +41,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **Regression Testing:** The car has been approved and is in production. In the future, the manufacturer finds out about an issue within the motor. They go back to their design and correct the issue. They now want to ensure that they have not created any side effects by fixing the motor. They procede to run all the tests again to ensure the new changes have not negatively effected any other aspects of the car. 
 
-## 1. General Testing Principles 
+## 2. General Testing Principles 
 
   - "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham
   - Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
@@ -66,21 +64,16 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 * Testing frameworks - Jest 
 
-## 1. VSTS testing branch 
-
-* The VSTS testing branch... 
-
-
-## 2. Unit Testing 
+## 3. Unit Testing 
 
 * Unit tests are short, quick and automated tests that ensure a specific part of your program works. They test specific functionality of a method or class that have a clear pass/fail condition. By writing unit tests, developers can make sure their code works, before passing it to QA for further testing.
 * The test only fails when a new bug is introduced into the system or requirements change. 
 * When the test fails, it should be easy to understand the reason for the failure. 
 
-### Test Names
+### 3.1 Unit Test Names
 * Use the scenario tested and expected result as part of of the test method name. State name of method being tested, inputs then outputs expected in the name. ex. Multiply_PassOnePositiveAndOneNegative_ReturnCorrectAnswer(); 
 
-### Unit Testing Guidlines 
+### 3.2 Unit Testing Guidlines 
 1. Test only one thing per test to create a readable, reliable test. Do not create long, fragile and complex unit tests that test everything in a single method. 
 2. Unit tests should be self-sufficient. Great unit tests should be isolated and avoid dependencies (databases,environment settings etc.). A single test should not depend on other tests before it or the execution order of tests in general. Running the test 1000 times should return the same same result every time. Initialize and clean the test suite after every test run.   
 3. Test should be deterministic. It is unacceptable to have a test that passes only some of the time. A test should either pass all the time or fail until fixed! Having a unit test that only works some of the time is comperable to not having a test at all. Never use randomized data in a unit test as it creates uncertainty and makes it impossible to recreate the test.  
@@ -91,11 +84,13 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 8. Use an isolation framework. Dependencies hinder the ability to write unit tests. When dependencies need a complex setup for the automated test to run, the result is fragile tests. A mocking framework has a set of API's for creating and using fake objects without the user needing to maintain details of the specific test.  
 
 
-### 2.1 Integration Testing
+## 4. Integration Testing
 
 * If a test is an integration test if it is using a database, network, external system (a queue or a mail server) or reads/writes file or performs other I/O. 
 
 * Integration testing is a testing approach to test the integration among two or more objects that should work and interact together. 
+
+### 4.1 Integration Teting Guidlines
 
 Best practices for continuous integration testing. https://techbeacon.com/6-best-practices-integration-testing-ci-environment
 1. Run unit tests before integration tests. Unit tests indicate whether the inner workings of a code base are operating properly which is a pre-req to ensuring that the various modules will function properly together. 
@@ -108,7 +103,7 @@ Best practices for continuous integration testing. https://techbeacon.com/6-best
 5. Log extensively. Since unit tests have specific scope and test small pieces of code, if they fail it is clear why. Integration tests can span several modules, devices and components. If these tests fails, it's more complex to understand why. Exhaustive logging is the only way to analyze a failure ad discover where the problem lies. Use a logging framework that can be controlled via flags that allow for minimal logging during passing tests and more when a test fails. 
 6. Don't stop at integration tests. Integration is simply how specific modules work together. The actual usage of your application goes beyond this involving virtualization tools, databases, mail servers, DNS servers, proxy servers etc.. The end users experience depends on both your application and how it's deployed in a production environment and works with all the other peripheral components. So once you have validated your high-level architecture with integration testing, make sure you run systems tests that accurately simulate your production environment. 
 
-### 2.1 System Testing 
+## 5. System Testing 
 
 * Validates the software system but doesn't look outside of it.
 * Looks at system features (viewing each feature as a subsystem).
@@ -123,10 +118,10 @@ Best practices for continuous integration testing. https://techbeacon.com/6-best
 
 * During the process of manufacturing a ballpoint pen, the cap, the body, the tail, the ink cartridge and the ballpoint are produced separately and unit tested separately. When two or more units are ready, they are assembled and Integration Testing is performed. When the complete pen is integrated, System Testing is performed.
 
+### 6. End-To-End Testing
 
 
-
-### 2.2 End-To-End Testing
+End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
 
 * End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
 
@@ -149,7 +144,30 @@ Best practices for continuous integration testing. https://techbeacon.com/6-best
 * Here is the first general guideline
 * Here is the second general guideline
 
-### 2.3 Regression Testing 
+## 7. Load Testing
+
+Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
+
+Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
+
+Load testing best practices:
+1- Clear browser cache and cookies before recording traffic. 
+2- Start recording a new scenario from the 
+
+## 8. Acceptance Testing
+
+End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user.
+
+* Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
+
+User Acceptance Test is a phase in a typical software development process.
+
+From the other side, End-To-End test is one of the approaches to testing the complex applications which involves all layers of the application to interact with each other during test execution.
+
+It means that you can execute End-to-End test in User Acceptance Test phase, and you can't consider those two terms as one, that has the same meaning.
+ The perspectives are different, and while some duplication of effort could happen, the defects identified may vary.
+
+## 9. Regression Testing 
 
 * Regression : "when you fix one bug, you introduce several new bugs". 
 
@@ -179,29 +197,3 @@ Best practices for continuous integration testing. https://techbeacon.com/6-best
 * Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
 * Take a look at your test cases and determine if you will have to do a full, partial or unit regression. Identify the ones that will fit your situation
 * Schedule the time and test away!
-
-### Acceptance Testing 
-
-### Acceptance Testing vs End-to-end testing 
-
-User Acceptance Test is a phase in a typical software development process.
-
-From the other side, End-To-End test is one of the approaches to testing the complex applications which involves all layers of the application to interact with each other during test execution.
-
-It means that you can execute End-to-End test in User Acceptance Test phase, and you can't consider those two terms as one, that has the same meaning.
-
-End-to-End testing is typically performed by a technical QA team, whereas User Acceptance Testing is typically performed by a business user. The perspectives are different, and while some duplication of effort could happen, the defects identified may vary.
-
-### 2.4 3rd Party Testing
-
-* Project is submitted to a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
-
-### 2.5 Load Testing 
-
-Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions. 
-
-Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
-
-Load testing best practices:
-1- Clear browser cache and cookies before recording traffic. 
-2- Start recording a new scenario from the 
