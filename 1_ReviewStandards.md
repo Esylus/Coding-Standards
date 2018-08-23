@@ -9,13 +9,13 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 - [0. Code Review Terms](#0-code-review-terms)
 - [1. Code Review Overview](#1-code-review-overview)
 - [2. Code Review Procedure](#2-code-review-procedure)
-- [3. itGroove Style Guide / Coding Standards](#3-itgroove-style-guide--coding-standards)
+- [3. itGroove Style Guide](#3-itgroove-style-guide)
 - [4. Authors Responsibilities](#4-authors-responsibilities)
-- [5. Author checklist](#5-author-checklist)
+- [5. Author Checklist](#5-author-checklist)
 - [6. Reviewers Responsibilities](#6-reviewers-responsibilities)
 - [7. Reviewer Checklist](#7-reviewer-checklist)
-- [8. Conflict resolution & stalemates](#8-conflict-resolution--stalemates)
-- [9. Helpful tools in code review](#9-helpful-tools-in-code-review)
+- [8. Conflict Resolution & Stalemates](#8-conflict-resolution--stalemates)
+- [9. Helpful Tools](#9-helpful-tools)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -49,7 +49,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 6. Reviewer verifies that the author has addressed the note properly then signs off on the changelist.  
 7. Code is pulled into codebase.
 
-## 3. itGroove Style Guide / Coding Standards
+## 3. itGroove Style Guide
 
 * It is non-productive to argue about different style preferences as there is no ultimate correct way to write code. 
 * An itGroove style guide has been implemented to maximize code readability and maintainability.
@@ -66,7 +66,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Follow up on feedback. Make sure you revise what was discussed in your code review.
 * If you don't agree with a given comment, respectfully challenge it. Productive discussions are beneficial for all.  
 
-## 5. Author checklist
+## 5. Author Checklist
 
 1. Have I ensured the code conforms to the itGroove style guide? 
 2. Does my code compile without errors and run without exceptions?
@@ -98,7 +98,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 10. Is this code idiomatic, taking full advantage of the language, frameworks, and tools that we use?
 11. Is anything here a re-implementation of existing functionality the developer may not be aware of?
 
-## 8. Conflict resolution & stalemates
+## 8. Conflict Resolution & Stalemates
 
 * Are requested changes and notes per review round not trending downwards? 
 * Is there lots of pushback or an unusually high number of notes?
@@ -111,7 +111,7 @@ Objective: The purpose of this style guide is to create standards to adhere to w
 * Escalate - Do you need to look to a higher power in the company to solve the stalemate? 
 * After a stalemate - take some space and have a break. Discuss with a manager. Study conflict resolution. Reconnect, talk through what happened, reconcile.  
 
-## 9. Helpful tools in code review
+## 9. Helpful Tools
 
 1. Unit Tests / Integration tests - to ensure code behaves as expected and hasn't broken anything.
 2. Continuous Integration - to ensure code builds.
