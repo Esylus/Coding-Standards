@@ -51,24 +51,15 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ## 2. Comments
 
-We want code documentation to have some rules without being too suffocating. This means:
-- Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
-- Functions that aren't self-explained will need a comment block on them.
-- Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
-
-1. Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
-2. Every comment represents a failure to express yourself clearly in code.
-3. Since devs can't be relied on to always accurately update comments, inevitably code comments evolve into lies.
-
+**We want code documentation to have some rules without being too suffocating. This means:**
+* Files should have a comment block at the top with a quick description and anything a reader might need to know. Not necessary for files like schemas and tests.
+* Functions that aren't self-explained will need a comment block on them.
+* Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
+* Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
+* Since devs can't be relied on to always accurately update comments, inevitably code comments become inaccurate.
 * Avoid obvious, self-evident and unnecessary comments. Never state the obvious!
-* Adding a comment at beginning of each block of code emphasizes visual separation.
-* Comment code according to the JSDocs markup language -- MORE DETAIL NEEDED HERE -- 
-* If you need comments to explain the various parts of a function, perhaps you should break into sub-functions.
-* Short comments of 1 - 2 lines should use // where possible rather then /* */ to make commenting out large sections easier when debugging.
-* Comments have their place - explain why error got tripped! If error will throw a bunch of complicated error code, have explanation so co-worker doesn't have to decipher it.
-* Code that can't be made obvious (obscure bug, unlikely condition, something edge case) def should be commented. 
-* comment the INTENT of the code, why it is doing something rather then what it is doing
-* Comment to explain purpose of a class, function, endpoint.
+* Multi-line comments should use // rather then /* */ to make commenting out large sections of code easier when debugging.
+* Comment the INTENT of the code, why it is doing something rather then what it is doing
 
 ## Documentation.js
 
@@ -220,7 +211,6 @@ itGroove has chosen the "documentation.js" framework to document it's code. All 
 ### General Assumptions 
 * Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
 * Consider arrays as immutable by default after creation.
-
 
 ### Classes 
 * For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
