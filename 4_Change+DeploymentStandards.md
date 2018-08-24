@@ -25,11 +25,14 @@ Objective: This document has been written to create standards to adhere to while
 **Continuous Delivery to Azure**
 * itgroove has configured full CI/CD pipelines to various Azure services such as websites, docker containers, virtual machines and more.
 * More about this 
+* More about this 
 
 **VSTS Branching Strategy**
 * More about this
+* More about this
 
 **Semantic Versioning**
+* More about this
 * More about this
 
 ## 2. VSTS Continuous Integration
@@ -77,7 +80,7 @@ Objective: This document has been written to create standards to adhere to while
 * `next` serves as our stable branch, while `master` reflects what is currently on the production site.
 * `test` is deployed to a test resource where it will undergo various forms of testing. 
 
-* itgroove brancghing procedure: 
+* itgroove branching procedure: 
 
 1. Branch off the `integration` branch (or an existing branch) with the following name:
 -- `feature/{UserStory}`
