@@ -158,16 +158,16 @@ Load testing best practices:
 
 ### 8.2 Acceptance Testing Deliverables
 
-1. Test plan - This outlines the testing strategy.
-2. Acceptance test cases - The test cases help the team to effectively test the application in the acceptance test environment.
-3. Test Results and error reports - This is a log of all the test cases executed and the actual results.
-3. Installation instructions - This is a document which helps to install the sysetm in production environments.
-4. Documentation materials - Tested and updated user documentation and training materials are finalized during user acceptance testing. 
-5. User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests with acceptable margins.
+* Test plan - To outline the testing strategy.
+* Test cases - The test cases help the team to effectively test the application in the acceptance test environment.
+* Results & Error Reports - This is a log of all the test cases executed and the actual results.
+* Installation Instructions - This is a document which helps to install the sysetm in production environments.
+* Documentation Materials - Tested and updated user documentation and training materials are finalized during user acceptance testing. 
+* User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests with acceptable margins.
 
 ## 9. Regression Testing 
 
-**Because when you fix one bug, you introduce several new bugs** 
+**Because when you fix one bug, you could introduce several new bugs** 
 
 * Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. It ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change.
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious.
