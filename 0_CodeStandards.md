@@ -8,8 +8,7 @@ Objective: This document has been written to create coding style standards to ad
 
 - [1. itgroove Style Guide Overview](#1-itgroove-style-guide-overview)
 - [2. Comments](#2-comments)
-- [Documentation.js](#documentationjs)
-- [3. Naming](#3-naming)
+- [3. General Naming Scheme](#3-general-naming-scheme)
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
   - [3.3 Class Names](#33-class-names)
