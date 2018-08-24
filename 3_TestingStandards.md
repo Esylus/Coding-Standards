@@ -138,8 +138,8 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 ### 7.1 Load Testing Guidlines
 
 Load testing best practices:  
-1- Clear browser cache and cookies before recording traffic.   
-2- Start recording a new scenario from the   
+1. Clear browser cache and cookies before recording traffic.   
+2. Start recording a new scenario from the   
 
 **FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
@@ -171,12 +171,11 @@ Load testing best practices:
 
 * Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. It ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change.
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious.
-* Regression means retesting the unchanged parts of the application as well as the modified parts. 
- 
-* Take a look at your test cases and determine if you will have to do a full, partial or unit regression. 
+* Regression means retesting the unchanged parts of the application as well as the modified parts.
+* Take a look at your test cases and determine if you will have to do a full, partial or unit regression.
 * Unit regression - Done during the unit testing phase where code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
-* Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code. 
-* Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
+* Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code.
+* Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code.
 
 ### 9.1 Regression Testing Guidlines 
 
