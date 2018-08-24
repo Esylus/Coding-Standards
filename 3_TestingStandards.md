@@ -67,7 +67,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 * Unit tests are short, quick and automated tests that ensure a specific module in your program works. 
 * They will test specific functionality of a method or class and have a clear pass / fail condition. 
-* With unit tests, developers can make sure their code works and continues to work as they make changes to it in the future.
+* With unit tests, developers ensure their code works and continues to work as they make changes to it in the future.
 * The test only fails when a new bug is introduced or requirements change. If it fails, it should be easy to understand why.
 * Unit testing is typically performed by the development team.
 
