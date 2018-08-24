@@ -176,7 +176,7 @@ documentation serve app.js
 * The role of documentation with a REST API is to explain the individual endpoints, what function they perform, and the parameters a developer can pass to them.  
 * The usage of Swagger within itGroove projects is currently being investigated with usage details forthcoming. 
 
-**CREATE SOME SWAGGER GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
+**CREATE SOME SWAGGER GUIDELINES AND PUT HERE AFTER LODGELINK2.0 APPLICATION**
 
 ## 5.0 GraphQL Documents
 
@@ -185,7 +185,7 @@ documentation serve app.js
 * This autogenerates explanatory text based on the three main entry types into a GraphQL schema: Query, Mutation, and Subscription.
 * GraphQL offers a lot of positives on the documentation front for simple APIs. For example, keeping documentation in sync with API changes is easy, as once a field, type, or query changes in code, so do the docs.
 
-**CREATE SOME GRAPHQL GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
+**CREATE SOME GRAPHQL GUIDELINES AND PUT HERE AFTER LODGELINK2.0 APPLICATION**
 
 
 
