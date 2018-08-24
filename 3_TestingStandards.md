@@ -128,7 +128,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Manual end-to-end testing is more common due to the need of dealing with external interfaces. 
 * End-to-end testing can be automated but the effort to do this is both extensive and transitory. Writing test scripts to perform a thorough test is typically as expensive as simply spending the hours to manually perform it and system changes (bug fixes, new features) require script re-writes to match.
 
-**MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0**
+**MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0**  
 **FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
 ## 7. Load Testing
@@ -158,29 +158,27 @@ Load testing best practices:
 ## 9. Regression Testing 
 
 * Regression : "when you fix one bug, you introduce several new bugs". 
+
 * Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. Ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious one too.
-* Regression means retesting the unchanged parts of the application. 
+* Regression means retesting the unchanged parts of the application as well as the modified parts. 
 * Regression tests methodology - Re-run the previous tests. Compare the current results with previously executed test results. 
+
+* Various types of regression tests: 
+1. Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on teh unit to be tested are blocked so that the unit can betested individually without any discrepency.
+2. Partual Regression - done to verify that thet code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged oralready existing code. 
+3. Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
+
+### 9.1 Regression Testing Guidlines 
 
 * Understand what kind of changes have been made to the software
 * Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
 * Take a look at your test cases and determine if you will have to do a full, partial or unit regression. Identify the ones that will fit your situation
 * Schedule the time and test away!s
 
-
-* Various types of regression tests: 
-  1- Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on teh unit to be tested are blocked so that the unit can be tested individually without any discrepency.
-
-  2- Partual Regression - done to verify that thet code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code. 
-
-  3- Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
-
-### 9.1 Regression Testing Guidlines 
-
 * Process as outlined in https://www.softwaretestinghelp.com/regression-testing-tools-and-methods/
-  1- Prepare a Test suite for Regression considering the points mentioned in “How to select Regression Test suite”?
-  2- Automate all the test cases of the test suite.
-  3- Update the Regression suite whenever it is required like if any new defect which is not covered in the test case is found, and a test case for the same should be updated in the test suite so that the testing is not missed for the same next time. Regression test suite should be managed properly by continuously updating the test cases.
-  4- Execute the Regression test cases whenever there is any change in the code, the bug is fixed, new functionality is added, an enhancement to the existing functionality is done etc.
-  5- Create a test execution Report which includes Pass/Fail status of the executed test cases.
+1. Prepare a Test suite for Regression considering the points mentioned in “How to select Regression Test suite”?
+2. Automate all the test cases of the test suite.
+3. Update the Regression suite whenever it is required like if any new defect which is not covered in the test case is found, and a test case for the same should be updatedin the test suite so that the testing is not missed for the same next time. Regression test suite should be managed properly by continuously updating the test cases.
+4. Execute the Regression test cases whenever there is any change in the code, the bug is fixed, new functionality is added, an enhancement to the existing functionality isdone etc.
+5. Create a test execution Report which includes Pass/Fail status of the executed test cases.
