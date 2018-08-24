@@ -8,14 +8,11 @@ Objective: This document has been written to create standards to adhere to while
 **Table of Contents** 
 
   - [1. General Deployment Strategy](#1-general-deployment-strategy)
-  - [VSTS Continuous Integration Strategy](#vsts-continuous-integration-strategy)
-  - [VSTS Continuous Delivery Strategy](#vsts-continuous-delivery-strategy)
-  - [VSTS Branching strategy](#vsts-branching-strategy)
-    - [7. Database Changes](#7-database-changes)
-    - [Making Database Changes](#making-database-changes)
-  - [Commitizen + Semantic Versioning](#commitizen--semantic-versioning)
-  - [How does it work?](#how-does-it-work)
-    - [Semantic Versioning Summary](#semantic-versioning-summary)
+  - [2. VSTS Continuous Integration Strategy](#2-vsts-continuous-integration-strategy)
+  - [3. VSTS Continuous Delivery Strategy](#3-vsts-continuous-delivery-strategy)
+  - [4. VSTS Branching strategy](#4-vsts-branching-strategy)
+  - [5. Database Changes](#5-database-changes)
+  - [6. Commitizen + Semantic Versioning](#6-commitizen--semantic-versioning)
     - [What if I don't want to use Commitizen?](#what-if-i-dont-want-to-use-commitizen)
 - [Setting up Semantic-Release](#setting-up-semantic-release)
   - [Semantic-Release Setup](#semantic-release-setup)
@@ -24,13 +21,25 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 1. General Deployment Strategy
 
-* Deployment standards 
+**Visual Studio Team Services**
+* itgroove is committed to utilizing the latest technology embodied in Visual Studio Team Services in all aspects of product planning, production, testing and deployment.
+* Using VSTS, itgroove can practice Continuous Integration and Continuous Delivery which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the bulid including changes to the the code, reviews and test results.  
 
-## VSTS Continuous Integration Strategy
+**Continuous Delivery to Azure**
+* itgroove has configured full CI/CD pipelines to various Azure services such as websites, docker containers, virtual machines and more.
+* **More about this** 
+
+**VSTS Branching Strategy**
+*
+
+**Semantic Versioning**
+* 
+
+## 2. VSTS Continuous Integration Strategy
 
 Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
 
-itGroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. 
+itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. 
 
 Different types of coding repositories will have different steps implemented in the CI build process. Several steps can be common to many types of builds. Examples include..
 
@@ -45,7 +54,7 @@ Different types of coding repositories will have different steps implemented in 
 
 On completion of a succesful integration, the code is added to the code base or is possibly picked up into the Continuous Deployment lifecycle. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itGroove. 
 
-## VSTS Continuous Delivery Strategy 
+## 3. VSTS Continuous Delivery Strategy 
 
 Continous Delivery (CD) is the process to build, test, configure and deploy from a build to a production environment. Multiple testing or staging environments create a release pipeline to automate the creation of infrastructure and deployment of applications. Successive environments support progressively longer-running activities of integration, load and user acceptance testing. 
 
@@ -58,7 +67,7 @@ Different types of coding repositories will be deployed to different types of re
 - Staging for testing by 3rd parties
 - And more..
 
-## VSTS Branching strategy
+## 4. VSTS Branching strategy
 There is a naming scheme for branching, and a defined process all the way to deployment. `next` serves as our stable branch, while `master` reflects what is currently on the production site.
 1. Branch off the `integration` branch (or an existing branch) with the following name:
 -- `feature/{UserStory}`
@@ -75,9 +84,8 @@ Before approving Pull Requests, please make sure to:
 1. Run the app and do a quick test of some of the code
 2. Run an `npm run test` to verify the tests.
 
-### 7. Database Changes 
+## 5. Database Changes 
 
-### Making Database Changes
 Please make sure that the database you are changing has the current changes by running `typeorm migration: run`.
 
 To make changes to the data schema, simple change or add the entities required under entity. As much as it makes sense, use partial classes for fields that are common among multiple classes.
@@ -92,13 +100,10 @@ typeorm migration:run
 
 First, build so your changes are reflected in the `lib`. You then generate the migration to generate a `.ts` under `src/migration`. Please verify this migration to make sure that these are the changes you expect, and if not, change the queries as needed. You then build again to pull the new migration files as `.js`, and finally migrate those changes to the database.
 
-## Commitizen + Semantic Versioning 
+## 6. Commitizen + Semantic Versioning 
 
 On the [LodgeLink-Components](/Repositories/LodgeLink-Components) project, we utilize [Semantic Versioning](http://www.semver.org) to version and publish releases of the component library. We've integrated [Semantic Release](https://github.com/semantic-release) to take the manual work out of creating releases. **Semantic Release** is meant to be executed on the CI environment after every successful build on the release branch. This way no human is directly involved in the release process and the releases are guaranteed to be unromantic and unsentimental.
 
-## How does it work?
-
-### Semantic Versioning Summary
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 * MAJOR version when you make incompatible API changes **BREAKING CHANGES**,
@@ -156,7 +161,3 @@ Before triggering a build, it's a good idea to run a dry-run. You can do this by
 Once you've verified your dry run, feel free to run it through your build pipeline and trigger an actual publish. If you're having difficulty with this, [Lee Mulvey](mailto:leem@criticalmass.com) @ CM set this all up and may be able to give you a hand!
 
 <br /><br/>
-
- ## 1. VSTS testing branch 
-
-* The VSTS testing branch... 
