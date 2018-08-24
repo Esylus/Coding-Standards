@@ -14,12 +14,14 @@ Objective: This document has been written to create itgroove standards surroundi
 - [4. Integration Testing](#4-integration-testing)
   - [4.1 Integration Testing Guidelines](#41-integration-testing-guidelines)
 - [5. System Testing](#5-system-testing)
-  - [5.1 System Testing Guidelines](#51-system-testing-guidelines)
+  - [5.1 Common System Test Types](#51-common-system-test-types)
 - [6. End-To-End Testing](#6-end-to-end-testing)
-- [6. End-To-End Testing Guidelines](#6-end-to-end-testing-guidelines)
-- [7. Load Testing](#7-load-testing)
-- [8. Acceptance Testing](#8-acceptance-testing)
+  - [6.1 End-To-End Testing Guidelines](#61-end-to-end-testing-guidelines)
+- [7. User Acceptance Testing](#7-user-acceptance-testing)
+  - [8.1 User Acceptance Testing Guidlines](#81-user-acceptance-testing-guidlines)
+  - [8.2 Acceptance Testing Deliverables](#82-acceptance-testing-deliverables)
 - [9. Regression Testing](#9-regression-testing)
+  - [9.1 Regression Testing Guidlines](#91-regression-testing-guidlines)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -110,9 +112,24 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * System testing testers are concentrated on finding bugs/defects based on software application behaviour, software design and expectations of the end user.
 * System testing is typically performed by the development team or a closely related QA team.
 
-### 5.1 System Testing Guidelines
+**What types of system testing should testers use? With over 50 different types of System Testing, it depends on several variables**
 
-**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
+* Who the tester works for - Methods used by large companies are different than that used by medium and small companies.
+* Time available for testing - Time is often what limits us to using only the types that are most relevant for the software project.
+* Resources available to the tester - Some testers will not have necessary resources to conduct a testing type. ex. Expensive automated testing software. 
+* Software Tester's Education - There is a certain learning curve for each type of software testing available.
+* Testing budget - Money becomes a factor not just for smaller companies and individual software developers but large companies as well. 
+
+### 5.1 Common System Test Types
+
+* Usability Testing - Focuses on the user's ease to use the application, flexibility in handling controls and ability of system to meet its objectives.
+* Load Testing - The process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions.
+* Recovery Testing - Done to demonstrate a software solution is reliable, trustworthy and can successfully recoup from possible crashes.
+* Migration Testing - Ensures that the software can be moved from older system infrastructures to current system infrastructures without any issues.
+* Functional Testing - Also known as functional completeness testing, Functional Testing involves trying to think of any possible missing functions.
+* Hardware/Software Testing - Focuses attention on the interactions between the hardware and software during system testing.
+
+**FIGURE OUT ITGROOVES SYSTEM TESTING GOALS AND PUT HERE ONCE UNDERSTOOD**
 
 ## 6. End-To-End Testing
 
@@ -130,27 +147,14 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0**  
 
-## 7. Load Testing
-
-* Load testing is the process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions.
-* Load testing involves applying ordinary stress to a software application or IT system to see if it can perform as intended under normal conditions. It is related to stress testing, but load testing ensures that a given function, program, or system can handle what it's designed to handle while stress testing is about overloading / applying unlikely load scenarios upon the software until it breaks. 
-
-### 7.1 Load Testing Guidlines
-
-Load testing best practices:  
-1. Clear browser cache and cookies before recording traffic.   
-2. Start recording a new scenario from the   
-
-**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
-
-## 8. Acceptance Testing
+## 7. User Acceptance Testing
 
 * User acceptance testing is a process where an application is tested for business requirement acceptability and validates the end-to-end business flow.
 * Acceptance tests are created by business customers and articulated in business domanin languages. Ideally it is a collaboration between business customers, business analysts, testers and developers.
 * It consists of test suites which involve multiple test cases and each test case contains input data as well as expected output. 
 * User Acceptance Testing is typically performed by the client, other business user or 3rd party testing company.
 
-### 8.1 Acceptance Testing Guidlines
+### 8.1 User Acceptance Testing Guidlines
 
 * The official business requirements should be available and used to develop the the test cases around. 
 * Test cases should also be developed around real world scenarios of end users.
