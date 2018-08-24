@@ -180,10 +180,10 @@ itGroove has chosen the "documentation.js" framework to document it's code. All 
 
 ## 10. Best Practices
 
-### 10.1 Work out loud
+**Work out loud**
 * Information should be shared in a timely manner with other team members, regardless of whether that information is deemed relevent. 
 
-### 10.1 DRY - Don't repeat yourself
+**DRY - Don't repeat yourself**
 * This principle summarizes the essense of what it means to write good code, in all languages, at all levels.
 * Every piece of knowledge should have a single, unambiguous, authoritative representation within a system 
 * If you see the same code twice, wrap it in a function and maximize reusability. 
