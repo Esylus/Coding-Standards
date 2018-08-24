@@ -112,7 +112,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * System testing testers are concentrated on finding bugs/defects based on software application behaviour, software design and expectations of the end user.
 * System testing is typically performed by the development team or a closely related QA team.
 
-**What types of system testing should testers use? With over 50 different types of System Testing, it depends on several variables**
+**With over 50 different types of System Testing, what types of system testing should testers use? It depends.**
 
 * Who the tester works for - Methods used by large companies are different than that used by medium and small companies.
 * Time available for testing - Time is often what limits us to using only the types that are most relevant for the software project.
