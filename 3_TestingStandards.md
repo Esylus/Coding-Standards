@@ -47,9 +47,9 @@ Objective: This document has been written to create itgroove standards surroundi
 
 A car manufacturer does not produce a car as a whole car all at once. Each component of the car is manufactured separately, like seats, steering, mirrors, breaks, cables, the engine, car frame, wheels etc. The manufacturer performs many types of tests along the way to quickly find and address any issues that present during the build. 
 
-**Unit tests:** After manufacturing each seperate module, the module is tested in isolation as to whether it is working reliably the way it was designed to work.
+**Unit tests:** After manufacturing each seperate module, it is tested in isolation as to whether it is working reliably the way it was designed to work.
 
-**Integration tests:** When each individual module is combined with another, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of each component and whether both components are working together as expected.
+**Integration tests:** When each individual module is combined with another, that assembled combination is tested to ensure assembling has not produced any side effects to the functionality of either component and whether both components are working together as expected.
 
 **System tests:** Once all the parts are assembled and the car is ready to drive, the manufacturer needs to check different aspects of the car as a whole in a controlled environment and confirm the requirements have been met. Can the car can be driven smoothly, break quickly, shifts gears fluidly? Is system functionality working properly - does the car accelerate quickly and corner efficiently? Does the car pass basic saftey requirements like crashing and not hurting the occupants?
 
@@ -122,7 +122,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
 * End-to-End testing is typically performed by a technical QA team. 
 
-## 6. End-To-End Testing Guidelines
+### 6.1 End-To-End Testing Guidelines
 
 * End-To-End tests should validate both the software system, all interconnected systems and external interfaces. They should look at backend and hardware to cover all functionality that the user experiences when using an application. 
 * Manual end-to-end testing is more common due to the need of dealing with external interfaces.  
@@ -169,14 +169,14 @@ Load testing best practices:
 
 **Because when you fix one bug, you introduce several new bugs** 
 
-* Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. It ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
+* Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. It ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change.
 * Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious.
 * Regression means retesting the unchanged parts of the application as well as the modified parts. 
  
 * Take a look at your test cases and determine if you will have to do a full, partial or unit regression. 
-1. Unit regression - Done during the unit testing phase where code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
-2. Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code. 
-3. Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
+* Unit regression - Done during the unit testing phase where code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
+* Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code. 
+* Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
 
 ### 9.1 Regression Testing Guidlines 
 
