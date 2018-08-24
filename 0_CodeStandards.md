@@ -43,8 +43,8 @@ Objective: This document has been written to create coding style standards to ad
 
 * To maximize code readability and maintainability by making a teams code base look like a single person has written it.
 * To speed up writing code. Simple rules to follow means developers won't have to make continuous judgements about how code looks and presents.
-* To read each others code faster and discern patterns visually without having to read each individual token.
-* To encapsulate the shared experience of many developers so we learn from each others mistakes and wisdom. 
+* To discern patterns visually without having to read each individual token.
+* To encapsulate the shared experience of many developers so we learn from each others wisdoms and mistakes. 
 * To free us to think in higher abstractions and come up with new patterns instead of enforcing what we have always seen or done. 
 
 Note - Being that there is no right or wrong coding standard, a team has to "just pick something" for each category and stick with it. Thus this guide is a collection of "just pick somethings" developed by the itgroove team in August, 2018.  
@@ -53,40 +53,29 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 **We want code documentation to have some rules without being too suffocating. This means:**
 * Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
-* All functions should be documented using JSDoc syntax for application documentation. See the itgroove Document Standards for details.
+* All functions should be documented using JSDoc syntax for automatic documentation generation using [Documentation.js](https://documentation.js.org/). See the itgroove Documentation Standards for details.
 * Functions that aren't self-evident will need a comment block describing the INTENT of the code. However, avoid obvious and unnecessary comments. Never state the obvious!
 * Please verify that [GraphQL](https://graphql.org/) requests are self-documented on [GraphQL Playground](https://github.com/prisma/graphql-playground), and that the REST endpoints have [Swagger](https://swagger.io/solutions/api-documentation/) documentation attached to them.
 * Multi-line comments should use // rather then /* */ to make commenting out large sections of code easier when debugging.
 * Since future developers can't be relied on to always accurately update comments, over time, code comments become inaccurate and misleading. Thus before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
 
-## Documentation.js
+## 3. General Naming Scheme
 
-itGroove has chosen the "documentation.js" framework to document it's code. All functions and methods should use the following markup style to explain the purpose of each piece of code. By filling in the required comments, documentation.js will automatically generate the required documentation that will be accesible to end users and clients.
-
-* Use JSDoc style comments for functions, interfaces, enums, and classes.
-
-## 3. Naming
-
-* Use PascalCase for type names.
-* Use PascalCase for enum values.
-* Use camelCase for variable names. 
-* Use camelCase for function names.
-* Use camelCase for property names and local variables.
+* Use PascalCase for type and enum names.
+* Use camelCase for variable, function and property names. 
 * Do not use "_" as a prefix private properties. 
 * Do not use "I" as a prefix for interface names.
- 
 * Names should tell you why it's there, what it does, how to use it.
 * Use whole, pronounceable English words and never use ambiguous abbreviations. 
-* Ensure names are sufficiently different so you don't mistake a name for another similar one. 
+* Ensure names are always sufficiently different so you don't mistake a name for another similar one. 
 * Disallowed words: anything to general or to vague ex. Manager, Processor, Data, Info.
-* A name should be an obvious, logical name to search for in 100k lines of code. ex. A button to restore all is named restoreAllButton
+* A name should be an obvious, logical name to search. ex. A button to restore all is named 'restoreAllButton'.
 
 ### 3.1 Variable Names
-* Use camelCase for variable names.
-* When you can, use customary opposite pairs in var names such as min/max, begin/end, open/close.
+* When you can, use customary opposite pairs in variable names such as min/max, begin/end, open/close.
 * Boolean vars should contain 'is / has / can / use' which implies yes/no or true/false ex. fileIsFound, isValidEmail.
 * Use single letter var names for short loop indexes or array index ex. For(x = 0; x > 10, x++) or a[i].
-* Even for a limited scope variable, still use meaningful name.
+* Even for a trivial, limited scope variable, always use meaningful names.
 * Groups of enumerated types should share same prefix Ex. FONT_ARIAL and FONT_ROMAN
 
 ### 3.2 Function and Method Names

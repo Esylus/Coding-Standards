@@ -23,6 +23,7 @@ Objective: This document has been written to create standards to adhere to while
 <!-- Table of contents -->
 
 ## 0. Code Review Terms  
+
 * Author - Developer who writes the changelist.
 * Reviewer - Developer who reviews the authors changelist.
 * Changelist - A set of recommended changes to source code that the author wants to merge into a repository.
