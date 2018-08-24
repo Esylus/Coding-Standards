@@ -18,16 +18,17 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 1. General Deployment Strategy
 
-* itgroove is committed to utilizing the latest technology embodied in Visual Studio Team Services in all aspects of product planning, production, testing and deployment.
-* Using VSTS, itgroove can practice Continuous Integration and Continuous Delivery which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the bulid including changes to the the code, reviews and test results.  
-* A specific branching strategy has been implemented across all projects to enforce uniform project management that has high readability.
+* itgroove is committed to utilizing the latest technologies embodied in [Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/continuous-integration/) in all aspects of product planning, production, testing and deployment.
+* Using VSTS, itgroove can practice Continuous Integration and Continuous Delivery which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the build including changes to the the code, reviews and test results.  
+* A specific branching strategy has been implemented across all projects to enforce uniform repository management that is intuitive, familiar and has high readability.
 * Node Package Management versioning has been automated using Semantic Versioning and Commitizen.
 * Database changes follow a strict procedure and utilize the migration capablities of TypeORM. 
 
 ## 2. VSTS Continuous Integration
 
 * Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
-* itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. All code must undergo successful Continuous Integration before being pulled into a code base.
+* itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. All code changes must undergo successful Continuous Integration before being pulled into a code base.
+* If there is a bug being introduced, the build will fail and reject the code and supply data about what about the integration failed. 
 
 **Different types of coding repositories will require different actions within the CI build process. Examples include..**
 
@@ -40,9 +41,11 @@ Objective: This document has been written to create standards to adhere to while
 - Run NPM start
 - Publish to Node Package Manager
 - Publish Documentation.js
+- Copy files from one place to another
+- Create Artifact for Continuous Delivery
 ```
 
-* On completion of a succesful integration, the code is added to the code base or is possibly moved on into Continuous Deployment. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. 
+* On completion of a succesful integration, the code is added to the code base or is moved on into Continuous Deployment. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. 
 * See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itgroove. 
 
 ## 3. VSTS Continuous Delivery
