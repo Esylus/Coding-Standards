@@ -125,11 +125,10 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 ## 6. End-To-End Testing Guidelines
 
 * End-To-End tests should validate both the software system, all interconnected systems and external interfaces. They should look at backend and hardware to cover all functionality that the user experiences when using an application. 
-* Manual end-to-end testing is more common due to the need of dealing with external interfaces. 
+* Manual end-to-end testing is more common due to the need of dealing with external interfaces.  
 * End-to-end testing can be automated but the effort to do this is both extensive and transitory. Writing test scripts to perform a thorough test is typically as expensive as simply spending the hours to manually perform it and system changes (bug fixes, new features) require script re-writes to match.
 
 **MORE ON END-TO-END TESTING ONCE WE START USING CYPRUS FOR LODGELINK2.0**  
-**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
 ## 7. Load Testing
 

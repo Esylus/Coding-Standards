@@ -10,9 +10,9 @@ Objective: This document has been written to create standards for itGroove suppo
 - [2. Project ReadMe Requirements](#2-project-readme-requirements)
 - [3. Documentation.js](#3-documentationjs)
   - [3.1 Common tags](#31-common-tags)
-  - [2.3 Usage Examples](#23-usage-examples)
-- [3.0 Swagger](#30-swagger)
-- [4.0 GraphQL Documentation](#40-graphql-documentation)
+  - [3.2 Usage Examples](#32-usage-examples)
+- [4.0 Swagger Documents](#40-swagger-documents)
+- [5.0 GraphQL Documents](#50-graphql-documents)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -158,7 +158,7 @@ The most common tags are listed below.
 * @example - you can use the @example tag to add inline code examples with your
   documentation
 
-### 2.3 Usage Examples
+### 3.2 Usage Examples
 
 * After applying the JSDoc syntax, there are different ways to run the documentation generator to achieve different output formats.
 * Below are two examples, many other types of output formats can be found on the Documentation.js webpage. 
@@ -171,12 +171,12 @@ documentation build index.js -f md
 documentation serve app.js
 ```
 
-## 3.0 Swagger Documents
+## 4.0 Swagger Documents
 
 * The role of documentation with a REST API is to explain the individual endpoints, what function they perform, and the parameters a developer can pass to them.  
 * The usage of Swagger within itGroove projects is currently being investigated with usage details forthcoming. 
 
-## 4.0 GraphQL Documents
+## 5.0 GraphQL Documents
 
 * With a GraphQL API, you describe the data types, fields, and the interaction points between them, and a developer can assemble an appropriate query to get the information they need.
 * Playground then lets you interactively explore the schema of a GraphQL server and run queries against it at the same time.
