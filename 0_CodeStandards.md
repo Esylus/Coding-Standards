@@ -12,18 +12,18 @@ Objective: This document has been written to create coding style standards to ad
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
   - [3.3 Class Names](#33-class-names)
-- [4. General Constructs](#4-general-constructs)
+- [4. General](#4-general)
   - [4.1 Spacing](#41-spacing)
   - [4.2 Braces](#42-braces)
   - [4.3 Lines](#43-lines)
   - [4.4 Code Cluster Sizes](#44-code-cluster-sizes)
-- [5. Types](#5-types)
-- [6. Null and Undefined](#6-null-and-undefined)
-- [7. Maintainability](#7-maintainability)
-- [8. Classes](#8-classes)
-- [9. Errors](#9-errors)
-- [10. Portability](#10-portability)
-- [11. Best Practices](#11-best-practices)
+  - [4.5 Types](#45-types)
+  - [4.6 Class Order](#46-class-order)
+  - [4.7 Null and Undefined](#47-null-and-undefined)
+  - [4.8 Errors](#48-errors)
+- [5. Maintainability](#5-maintainability)
+- [6. Portability](#6-portability)
+- [7. Best Practices To Strive For](#7-best-practices-to-strive-for)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -127,34 +127,25 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Classes shouldn't be bigger then 5 member variables and a few hundred lines of code.
 * Files shouldn't be longer then 500 lines of code so you can navigate effectively.
 
-## 5. Types
+### 4.5 Types
 
 * Do not export types/functions unless you need to share it across multiple components.
 * Do not introduce new types/values to the global namespace.
 * Shared types should be defined in 'types.ts'.
 * Within a file, type definitions should come first.
 
-## 6. Null and Undefined
-
-* Use "undefined". DO NOT use "null".
-
-## 7. Maintainability
-
-* Software is a living work, the initial development is just the beginning - expect it to change and evolve.
-* Keep scope of variables as small as possible to avoid confusion and ensure maintainability.
-* Use vars and routines for one purpose only, avoid multipurpose routines that perform a variety of unrelated tasks.
-* Avoid deep nesting, it makes code harder to read and follow.
-* Try to keep a return point from a function as the last statement in the function.
-* Don't put numbers directly in code, put in variables or constants that can be changed later.
-
-## 8. Classes
+### 4.6 Class Order
 
 * Classes are a story that you read from top to bottom. The most relevant, important parts go at the top.
 * Public members first, protected second, private last - public members are most relevent to extension. 
 * Try to minimize scrolling either vertically or horizontally.
 * For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
 
-## 9. Errors
+### 4.7 Null and Undefined
+
+* Use "undefined". DO NOT use "null".
+
+### 4.8 Errors
 
 * Always recover or fail gracefully - Report an error message and optimally attempt to continue.
 * Provide useful error messages while also logging a programmer friendly message with enough user info so a support team can investigate the error.
@@ -164,13 +155,22 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * When stating a rule, the subject should be in the singular (e.g. "An external module cannot..." instead of "External modules cannot...").
 * Use present tense.
 
-## 10. Portability
+## 5. Maintainability
+
+* Software is a living work, the initial development is just the beginning - expect it to change and evolve.
+* Keep scope of variables as small as possible to avoid confusion and ensure maintainability.
+* Use vars and routines for one purpose only, avoid multipurpose routines that perform a variety of unrelated tasks.
+* Avoid deep nesting, it makes code harder to read and follow.
+* Try to keep a return point from a function as the last statement in the function.
+* Don't put numbers directly in code, put in variables or constants that can be changed later.
+
+## 6. Portability
 
 * Program code should not contain "hard-coded" or literal values referring to environmental parameters such as file paths, user names, host names etc..
 * Parametrize such variables and configure them for the hosting environment outside of the application such as on the application server or in database. 
 * Code should run on different environments and not fail on systems with a different design then anticipated.
 
-## 11. Best Practices To Strive For
+## 7. Best Practices To Strive For
 
 **Work out loud**
 * Information should be shared in a timely manner with other team members, regardless of whether that information is deemed relevent. 
