@@ -26,7 +26,7 @@ Objective: This document has been written to create itgroove standards surroundi
 
 ## 1. General Testing Principles 
 
-* itGroove adheres to the principles outlined in "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham. Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
+* itgroove adheres to the principles outlined in "Foundations of Software Testing" by Rex Black, Erick Van Veenendaal, Dorothy Graham. Below is a summary by Vineeta Gakhare at https://www.utest.com/articles/seven-testing-principles.  
 
 1. Testing finds defects. While testing can show that defects are present, it cannot prove that there are no defects at all. One can never assume that there are no defects or the application is 100 percent bug free even if thorough testing is done.
 
@@ -56,7 +56,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **End-to-end tests:** The car is then driven in real-world scenarios - traffic, city streets, evasive maneovers, getting rear-ended, smooth roads vs bumpy roads, freezing / wet / hot weather. End-to-end testing involves testing the unit in real-world environmental conditions that are occuring around the car under test.
 
-**Load tests:** The engineers want to know where the point of failure is for the car. They drive it faster then it was designed to drive and let the engine run hotter then it is supposed to. The purpose of these tests is to find the products breaking point so they understand exactly how far a given car can be pushed and explore the outer limits of performance capacity. 
+**Load tests:** The engineers want to know where the point of failure is for the car. They drive it faster then it was designed to drive and let the engine run hotter then it is supposed to. The purpose of these tests is to find the products breaking point so they understand exactly how far a given design can be pushed and explore the outer limits of performance capacity. 
 
 **Acceptance Tests:** The car then needs to be driven by real-world users in a focus group to find out how consumers feel about the capabilities of the product and get feedback. Do they feel like it's smooth? Do they like the color and look? Would they buy it? Would they reccomend it to their friends?    
 
