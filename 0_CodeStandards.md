@@ -57,8 +57,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Functions that aren't self-evident will need a comment block describing the INTENT of the code. However, avoid obvious and unnecessary comments. Never state the obvious!
 * Please verify that [GraphQL](https://graphql.org/) requests are self-documented on [GraphQL Playground](https://github.com/prisma/graphql-playground), and that the REST endpoints have [Swagger](https://swagger.io/solutions/api-documentation/) documentation attached to them.
 * Multi-line comments should use // rather then /* */ to make commenting out large sections of code easier when debugging.
-* Since future developers can't be relied on to always accurately update comments, inevitably code comments become inaccurate and misleading.
-* Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
+* Since future developers can't be relied on to always accurately update comments, over time, code comments become inaccurate and misleading. Thus before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
 
 ## Documentation.js
 
