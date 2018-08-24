@@ -138,9 +138,9 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 ### 7.1 Load Testing Guidlines
 
-Load testing best practices:
-1- Clear browser cache and cookies before recording traffic. 
-2- Start recording a new scenario from the 
+Load testing best practices:  
+1- Clear browser cache and cookies before recording traffic.   
+2- Start recording a new scenario from the   
 
 **FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
 
@@ -165,8 +165,8 @@ Load testing best practices:
 * Regression tests methodology - Re-run the previous tests. Compare the current results with previously executed test results. 
 
 * Various types of regression tests: 
-1. Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on teh unit to be tested are blocked so that the unit can betested individually without any discrepency.
-2. Partual Regression - done to verify that thet code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged oralready existing code. 
+1. Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
+2. Partual Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged oralready existing code. 
 3. Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
 
 ### 9.1 Regression Testing Guidlines 
