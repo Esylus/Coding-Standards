@@ -90,23 +90,24 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 ## 4. Integration Testing
 
-* When combining two or more key modules together, integration tests should be written to ensure the modules all work fluidly together as a system. For example, an integration test could call a REST endpoint which calls a service which calls a test database to insert, then retrieve some information. If all the parts are working correctly, the integration test will pass. If any one of the modules is not configured properly, the test will fail and the developer will have to determine why.  
+* Integration tests should be written when combining two or more key modules together to ensure the modules all work fluidly together as a system. For example, an integration test could call a REST endpoint which calls a service which calls a test database to insert, then retrieve some information. If all the parts are working correctly, the integration test will pass. If any one of the modules is not configured properly, the test will fail and the developer will have to determine why.  
+* Be clear about how integration is different than unit testing. 
+* Encapsulation - Unit tests are encapsulated while integration tests rely on external resources. 
+* Complexity - Unit tests target small and distinct parts of code while integration tests are more complex and often require a global setup / teardown. 
+* Test failure - When a unit test fails, there is clearly a bug in the business logic. When integration fails, it's likely environmental issues that need to be addressed.  
 * Integration testing is typically performed by the development team or a closely related QA team. 
 
 ### 4.1 Integration Testing Guidelines
 
 1. Run unit tests before integration tests. Unit tests indicate whether the inner workings of a code base are operating properly which is a pre-req to ensuring that the various modules will function properly together. 
 2. Don't test business logic with integration testing. Unit tests are for business logic and should be fast and not hinder a developers time. Intgeration testing takes longer and shouldn't be run as often as unit tests.
-3. Be clear about how integration is different than unit testing. 
-* Encapsulation - Unit tests are encapsulated while integration tests rely on external resources. 
-* Complexity - Unit tests target small and distinct parts of code while integration are more complex and often require a global setup / teardown. 
-* Test failure - When a unit test fails, there is clearly a bug in the business logic. When integration fails, it's likely environmental issues that need to be addressed.  
-4. Keep your testing suites separate. Integration tests should not be run together with unit tests. Unit tests need to be run frequently and should not be inconvenient to run. By keeping test suites separate, developers feel free to run quick unit tests. Long and tedious integration tests should be reserved for the build server in a seperate suite to be run less frequently. 
-5. Log extensively. Since unit tests have specific scope and test small pieces of code, it is clear why they fail. Integration tests can span several modules, devices and components. If these tests fails it's more complex to understand why. Exhaustive logging is the only way to analyze a failure and discover where the problem lies. Use a logging framework that can be controlled via flags that allow for minimal logging during passing tests and more when a test fails.  
+3. Keep your testing suites separate. Integration tests should not be run together with unit tests. Unit tests need to be run frequently and should not be inconvenient to run. By keeping test suites separate, developers feel free to run quick unit tests. Long and tedious integration tests should be reserved for the build server in a seperate suite to be run less frequently. 
+4. Log extensively. Since unit tests have specific scope and test small pieces of code, it is clear why they fail. Integration tests can span several modules, devices and components. If these tests fails it's more complex to understand why. Exhaustive logging is the only way to analyze a failure and discover where the problem lies. Use a logging framework that can be controlled via flags that allow for minimal logging during passing tests and more when a test fails.  
 
 ## 5. System Testing 
 
 * Once the application has been completed by having all its modules/components integrated, system tests are run which attempt to accurately reproduce your production environment while remaining in a safe, predictable development environment. The purpose of these tests are to validate functionality as a whole. They will test the various features as subsystems of an application and ensure user requirements have been met. It also tests how separte features interoperate as parts of a product.
+* System testing testers are concentrated on finding bugs/defects based on software application behaviour, software design and expectations of the end user.
 * System testing is typically performed by the development team or a closely related QA team.
 
 ### 5.1 System Testing Guidelines
@@ -119,8 +120,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Thus once the high-level architecture is validated through integration and system testing, End-to-End tests are used to test the application within its final production environment.
 * End-to-end tests verify the use of the system controls to retrieve, manipulate and store data results in the intended activities at the database and API points of the system. They test message content integrity (did the the correct info get transferred throughout the chain) and operational timing (did content pieces/control get where they needed to be in the proper order). 
 * End-to-end testing checks if an application performs as designed on all levels across all subsystems. The scope encompasses the application in its entirety, as well as its integration with external interfaces and outside applications. 
-* End-to-End testing is typically performed by a technical QA team.
-* The downside is cost. With its extreme setup and overall control and monitoring requirements, this is easily the most expensive and time-consuming software quality test method. 
+* End-to-End testing is typically performed by a technical QA team. 
 
 ## 6. End-To-End Testing Guidelines
 
@@ -146,39 +146,45 @@ Load testing best practices:
 
 ## 8. Acceptance Testing
 
-* Project is submitted to the client or a 3rd party company for testing purposes. They may conduct a wide range of tests depending on the what they have been requested to do.
-* User Acceptance Testing is typically performed by a business user.
-
-**FIND SOME MORE INFO ABOUT ACCEPTANCE TESTING**
+* User acceptance testing is a process where an application is tested for business requirement acceptability and validates the end-to-end business flow.
+* Acceptance tests are created by business customers and articulated in business domanin languages. Ideally it is a collaboration between business customers, business analysts, testers and developers.
+* It consists of test suites which involve multiple test cases and each test case contains input data as well as expected output. 
+* User Acceptance Testing is typically performed by the client, other business user or 3rd party testing company.
 
 ### 8.1 Acceptance Testing Guidlines
 
-**FIND SOME GUIDELINES AND PUT HERE ONCE UNDERSTOOD**
+* The official business requirements should be available and used to develop the the test cases around. 
+* Test cases should also be developed around real world scenarios of end users.
+* The actual testing should be carried out in a replica of the production environment using all external factors that the production environment will encounter. 
+
+### 8.2 Acceptance Testing Deliverables
+
+1. Test plan - This outlines the testing strategy.
+2. Acceptance test cases - The test cases help the team to effectively test the application in the acceptance test environment.
+3. Test Results and error reports - This is a log of all the test cases executed and the actual results.
+3. Installation instructions - This is a document which helps to install the sysetm in production environments.
+4. Documentation materials - Tested and updated user documentation and training materials are finalized during user acceptance testing. 
+5. User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests with acceptable margins.
 
 ## 9. Regression Testing 
 
-* Regression : "when you fix one bug, you introduce several new bugs". 
+**Because when you fix one bug, you introduce several new bugs** 
 
-* Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. Ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
-* Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious one too.
+* Regression testing is testing that is done to verify that code change in the software does not impact the existing functionality of the product. It ensures the product works fine as previous with the newly added functionality or any change in the existing feature or once the bug fix is done. Previously executed test cases are re-executed in order to verify the impact of change. 
+* Regression testing is like a verification method. Test cases are generally automated as test cases are required to execute again and again and running the same test cases again and again manually is time consuming and tedious.
 * Regression means retesting the unchanged parts of the application as well as the modified parts. 
-* Regression tests methodology - Re-run the previous tests. Compare the current results with previously executed test results. 
-
-* Various types of regression tests: 
-1. Unit regression - done during the unit testing phase and a code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
-2. Partual Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged oralready existing code. 
+ 
+* Take a look at your test cases and determine if you will have to do a full, partial or unit regression. 
+1. Unit regression - Done during the unit testing phase where code is tested in isolation. Any dependencies on the unit to be tested are blocked so that the unit can be tested individually without any discrepency.
+2. Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code. 
 3. Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code. 
 
 ### 9.1 Regression Testing Guidlines 
 
-* Understand what kind of changes have been made to the software
 * Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
-* Take a look at your test cases and determine if you will have to do a full, partial or unit regression. Identify the ones that will fit your situation
-* Schedule the time and test away!s
-
-* Process as outlined in https://www.softwaretestinghelp.com/regression-testing-tools-and-methods/
-1. Prepare a Test suite for Regression considering the points mentioned in “How to select Regression Test suite”?
-2. Automate all the test cases of the test suite.
-3. Update the Regression suite whenever it is required like if any new defect which is not covered in the test case is found, and a test case for the same should be updatedin the test suite so that the testing is not missed for the same next time. Regression test suite should be managed properly by continuously updating the test cases.
-4. Execute the Regression test cases whenever there is any change in the code, the bug is fixed, new functionality is added, an enhancement to the existing functionality isdone etc.
-5. Create a test execution Report which includes Pass/Fail status of the executed test cases.
+* Prepare a Test suite for Regression testing considering what kind of changes have been made to the software.
+* Automate all the test cases of the test suite.
+* Run the regression tests which should include all previous tests. Compare the current results with previously executed test results.
+* Update the Regression suite whenever it is required like if any new defect which is not covered in the test case is found, and a test case for the same should be updatedin the test suite so that the testing is not missed for the same next time. Regression test suite should be managed properly by continuously updating the test cases.
+* Execute the Regression test cases whenever there is any change in the code, a bug is fixed, new functionality is added or any enhancement is done to the existing functionality.
+* Create a test execution Report which includes Pass/Fail status of the executed test cases.
