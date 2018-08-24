@@ -8,11 +8,11 @@ Objective: This document has been written to create coding style standards to ad
 
 - [1. itgroove Style Guide Overview](#1-itgroove-style-guide-overview)
 - [2. Comments](#2-comments)
-- [3. General Naming Scheme](#3-general-naming-scheme)
+- [3. General Naming Choices](#3-general-naming-choices)
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
   - [3.3 Class Names](#33-class-names)
-- [4. General](#4-general)
+- [4. General Style Choices](#4-general-style-choices)
   - [4.1 Spacing](#41-spacing)
   - [4.2 Braces](#42-braces)
   - [4.3 Lines](#43-lines)
@@ -49,7 +49,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Multi-line comments should use // rather then /* */ to make commenting out large sections of code easier when debugging.
 * Since future developers can't be relied on to always accurately update comments, over time, code comments become inaccurate and misleading. Thus before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
 
-## 3. General Naming Scheme
+## 3. General Naming Choices
 
 * Use PascalCase for type and enum names.
 * Use camelCase for variable, function, method and property names. 
@@ -80,7 +80,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * If you use patterns that people are familiar with, use the pattern name in your class name ex. Velocity_Listener
 * To help name a class, describe it to someone in less then 25 words without using if, and, or, but and find the name in that sentence somewhere.
 
-## 4. General 
+## 4. General Style Choices
 
 * The indenting style of code conveys logical structure and flow.
 * Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
