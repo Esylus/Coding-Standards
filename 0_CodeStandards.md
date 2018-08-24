@@ -12,20 +12,18 @@ Objective: This document has been written to create coding style standards to ad
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
   - [3.3 Class Names](#33-class-names)
-  - [3.3 Object Names](#33-object-names)
-- [4. Readability](#4-readability)
+- [4. General Readability](#4-general-readability)
   - [4.1 Spacing](#41-spacing)
   - [4.2 Braces](#42-braces)
   - [4.3 Lines](#43-lines)
   - [4.4 Code Cluster Sizes](#44-code-cluster-sizes)
-- [5. Maintainability](#5-maintainability)
-- [6. Classes](#6-classes)
-- [7. Errors](#7-errors)
-- [8. Portability](#8-portability)
-- [9. Repository](#9-repository)
-- [10. Best Practices](#10-best-practices)
-  - [11 Types](#11-types)
-  - [12 Null and Undefined](#12-null-and-undefined)
+- [5. Types](#5-types)
+- [6. Null and Undefined](#6-null-and-undefined)
+- [7. Maintainability](#7-maintainability)
+- [8. Classes](#8-classes)
+- [9. Errors](#9-errors)
+- [10. Portability](#10-portability)
+- [11. Best Practices](#11-best-practices)
   - [General Assumptions](#general-assumptions)
   - [Classes](#classes)
   - [Flags](#flags)
@@ -61,7 +59,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 ## 3. General Naming Scheme
 
 * Use PascalCase for type and enum names.
-* Use camelCase for variable, function and property names. 
+* Use camelCase for variable, function, method and property names. 
 * Do not use "_" as a prefix private properties. 
 * Do not use "I" as a prefix for interface names.
 * Names should tell you why it's there, what it does, how to use it.
@@ -80,33 +78,24 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ### 3.2 Function and Method Names
 
-* Use camelCase for method and function names.
 * Use verb-noun method - name routines that perform an operation-on-a-given-object ex. calulateTotalAmount()
-* Can mention if there is heavy processing or side effects ex.. shutdown(), removeListener(), getWidth(), generateHistogram()
-* Append computational qualifiers (Avg, Sm, Min, Max etc..) to end of var name where appropriate.
+* Mention if there is heavy processing or side effects ex.. shutdown(), removeListener(), getWidth(), generateHistogram()
+* Append computational qualifiers (Avg, Sm, Min, Max etc..) to end of name where appropriate.
 
 ### 3.3 Class Names
 
-* Class names are PascalCase. 
-* If you use patterns that people are familiar with, it's an obvious name for your class ex. Listener, Visitor
+* If you use patterns that people are familiar with, use the pattern name in your class name ex. Signal_Listener, Client_Visitor
 * To help name class, describe to someone in less then 25 words without using if, and, or, but - the name will be in that sentence somewhere.
 
-### 3.3 Object Names
+## 4. General Readability
 
-*  Do we need anything for this? PascalCase? 
-* 
-
-
-## 4. Readability
-
-1. The indenting style of code conveys logical structure and flow.
-1. Point 1
-1. Point 1
+* The indenting style of code conveys logical structure and flow.
+* Add some statements around the general readability of this style guide.
 
 ### 4.1 Spacing
 
 * Do not mix spaces with the tab key - the number of spaces represented by a tab is different in different IDE's.
-* An indent == 3 spaces??
+* An indent == 2 spaces. 
 * Use space after every comma in a list.
 * Use space before and after every "=" of assignment, after every binary operators (+, -, /, *).
 
@@ -118,47 +107,53 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 * Try to keep lines short and clear as general rule - don't want to use horizontal scroll bar.
 * Write one statement per line, not multiple statements per line .
-* However if  breaking up longer line creates confusing looking code, a longer line is more readable and acceptable. 
+* However if  breaking up a longer line creates confusing looking code, a longer line is more readable and acceptable. 
 * In long lines of similar code with minor variations, stacking vertically will emphasize patterns and make vertical similarities jump out. 
 
 ### 4.4 Code Cluster Sizes
 
-* Functions should be under 10? 30? lines of code.
+* Functions should be under 10 lines of code.
 * Classes shouldn't be bigger then 5 member variables and a few hundred lines of code.
 * Files shouldn't be longer then 500 lines of code so you can navigate effectively.
 
-## 5. Maintainability
+## 5. Types
 
-1. Software is a living work, the initial development is just the beginning - expect it to change and evolve.
-1. Keep scope of variables as small as possible to avoid confusion and ensure maintainability.
-1. Use vars and routines for one purpose only, avoid multipurpose routines that perform a variety of unrelated tasks.
-1. Avoid deep nesting, makes code harder to read and follow.
-1. Try to keep return point from a function as the last statement in the function.
+* Do not export types/functions unless you need to share it across multiple components.
+* Do not introduce new types/values to the global namespace.
+* Shared types should be defined in 'types.ts'.
+* Within a file, type definitions should come first.
 
-* Don't put numbers directly in code, put in var that can be changed later .
+## 6. Null and Undefined
 
-## 6. Classes
+* Use "undefined". DO NOT use "null".
 
-* Most important things at the top, top down story you read.
+## 7. Maintainability
+
+* Software is a living work, the initial development is just the beginning - expect it to change and evolve.
+* Keep scope of variables as small as possible to avoid confusion and ensure maintainability.
+* Use vars and routines for one purpose only, avoid multipurpose routines that perform a variety of unrelated tasks.
+* Avoid deep nesting, it makes code harder to read and follow.
+* Try to keep a return point from a function as the last statement in the function.
+* Don't put numbers directly in code, put in variables or constants that can be changed later.
+
+## 8. Classes
+
+* Classes are a story that you read from top to bottom. The most relevant, important parts go at the top.
 * Public members first, protected second, private last - public members are most relevent to extension. 
 * Try to minimize scrolling either vertically or horizontally.
 
-## 7. Errors
+## 9. Errors
+
 * Always recover or fail gracefully - Report an error message and optimally attempt to continue.
 * Provide useful error messages while also logging a programmer friendly message with enough user info so a support team can investigate the error.
 
-## 8. Portability
+## 10. Portability
 
 * Program code should not contain "hard-coded" or literal values referring to environmental parameters such as file paths, user names, host names etc..
-* Want code to run on different environments and not fail on systems with a different design then anticipated.
-* Parametrize such vars and configure them for the hosting environment outside of the application such as on the application server or in database. 
+* Parametrize such variables and configure them for the hosting environment outside of the application such as on the application server or in database. 
+* Code should run on different environments and not fail on systems with a different design then anticipated.
 
-## 9. Repository
-
-* itgroove practices continuous integration and continous deployment via Visual Studio Team Services
-* Policies will be forthcoming 
-
-## 10. Best Practices
+## 11. Best Practices
 
 **Work out loud**
 * Information should be shared in a timely manner with other team members, regardless of whether that information is deemed relevent. 
@@ -195,16 +190,14 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Does it add information for the reader?
 * Does it reduce the likelihood of errors?
 
-### 11 Types
 
-* Do not export types/functions unless you need to share it across multiple components.
-* Do not introduce new types/values to the global namespace.
-* Shared types should be defined in 'types.ts'.
-* Within a file, type definitions should come first.
 
-### 12 Null and Undefined
 
-* Use "undefined". DO NOT use "null".
+
+
+
+
+
 
 ### General Assumptions 
 
