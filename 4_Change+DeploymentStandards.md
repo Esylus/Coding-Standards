@@ -32,7 +32,6 @@ Objective: This document has been written to create standards to adhere to while
 
 * Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
 * itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. All code must undergo successful Continuous Integration before being pulled into a code base.
-
 * Different types of coding repositories will require different actions within the CI build process. Examples include..
 
 ```
@@ -53,7 +52,6 @@ Objective: This document has been written to create standards to adhere to while
 
 * Continous Delivery (CD) is the process to build, test, configure and deploy from a build to a production environment. Multiple testing or staging environments create a release pipeline to automate the creation of infrastructure and deployment of applications. Successive environments support progressively longer-running activities of integration, load and user acceptance testing.
 * itGroove fully utilizes the power of Continuous Delivery within the software devlivery cycle within Visual Studio Team Services. 
-
 * Within any given project, different types of coding repositories will be deployed to different types of resources. Some examples include Continuous Delivery from Visual Studio Team Serivces to..
 
 ```
@@ -72,7 +70,6 @@ Objective: This document has been written to create standards to adhere to while
 * There is a naming scheme for branching, and a defined process all the way to deployment.
 * `next` serves as our stable branch, while `master` reflects what is currently on the production site.
 * `test` is deployed to a test resource where it will undergo various forms of testing.  
-
 * Development branching procedure: 
 
 1. Branch off the `integration` branch (or an existing branch) with the following name:
@@ -94,9 +91,7 @@ Objective: This document has been written to create standards to adhere to while
 ## 5. Database Changes 
 
 * Please make sure that the database you are changing has the current changes by running `typeorm migration: run`.
-
 * To make changes to the data schema, simple change or add the entities required under entity. As much as it makes sense, use partial classes for fields that are common among multiple classes.
-
 * From there, it's for now a multiple step process to migrate the changes:
 
 ```
