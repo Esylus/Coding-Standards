@@ -1,12 +1,12 @@
 # itgroove Coding Style Guide
 
-Objective: This document has been written to create code style standards to adhere to while developing.
+Objective: This document has been written to create coding style standards to adhere to while developing itgroove projects.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** 
 
-- [1. Objective](#1-objective)
+- [1. itgroove Style Guide Overview](#1-itgroove-style-guide-overview)
 - [2. Comments](#2-comments)
 - [Documentation.js](#documentationjs)
 - [3. Naming](#3-naming)
