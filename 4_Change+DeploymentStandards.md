@@ -34,11 +34,10 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 2. VSTS Continuous Integration
 
-Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
+* Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
+* itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. All code must undergo successful Continuous Integration before being pulled into a code base.
 
-itgroove has fully embraced the ideas of continuous integration within the software development lifecycle by utilizing it to it's fullest extent in Visual Studio Team Services. 
-
-Different types of coding repositories will have different steps implemented in the CI build process. Several steps can be common to many types of builds. Examples include..
+* Different types of coding repositories will require different actions within the CI build process. Examples include..
 
 - Install the lastest version of Node.js
 - Run NPM install
@@ -49,7 +48,7 @@ Different types of coding repositories will have different steps implemented in 
 - Publish to Node Package Manager
 - Publish Documentation.js
 
-On completion of a succesful integration, the code is added to the code base or is possibly picked up into the Continuous Deployment lifecycle. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itGroove. 
+On completion of a succesful integration, the code is added to the code base or is possibly moved on into Continuous Deployment. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itgroove. 
 
 ## 3. VSTS Continuous Delivery
 
