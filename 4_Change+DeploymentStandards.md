@@ -18,6 +18,10 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 1. General Deployment Strategy
 
+* Test
+* Test
+* Test
+
 * itgroove is committed to utilizing the latest technology embodied in Visual Studio Team Services in all aspects of product planning, production, testing and deployment.
 * Using VSTS, itgroove can practice Continuous Integration and Continuous Delivery which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the bulid including changes to the the code, reviews and test results.  
 * A specific branching strategy has been implemented across all projects to enforce uniform project management that has high readability.
