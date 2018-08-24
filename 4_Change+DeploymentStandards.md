@@ -8,9 +8,9 @@ Objective: This document has been written to create standards to adhere to while
 **Table of Contents** 
 
 - [1. General Deployment Strategy](#1-general-deployment-strategy)
-- [2. VSTS Continuous Integration Strategy](#2-vsts-continuous-integration-strategy)
-- [3. VSTS Continuous Delivery Strategy](#3-vsts-continuous-delivery-strategy)
-- [4. VSTS Branching strategy](#4-vsts-branching-strategy)
+- [2. VSTS Continuous Integration](#2-vsts-continuous-integration)
+- [3. VSTS Continuous Delivery](#3-vsts-continuous-delivery)
+- [4. VSTS Branching](#4-vsts-branching)
 - [5. Database Changes](#5-database-changes)
 - [6. Semantic Versioning + Commitizen](#6-semantic-versioning--commitizen)
 
@@ -32,7 +32,7 @@ Objective: This document has been written to create standards to adhere to while
 **Semantic Versioning**
 * Stuff
 
-## 2. VSTS Continuous Integration Strategy
+## 2. VSTS Continuous Integration
 
 Continuous Integration (CI) is a software best practice where code is automatically built and tested everytime a team member commits changes to version control.
 
@@ -51,7 +51,7 @@ Different types of coding repositories will have different steps implemented in 
 
 On completion of a succesful integration, the code is added to the code base or is possibly picked up into the Continuous Deployment lifecycle. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itGroove. 
 
-## 3. VSTS Continuous Delivery Strategy 
+## 3. VSTS Continuous Delivery
 
 Continous Delivery (CD) is the process to build, test, configure and deploy from a build to a production environment. Multiple testing or staging environments create a release pipeline to automate the creation of infrastructure and deployment of applications. Successive environments support progressively longer-running activities of integration, load and user acceptance testing. 
 
@@ -64,7 +64,7 @@ Different types of coding repositories will be deployed to different types of re
 - Staging for testing by 3rd parties
 - And more..
 
-## 4. VSTS Branching strategy
+## 4. VSTS Branching
 There is a naming scheme for branching, and a defined process all the way to deployment. `next` serves as our stable branch, while `master` reflects what is currently on the production site.
 1. Branch off the `integration` branch (or an existing branch) with the following name:
 -- `feature/{UserStory}`
