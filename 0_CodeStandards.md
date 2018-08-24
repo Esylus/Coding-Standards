@@ -12,7 +12,7 @@ Objective: This document has been written to create coding style standards to ad
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
   - [3.3 Class Names](#33-class-names)
-- [4. General Readability](#4-general-readability)
+- [4. General Constructs](#4-general-constructs)
   - [4.1 Spacing](#41-spacing)
   - [4.2 Braces](#42-braces)
   - [4.3 Lines](#43-lines)
@@ -24,13 +24,6 @@ Objective: This document has been written to create coding style standards to ad
 - [9. Errors](#9-errors)
 - [10. Portability](#10-portability)
 - [11. Best Practices](#11-best-practices)
-  - [General Assumptions](#general-assumptions)
-  - [Classes](#classes)
-  - [Flags](#flags)
-  - [Strings](#strings)
-  - [Diagnostic Messages](#diagnostic-messages)
-  - [General Constructs](#general-constructs)
-  - [Style](#style)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -84,24 +77,40 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ### 3.3 Class Names
 
-* If you use patterns that people are familiar with, use the pattern name in your class name ex. Signal_Listener, Client_Visitor
-* To help name class, describe to someone in less then 25 words without using if, and, or, but - the name will be in that sentence somewhere.
+* If you use patterns that people are familiar with, use the pattern name in your class name ex. Velocity_Listener
+* To help name a class, describe it to someone in less then 25 words without using if, and, or, but and find the name in that sentence somewhere.
 
-## 4. General Readability
+## 4. General Constructs
 
 * The indenting style of code conveys logical structure and flow.
-* Add some statements around the general readability of this style guide.
+* Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
+* Consider arrays as immutable by default after creation.
+* Do not use for..in statements; instead, use ts.forEach, ts.forEachKey and ts.forEachValue. Be aware of their slightly different semantics.
+* Try to use ts.forEach, ts.map, and ts.filter instead of loops when it is not strongly inconvenient.
+* Use arrow functions over anonymous function expressions.
+* Only surround arrow function parameters when necessary. 
+* For example, (x) => x + x is wrong but the following are correct:
+    x => x + x
+    (x,y) => x + y
+    <T>(x: T, y: T) => x === y
 
 ### 4.1 Spacing
 
 * Do not mix spaces with the tab key - the number of spaces represented by a tab is different in different IDE's.
-* An indent == 2 spaces. 
+* Use 2 spaces per indentation.
 * Use space after every comma in a list.
 * Use space before and after every "=" of assignment, after every binary operators (+, -, /, *).
+* Parenthesized constructs should have no surrounding whitespace. 
+* A single space follows commas, colons, and semicolons in those constructs. For example:
+    for (var i = 0, n = str.length; i < 10; i++) { }
+    if (x < 10) { }
+    function f(x: number, y: string): void { }
 
 ### 4.2 Braces
 
-* Do braces begin directly after a function name or start on the next line?
+* Always surround loop and conditional bodies with curly braces. Statements on the same line are allowed to omit braces.
+* Open curly braces always go on the same line as whatever necessitates them.
+* else goes on a separate line from the closing curly brace.
 
 ### 4.3 Lines
 
@@ -109,6 +118,8 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Write one statement per line, not multiple statements per line .
 * However if  breaking up a longer line creates confusing looking code, a longer line is more readable and acceptable. 
 * In long lines of similar code with minor variations, stacking vertically will emphasize patterns and make vertical similarities jump out. 
+* Use a single declaration per variable statement 
+    (i.e. use var x = 1; var y = 2; over var x = 1, y = 2;).
 
 ### 4.4 Code Cluster Sizes
 
@@ -141,11 +152,17 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Classes are a story that you read from top to bottom. The most relevant, important parts go at the top.
 * Public members first, protected second, private last - public members are most relevent to extension. 
 * Try to minimize scrolling either vertically or horizontally.
+* For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
 
 ## 9. Errors
 
 * Always recover or fail gracefully - Report an error message and optimally attempt to continue.
 * Provide useful error messages while also logging a programmer friendly message with enough user info so a support team can investigate the error.
+* Use a period at the end of a sentence.
+* Use indefinite articles for indefinite entities.
+* Definite entities should be named (this is for a variable name, type name, etc..).
+* When stating a rule, the subject should be in the singular (e.g. "An external module cannot..." instead of "External modules cannot...").
+* Use present tense.
 
 ## 10. Portability
 
@@ -180,72 +197,12 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Use error response's or message's that will make the exact problem clear to your caller.
 
 **POLA - Principle of least astonishment**
+* A component of a system should behave in a way a user expects it to, users should not be astonished by it's behavior.
 * Choose a solution that everyone can understand.
-* A component of a system should behave in a way a user expects it to, users should not be astonished by it's behavior. 
-
+ 
 **Should I use cool new feature "X"?**
 * Will everyone on my team understand the code? 
 * Does it replace another less readable feature?
 * Does it reduce redundancy/repetition?
 * Does it add information for the reader?
 * Does it reduce the likelihood of errors?
-
-
-
-
-
-
-
-
-
-
-### General Assumptions 
-
-* Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
-* Consider arrays as immutable by default after creation.
-
-### Classes 
-
-* For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
-
-### Flags
-
-* More than 2 related Boolean properties on a type should be turned into a flag.
-
-### Strings
-
-* Use double quotes for strings.
-* All strings visible to the user need to be localized (make an entry in diagnosticMessages.json).
-
-### Diagnostic Messages
-
-* Use a period at the end of a sentence.
-* Use indefinite articles for indefinite entities.
-* Definite entities should be named (this is for a variable name, type name, etc..).
-* When stating a rule, the subject should be in the singular (e.g. "An external module cannot..." instead of "External modules cannot...").
-* Use present tense.
-
-### General Constructs
-
-* Do not use for..in statements; instead, use ts.forEach, ts.forEachKey and ts.forEachValue. Be aware of their slightly different semantics.
-* Try to use ts.forEach, ts.map, and ts.filter instead of loops when it is not strongly inconvenient.
-
-### Style
-
-* Use arrow functions over anonymous function expressions.
-* Only surround arrow function parameters when necessary. 
-* For example, (x) => x + x is wrong but the following are correct:
-    x => x + x
-    (x,y) => x + y
-    <T>(x: T, y: T) => x === y
-* Always surround loop and conditional bodies with curly braces. Statements on the same line are allowed to omit braces.
-* Open curly braces always go on the same line as whatever necessitates them.
-* Parenthesized constructs should have no surrounding whitespace. 
-* A single space follows commas, colons, and semicolons in those constructs. For example:
-    for (var i = 0, n = str.length; i < 10; i++) { }
-    if (x < 10) { }
-    function f(x: number, y: string): void { }
-* Use a single declaration per variable statement 
-    (i.e. use var x = 1; var y = 2; over var x = 1, y = 2;).
-* else goes on a separate line from the closing curly brace.
-* Use 2 spaces per indentation.
