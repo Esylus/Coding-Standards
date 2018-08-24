@@ -9,18 +9,18 @@ Objective: This document has been written to create itgroove standards surroundi
 - [1. General Testing Principles](#1-general-testing-principles)
 - [2. The Various Testing Layers Analogy](#2-the-various-testing-layers-analogy)
 - [3. Unit Testing](#3-unit-testing)
-  - [3.1 Unit Test Guidelines](#31-unit-test-guidelines)
+  - [3.1 Unit Testing Guidelines](#31-unit-testing-guidelines)
 - [4. Integration Testing](#4-integration-testing)
   - [4.1 Integration Testing Guidelines](#41-integration-testing-guidelines)
 - [5. System Testing](#5-system-testing)
-  - [5.1 System Test Guidlines](#51-system-test-guidlines)
+  - [5.1 System Test Guidelines](#51-system-test-guidelines)
 - [6. End-To-End Testing](#6-end-to-end-testing)
   - [6.1 End-To-End Testing Guidelines](#61-end-to-end-testing-guidelines)
 - [7. User Acceptance Testing](#7-user-acceptance-testing)
   - [8.1 User Acceptance Testing Guidlines](#81-user-acceptance-testing-guidlines)
-  - [8.2 Acceptance Testing Deliverables](#82-acceptance-testing-deliverables)
+  - [8.2 User Acceptance Testing Deliverables](#82-user-acceptance-testing-deliverables)
 - [9. Regression Testing](#9-regression-testing)
-  - [9.1 Regression Testing Guidlines](#91-regression-testing-guidlines)
+  - [9.1 Regression Testing Guidelines](#91-regression-testing-guidelines)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -70,7 +70,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * The test only fails when a new bug is introduced or requirements change. If it fails, it should be easy to understand why.
 * Unit testing is typically performed by the development team.
 
-### 3.1 Unit Test Guidelines 
+### 3.1 Unit Testing Guidelines 
 
 *  State the name of the method being tested, inputs used and outputs expected.
 ```
@@ -126,7 +126,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Functional Testing - Also known as functional completeness testing, Functional Testing involves trying to think of any possible missing functions.
 * Hardware/Software Testing - Focuses attention on the interactions between the hardware and software during system testing.
 
-### 5.1 System Test Guidlines
+### 5.1 System Test Guidelines
 
 **FIGURE OUT ITGROOVES SYSTEM TESTING GOALS AND PUT HERE ONCE UNDERSTOOD**
 
@@ -159,7 +159,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Test cases should also be developed around real world scenarios of end users.
 * The actual testing should be carried out in a replica of the production environment using all external factors that the production environment will encounter. 
 
-### 8.2 Acceptance Testing Deliverables
+### 8.2 User Acceptance Testing Deliverables
 
 * Test plan - To outline the testing strategy.
 * Test cases - The test cases help the team to effectively test the application in the acceptance test environment.
@@ -180,7 +180,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code.
 * Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code.
 
-### 9.1 Regression Testing Guidlines 
+### 9.1 Regression Testing Guidelines 
 
 * Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
 * Prepare a Test suite for Regression testing considering what kind of changes have been made to the software.
