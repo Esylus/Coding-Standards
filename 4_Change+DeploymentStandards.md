@@ -18,11 +18,11 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 1. General Deployment Strategy
 
-* itgroove is committed to utilizing the latest technologies embodied in [Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/continuous-integration/) in all aspects of product planning, production, testing and deployment.
-* Using VSTS, itgroove can practice Continuous Integration and Continuous Delivery which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the build including changes to the the code, reviews and test results.  
+* itgroove is committed to utilizing the latest technologies from [Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) in all aspects of product planning, production, testing and deployment.
+* Using VSTS, itgroove can practice [Continuous Integration and Continuous Delivery](https://visualstudio.microsoft.com/team-services/continuous-integration/) which not only automates the build, testing and deployment of the app, it gives complete traceability to see everything in the build including changes to the the code, reviews and test results.  
 * A specific branching strategy has been implemented across all projects to enforce uniform repository management that is intuitive, familiar and has high readability.
-* Node Package Management versioning has been automated using Semantic Versioning and Commitizen.
-* Database changes follow a strict procedure and utilize the migration capablities of TypeORM. 
+* Node Package Management versioning has been automated using [Semantic Versioning](https://semver.org/) and [Commitizen](http://commitizen.github.io/cz-cli/).
+* Database changes follow a strict procedure and utilize the migration capablities of [TypeORM](http://typeorm.io/#/). 
 
 ## 2. VSTS Continuous Integration
 
