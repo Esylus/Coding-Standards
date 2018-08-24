@@ -9,12 +9,11 @@ Objective: This document has been written to create itgroove standards surroundi
 - [1. General Testing Principles](#1-general-testing-principles)
 - [2. The Various Testing Layers Analogy](#2-the-various-testing-layers-analogy)
 - [3. Unit Testing](#3-unit-testing)
-  - [3.1 Unit Test Names](#31-unit-test-names)
-  - [3.2 Unit Test Guidelines](#32-unit-test-guidelines)
+  - [3.1 Unit Test Guidelines](#31-unit-test-guidelines)
 - [4. Integration Testing](#4-integration-testing)
   - [4.1 Integration Testing Guidelines](#41-integration-testing-guidelines)
 - [5. System Testing](#5-system-testing)
-  - [5.1 Common System Test Types](#51-common-system-test-types)
+  - [5.1 System Test Guidlines](#51-system-test-guidlines)
 - [6. End-To-End Testing](#6-end-to-end-testing)
   - [6.1 End-To-End Testing Guidelines](#61-end-to-end-testing-guidelines)
 - [7. User Acceptance Testing](#7-user-acceptance-testing)
@@ -71,7 +70,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * The test only fails when a new bug is introduced or requirements change. If it fails, it should be easy to understand why.
 * Unit testing is typically performed by the development team.
 
-### 3.1 Unit Test Names
+### 3.1 Unit Test Guidelines 
 
 *  State the name of the method being tested, inputs used and outputs expected.
 ```
@@ -79,16 +78,14 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
  FindMatchingNumber_PassUserInteger_ReturnMatchingInteger();
 ```
 
-### 3.2 Unit Test Guidelines 
-
-1. Test only one thing per test to create a readable, reliable test. Do not create long and complex tests that test everything in a single method. 
-2. Unit tests should be self-sufficient, isolated and avoid dependencies (databases, environment settings). A single test should not depend on other tests before it or the execution order of tests in general. Initialize and clean the test suite after every test run.   
-3. Test should be deterministic. It's unacceptable to have a test that passes unreliably - a test should either pass all the time or fail until fixed. Running the test 1000 times should return the same same result every time. Never use randomized data in a unit test as it creates uncertainty and impossible to recreate the test.  
-4. Use naming conventions. To know why the test failed, you need to be able to understand it at a glance.   
-5. Do repeat yourself. In writing tests, readability is of high importance. If tests are similarily structured, it makes it very easy to read through a suite of tests and know exactly what each piece is testing. 
-6. Test results and not implementation. Changing the inner workings of a method should not fail a unit test if the code produces the same output result. Implementaion will naturally grow and change as the project evolves. Private methods are part of the internal mechanics of a class and should only be tested if there is a very good reason to do so. Otherewise trivial refactoring can cause complication errors and failures in the tests. 
-7. Avoid overspecification. While it seems logical to create well-defined, controlled, strict tests that observe exact process flow, it can "lock" the scenario under test and prevent it from changing in ways that do not affect the result. 
-8. Use an isolation framework. Dependencies hinder the ability to write unit tests. When dependencies need a complex setup for the automated test to run, the result is fragile tests. A mocking framework has a set of API's for creating and using fake objects without the user needing to maintain details of the specific test.  
+* Test only one thing per test to create a readable, reliable test. Do not create long and complex tests that test everything in a single method. 
+* Unit tests should be self-sufficient, isolated and avoid dependencies (databases, environment settings). A single test should not depend on other tests before it or the execution order of tests in general. Initialize and clean the test suite after every test run.   
+* Test should be deterministic. It's unacceptable to have a test that passes unreliably - a test should either pass all the time or fail until fixed. Running the test 1000 times should return the same same result every time. Never use randomized data in a unit test as it creates uncertainty and impossible to recreate the test.  
+* Use naming conventions. To know why the test failed, you need to be able to understand it at a glance.   
+* Do repeat yourself. In writing tests, readability is of high importance. If tests are similarily structured, it makes it very easy to read through a suite of tests and know exactly what each piece is testing. 
+* Test results and not implementation. Changing the inner workings of a method should not fail a unit test if the code produces the same output result. Implementaion will naturally grow and change as the project evolves. Private methods are part of the internal mechanics of a class and should only be tested if there is a very good reason to do so. Otherewise trivial refactoring can cause complication errors and failures in the tests. 
+* Avoid overspecification. While it seems logical to create well-defined, controlled, strict tests that observe exact process flow, it can "lock" the scenario under test and prevent it from changing in ways that do not affect the result. 
+* Use an isolation framework. Dependencies hinder the ability to write unit tests. When dependencies need a complex setup for the automated test to run, the result is fragile tests. A mocking framework has a set of API's for creating and using fake objects without the user needing to maintain details of the specific test.  
 
 ## 4. Integration Testing
 
@@ -112,7 +109,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * System testing testers are concentrated on finding bugs/defects based on software application behaviour, software design and expectations of the end user.
 * System testing is typically performed by the development team or a closely related QA team.
 
-**With over 50 different types of System Testing, what types of system testing should testers use? It depends.**
+**With over 50 different types of System Testing, what factors should be considered in choosing tests?**
 
 * Who the tester works for - Methods used by large companies are different than those used by smaller ones.
 * Time available for testing - Time is often what limits us to using only the types that are most relevant for the project.
@@ -120,7 +117,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Software Tester's Education - There is a certain learning curve for each type of software testing available.
 * Testing budget - Money is driving factor for all levels  of companies. 
 
-### 5.1 Common System Test Types
+**Common types of System Tests**
 
 * Usability Testing - Focuses on the user's ease to use the application, flexibility in handling controls and ability of system to meet its objectives.
 * Load Testing - The process of putting simulated demand on software, an application or website in a way that tests or demonstrates it's behaviour under various conditions.
@@ -128,6 +125,8 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Migration Testing - Ensures that the software can be moved from older system infrastructures to current system infrastructures without any issues.
 * Functional Testing - Also known as functional completeness testing, Functional Testing involves trying to think of any possible missing functions.
 * Hardware/Software Testing - Focuses attention on the interactions between the hardware and software during system testing.
+
+### 5.1 System Test Guidlines
 
 **FIGURE OUT ITGROOVES SYSTEM TESTING GOALS AND PUT HERE ONCE UNDERSTOOD**
 
