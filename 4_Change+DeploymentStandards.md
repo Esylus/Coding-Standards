@@ -51,7 +51,8 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 3. VSTS Continuous Delivery
 
-* Continous Delivery (CD) is the process to build, test, configure and deploy from a build to a production environment. Multiple testing or staging environments create a release pipeline to automate the creation of infrastructure and deployment of applications. Successive environments support progressively longer-running activities of integration, load and user acceptance testing. * itGroove fully utilizes the power of Continuous Delivery within the software devlivery cycle within Visual Studio Team Services. 
+* Continous Delivery (CD) is the process to build, test, configure and deploy from a build to a production environment. Multiple testing or staging environments create a release pipeline to automate the creation of infrastructure and deployment of applications. Successive environments support progressively longer-running activities of integration, load and user acceptance testing.
+* itGroove fully utilizes the power of Continuous Delivery within the software devlivery cycle within Visual Studio Team Services. 
 
 * Within any given project, different types of coding repositories will be deployed to different types of resources. Some examples include Continuous Delivery from Visual Studio Team Serivces to..
 
