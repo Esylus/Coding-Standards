@@ -162,8 +162,8 @@ Load testing best practices:
 * Test cases - The test cases help the team to effectively test the application in the acceptance test environment.
 * Results & Error Reports - This is a log of all the test cases executed and the actual results.
 * Installation Instructions - This is a document which helps to install the sysetm in production environments.
-* Documentation Materials - Tested and updated user documentation and training materials are finalized during user acceptance testing. 
-* User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests with acceptable margins.
+* Documentation Materials - Tested and updated user documentation and training materials are finalized. 
+* User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests.
 
 ## 9. Regression Testing 
 
