@@ -1,26 +1,24 @@
 # itgroove Coding Style Guide
 
-Objective: This document has been written to create a collaborative coding style baseline for itgroove.  
-
-This guide will follow the below format to address both generalities and details:
-
-*In principle :* General guiding principles around the topic. 
-
-*In practice :* Specific implementation details required by itgroove of it's developers.
+Objective: This document has been written to create code style standards to adhere to while developing.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [1. General](#1-general)
+- [1. Objective](#1-objective)
 - [2. Comments](#2-comments)
-- [3. Naming Schemes](#3-naming-schemes)
+- [Documentation.js](#documentationjs)
+- [3. Naming](#3-naming)
   - [3.1 Variable Names](#31-variable-names)
   - [3.2 Function and Method Names](#32-function-and-method-names)
+  - [3.3 Class Names](#33-class-names)
+  - [3.3 Object Names](#33-object-names)
 - [4. Readability](#4-readability)
   - [4.1 Spacing](#41-spacing)
   - [4.2 Braces](#42-braces)
   - [4.3 Lines](#43-lines)
+  - [4.4 Code Cluster Sizes](#44-code-cluster-sizes)
 - [5. Maintainability](#5-maintainability)
 - [6. Classes](#6-classes)
 - [7. Errors](#7-errors)
@@ -34,19 +32,26 @@ This guide will follow the below format to address both generalities and details
   - [10.4 Fail fast, fail often](#104-fail-fast-fail-often)
   - [10.6 POLA - Principle of least astonishment](#106-pola---principle-of-least-astonishment)
   - [10.7 Should I use cool new feature "X"?](#107-should-i-use-cool-new-feature-x)
+  - [11 Types](#11-types)
+  - [12 Null and Undefined](#12-null-and-undefined)
+  - [General Assumptions](#general-assumptions)
+  - [Classes](#classes)
+  - [Flags](#flags)
+  - [Strings](#strings)
+  - [Diagnostic Messages](#diagnostic-messages)
+  - [General Constructs](#general-constructs)
+  - [Style](#style)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 1. itgroove Style Guide Overview 
 
-
-## 1. Objective 
-
-*The objective of these itGroove coding standards* 
+**Why have a style guide / coding standards at all?** 
 
 * To maximize code readability and maintainability by making a teams code base look like a single person has written it.
 * To speed up writing code. Simple rules to follow means developers won't have to make continuous judgements about how code looks and presents.
-* To read each others code faster and discern patterns visually without having to read each token.
-* To encapsulate the shared experience of many developers so we can learn from each others mistakes. 
+* To read each others code faster and discern patterns visually without having to read each individual token.
+* To encapsulate the shared experience of many developers so we learn from each others mistakes and wisdom. 
 * To free us to think in higher abstractions and come up with new patterns instead of enforcing what we have always seen or done. 
 
 Note - Being that there is no right or wrong coding standard, a team has to "just pick something" for each category and stick with it. Thus this guide is a collection of "just pick somethings" developed by the itgroove team in August, 2018.  
