@@ -114,11 +114,11 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 
 **With over 50 different types of System Testing, what types of system testing should testers use? It depends.**
 
-* Who the tester works for - Methods used by large companies are different than that used by medium and small companies.
-* Time available for testing - Time is often what limits us to using only the types that are most relevant for the software project.
-* Resources available to the tester - Some testers will not have necessary resources to conduct a testing type. ex. Expensive automated testing software. 
+* Who the tester works for - Methods used by large companies are different than those used by smaller ones.
+* Time available for testing - Time is often what limits us to using only the types that are most relevant for the project.
+* Resources available - Some testers will not have resources to conduct a testing type, like expensive automated testing suites. 
 * Software Tester's Education - There is a certain learning curve for each type of software testing available.
-* Testing budget - Money becomes a factor not just for smaller companies and individual software developers but large companies as well. 
+* Testing budget - Money is driving factor for all levels  of companies. 
 
 ### 5.1 Common System Test Types
 
