@@ -80,7 +80,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * If you use patterns that people are familiar with, use the pattern name in your class name ex. Velocity_Listener
 * To help name a class, describe it to someone in less then 25 words without using if, and, or, but and find the name in that sentence somewhere.
 
-## 4. General Constructs
+## 4. General 
 
 * The indenting style of code conveys logical structure and flow.
 * Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
@@ -170,7 +170,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Parametrize such variables and configure them for the hosting environment outside of the application such as on the application server or in database. 
 * Code should run on different environments and not fail on systems with a different design then anticipated.
 
-## 11. Best Practices
+## 11. Best Practices To Strive For
 
 **Work out loud**
 * Information should be shared in a timely manner with other team members, regardless of whether that information is deemed relevent. 
