@@ -7,15 +7,12 @@ Objective: This document has been written to create standards to adhere to while
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents** 
 
-  - [1. General Deployment Strategy](#1-general-deployment-strategy)
-  - [2. VSTS Continuous Integration Strategy](#2-vsts-continuous-integration-strategy)
-  - [3. VSTS Continuous Delivery Strategy](#3-vsts-continuous-delivery-strategy)
-  - [4. VSTS Branching strategy](#4-vsts-branching-strategy)
-  - [5. Database Changes](#5-database-changes)
-  - [6. Commitizen + Semantic Versioning](#6-commitizen--semantic-versioning)
-    - [What if I don't want to use Commitizen?](#what-if-i-dont-want-to-use-commitizen)
-- [Setting up Semantic-Release](#setting-up-semantic-release)
-  - [Semantic-Release Setup](#semantic-release-setup)
+- [1. General Deployment Strategy](#1-general-deployment-strategy)
+- [2. VSTS Continuous Integration Strategy](#2-vsts-continuous-integration-strategy)
+- [3. VSTS Continuous Delivery Strategy](#3-vsts-continuous-delivery-strategy)
+- [4. VSTS Branching strategy](#4-vsts-branching-strategy)
+- [5. Database Changes](#5-database-changes)
+- [6. Semantic Versioning + Commitizen](#6-semantic-versioning--commitizen)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -100,7 +97,7 @@ typeorm migration:run
 
 First, build so your changes are reflected in the `lib`. You then generate the migration to generate a `.ts` under `src/migration`. Please verify this migration to make sure that these are the changes you expect, and if not, change the queries as needed. You then build again to pull the new migration files as `.js`, and finally migrate those changes to the database.
 
-## 6. Commitizen + Semantic Versioning 
+## 6. Semantic Versioning + Commitizen
 
 On itgroove software development projects, we utilize [Semantic Versioning](http://www.semver.org) to version and publish releases of the component library. We've integrated [Semantic Release](https://github.com/semantic-release) to take the manual work out of creating releases. **Semantic Release** is meant to be executed on the CI environment after every successful build on the release branch. This way no human is directly involved in the release process and the releases are guaranteed to be unromantic and unsentimental.
 
