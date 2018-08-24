@@ -76,11 +76,11 @@ Objective: This document has been written to create standards to adhere to while
 
 ## 4. VSTS Branching
 
-* There is a naming scheme for branching, and a defined process all the way to deployment. 
+* There is a naming scheme for branching, and a defined process all the way to deployment.
 * `next` serves as our stable branch, while `master` reflects what is currently on the production site.
-* `test` is deployed to a test resource where it will undergo various forms of testing. 
+* `test` is deployed to a test resource where it will undergo various forms of testing.  
 
-* itgroove branching procedure: 
+* Development branching procedure: 
 
 1. Branch off the `integration` branch (or an existing branch) with the following name:
 -- `feature/{UserStory}`
