@@ -39,6 +39,7 @@ Objective: This document has been written to create standards to adhere to while
 
 * Different types of coding repositories will require different actions within the CI build process. Examples include..
 
+```
 - Install the lastest version of Node.js
 - Run NPM install
 - Run NPM build
@@ -47,6 +48,7 @@ Objective: This document has been written to create standards to adhere to while
 - Run NPM start
 - Publish to Node Package Manager
 - Publish Documentation.js
+```
 
 On completion of a succesful integration, the code is added to the code base or is possibly moved on into Continuous Deployment. Continuous Integration processes can be applied to different branches for different reasons to achieve different outcomes. See VSTS Branching Strategy below for more detail as to how Continuous Integration is being applied within itgroove. 
 
@@ -58,10 +60,12 @@ itGroove fully utilizes the power of Continuous Delivery within the software dev
 
 Different types of coding repositories will be deployed to different types of resources. Some examples include deployment to..
 
+```
 - Azure resource groups
 - Azure docking registry (for Docker)
 - Staging for testing by 3rd parties
 - And more..
+```
 
 ## 4. VSTS Branching
 There is a naming scheme for branching, and a defined process all the way to deployment. `next` serves as our stable branch, while `master` reflects what is currently on the production site.
