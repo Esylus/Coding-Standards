@@ -24,13 +24,13 @@ Objective: This document has been written to create standards to adhere to while
 
 **Continuous Delivery to Azure**
 * itgroove has configured full CI/CD pipelines to various Azure services such as websites, docker containers, virtual machines and more.
-* **More about this in general** 
+* More about this 
 
 **VSTS Branching Strategy**
-* Stuff
+* More about this
 
 **Semantic Versioning**
-* Stuff
+* More about this
 
 ## 2. VSTS Continuous Integration
 
