@@ -72,6 +72,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * A name should be an obvious, logical name to search. ex. A button to restore all is named 'restoreAllButton'.
 
 ### 3.1 Variable Names
+
 * When you can, use customary opposite pairs in variable names such as min/max, begin/end, open/close.
 * Boolean vars should contain 'is / has / can / use' which implies yes/no or true/false ex. fileIsFound, isValidEmail.
 * Use single letter var names for short loop indexes or array index ex. For(x = 0; x > 10, x++) or a[i].
@@ -79,17 +80,20 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Groups of enumerated types should share same prefix Ex. FONT_ARIAL and FONT_ROMAN
 
 ### 3.2 Function and Method Names
+
 * Use camelCase for method and function names.
 * Use verb-noun method - name routines that perform an operation-on-a-given-object ex. calulateTotalAmount()
 * Can mention if there is heavy processing or side effects ex.. shutdown(), removeListener(), getWidth(), generateHistogram()
 * Append computational qualifiers (Avg, Sm, Min, Max etc..) to end of var name where appropriate.
 
 ### 3.3 Class Names
+
 * Class names are PascalCase. 
 * If you use patterns that people are familiar with, it's an obvious name for your class ex. Listener, Visitor
 * To help name class, describe to someone in less then 25 words without using if, and, or, but - the name will be in that sentence somewhere.
 
 ### 3.3 Object Names
+
 *  Do we need anything for this? PascalCase? 
 * 
 
@@ -101,27 +105,31 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 1. Point 1
 
 ### 4.1 Spacing
+
 * Do not mix spaces with the tab key - the number of spaces represented by a tab is different in different IDE's.
 * An indent == 3 spaces??
 * Use space after every comma in a list.
 * Use space before and after every "=" of assignment, after every binary operators (+, -, /, *).
 
-
 ### 4.2 Braces
+
 * Do braces begin directly after a function name or start on the next line?
 
 ### 4.3 Lines
+
 * Try to keep lines short and clear as general rule - don't want to use horizontal scroll bar.
 * Write one statement per line, not multiple statements per line .
 * However if  breaking up longer line creates confusing looking code, a longer line is more readable and acceptable. 
 * In long lines of similar code with minor variations, stacking vertically will emphasize patterns and make vertical similarities jump out. 
 
 ### 4.4 Code Cluster Sizes
+
 * Functions should be under 10? 30? lines of code.
 * Classes shouldn't be bigger then 5 member variables and a few hundred lines of code.
 * Files shouldn't be longer then 500 lines of code so you can navigate effectively.
 
 ## 5. Maintainability
+
 1. Software is a living work, the initial development is just the beginning - expect it to change and evolve.
 1. Keep scope of variables as small as possible to avoid confusion and ensure maintainability.
 1. Use vars and routines for one purpose only, avoid multipurpose routines that perform a variety of unrelated tasks.
@@ -131,6 +139,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Don't put numbers directly in code, put in var that can be changed later .
 
 ## 6. Classes
+
 * Most important things at the top, top down story you read.
 * Public members first, protected second, private last - public members are most relevent to extension. 
 * Try to minimize scrolling either vertically or horizontally.
@@ -140,6 +149,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Provide useful error messages while also logging a programmer friendly message with enough user info so a support team can investigate the error.
 
 ## 8. Portability
+
 * Program code should not contain "hard-coded" or literal values referring to environmental parameters such as file paths, user names, host names etc..
 * Want code to run on different environments and not fail on systems with a different design then anticipated.
 * Parametrize such vars and configure them for the hosting environment outside of the application such as on the application server or in database. 
@@ -187,29 +197,36 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Does it reduce the likelihood of errors?
 
 ### 11 Types
+
 * Do not export types/functions unless you need to share it across multiple components.
 * Do not introduce new types/values to the global namespace.
 * Shared types should be defined in 'types.ts'.
 * Within a file, type definitions should come first.
 
 ### 12 Null and Undefined
+
 * Use "undefined". DO NOT use "null".
 
 ### General Assumptions 
+
 * Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
 * Consider arrays as immutable by default after creation.
 
 ### Classes 
+
 * For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
 
 ### Flags
+
 * More than 2 related Boolean properties on a type should be turned into a flag.
 
 ### Strings
+
 * Use double quotes for strings.
 * All strings visible to the user need to be localized (make an entry in diagnosticMessages.json).
 
 ### Diagnostic Messages
+
 * Use a period at the end of a sentence.
 * Use indefinite articles for indefinite entities.
 * Definite entities should be named (this is for a variable name, type name, etc..).
@@ -217,10 +234,12 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Use present tense.
 
 ### General Constructs
+
 * Do not use for..in statements; instead, use ts.forEach, ts.forEachKey and ts.forEachValue. Be aware of their slightly different semantics.
 * Try to use ts.forEach, ts.map, and ts.filter instead of loops when it is not strongly inconvenient.
 
 ### Style
+
 * Use arrow functions over anonymous function expressions.
 * Only surround arrow function parameters when necessary. 
 * For example, (x) => x + x is wrong but the following are correct:
