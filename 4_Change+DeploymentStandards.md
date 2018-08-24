@@ -27,13 +27,13 @@ Objective: This document has been written to create standards to adhere to while
 
 **Continuous Delivery to Azure**
 * itgroove has configured full CI/CD pipelines to various Azure services such as websites, docker containers, virtual machines and more.
-* **More about this** 
+* **More about this in general** 
 
 **VSTS Branching Strategy**
-*
+* Stuff
 
 **Semantic Versioning**
-* 
+* Stuff
 
 ## 2. VSTS Continuous Integration Strategy
 
@@ -102,7 +102,7 @@ First, build so your changes are reflected in the `lib`. You then generate the m
 
 ## 6. Commitizen + Semantic Versioning 
 
-On the [LodgeLink-Components](/Repositories/LodgeLink-Components) project, we utilize [Semantic Versioning](http://www.semver.org) to version and publish releases of the component library. We've integrated [Semantic Release](https://github.com/semantic-release) to take the manual work out of creating releases. **Semantic Release** is meant to be executed on the CI environment after every successful build on the release branch. This way no human is directly involved in the release process and the releases are guaranteed to be unromantic and unsentimental.
+On itgroove software development projects, we utilize [Semantic Versioning](http://www.semver.org) to version and publish releases of the component library. We've integrated [Semantic Release](https://github.com/semantic-release) to take the manual work out of creating releases. **Semantic Release** is meant to be executed on the CI environment after every successful build on the release branch. This way no human is directly involved in the release process and the releases are guaranteed to be unromantic and unsentimental.
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
@@ -118,10 +118,6 @@ By default **semantic-release** uses [Angular Commit Message Conventions](https:
 
 We use [commitizen](https://github.com/commitizen/cz-cli) to ensure proper formatting of the commit messages. Commitzen is entirely opt-in based and not required but does make it easier to learn the formatting of the messages and ensure compliance. Commitzen's convention adapter can be modified to match the conventions used on semantic-release if you don't opt into use Angular's Commit Message Conventions.
 
-### What if I don't want to use Commitizen?
-As the developer, you're free to use a regular commit flow but commit messages **not** adhering to the conventions will be ignored by semantic-release. The work still gets merged and ultimately published, but, if you commit a breaking change and fail to specify it as such, semantic-release will not pick it up and a breaking change may sneak into a minor/path release (which may upset some fellow developers).
-
-Please check out the [Commit Guide from our component library for a guide to formatting commits and using Commitizen.](/Repositories/LodgeLink-Components/Commiting-Guide)
 Here is an example of the release type that will be done based on a commit messages:
 
 | Commit message                                                                                                                                                                                   | Release type               |
@@ -130,34 +126,3 @@ Here is an example of the release type that will be done based on a commit messa
 | `feat(component): add 'Adaptive' component`                                                                                                                                                       | ~~Minor~~ Feature Release  |
 | `perf(css): remove cssKit`<br><br>`BREAKING CHANGE: cssKit removed for redundancy. Please use graceful migration path. Closes #32` | ~~Major~~ Breaking Release |
 
-
-# Setting up Semantic-Release
-While semantic-release claims to be CI agnostic, the default implementation is *very* geared toward GitHub. With a few overwrites, you can get it running on VSTS (though it doesn't believe that VSTS is a real CI and thus you have to override CI mode–more on that soon).
-
-## Semantic-Release Setup
-`npm i -D semantic-release` will install the latest version as a devDependency. **Do not try to use the semantic-release-cli setup as it does not work with non-GitHub projects.**
-
-Before we add semantic-release as a build step in the VSTS pipeline, you'll want to make a few modifications to your `package.json`:
-
-1. Add the following script: `"semantic-release": "semantic-release --ci false"`
-2. Ensure your repository entry points to the `https://` repo and not `ssh`: `"url": "https://lodgelink.visualstudio.com/LodgeLink/_git/LodgeLink-Components"`
-3. If you're using Commitizen, follow the install instructions from [the Commitizen repo.](https://github.com/commitizen/cz-cli)
-
-Once you're setup on that end, you're close getting ready to add it to your build pipeline. We'll need a few things.
-
-1. If you're using an NPM token on the registry URL inside `.npmrc`, **you need to ensure that this one has read/write access.** Semantic-release will favor this token over any other one (env variable or not) so it needs to be read/write.
-2. If you're NOT using a token in your `.npmrc`, you need to add a read/write NPM token to your variables in your build pipeline. The variable should have the key `NPM_TOKEN` and the value should be the token string. 
-3. You need to setup Git Credentials for VSTS. VSTS doesn't seem to play nice with SSH auth between the build pipeline and the repo itself. Semantic-release needs Git creds so it can write tags to your repo. **Note:** These credentials are an alias for your _own_ credentials and therefore you can set any username and password you like. **The username/password cannot contain any special characters as this will throw off the HTTP basic authentication.** You can setup Git Credentials in VSTS in two ways:
-  1. Through your account settings by clicking on your name icon in the top-right of the screen and then clicking on Security, and then Alternate Credentials.
-  2. Navigate to the relevant repo, ie, https://lodgelink.visualstudio.com/LodgeLink/_git/LodgeLink-Components, click on CLONE in the top-right, ensure that HTTPS is selected. You'll see an area for Setting Git Credentials there. 
-4. Once you have your Git Credentials, you need to add them as a build variable like you did with your NPM token. The key should be `GIT_CREDENTIALS` and the value should be your `<username>:<password>` separated with a colon. Ensure that your username and password do NOT contain any special characters as it will not be able to properly authorize if it does.
-5. After this is all setup, add a `npm` step to your build pipeline with the following custom command: `run semantic-release`
-6. After this is setup, you're ready to trigger a build.
-
-Before triggering a build, it's a good idea to run a dry-run. You can do this by first adding your GIT_CREDENTIALS into your own environment `export GIT_CREDENTIALS=<username>:<password>`. If you're not using `.npmrc` to hold your token, you'll need to add it to your local environment as well. You can then run `npx semantic-release --dry-run`. 
-
-> **Don't run `npm run semantic-release` here as npm-run-scripts notoriously ignores flags so it WON'T be a dry run.**
-
-Once you've verified your dry run, feel free to run it through your build pipeline and trigger an actual publish. If you're having difficulty with this, [Lee Mulvey](mailto:leem@criticalmass.com) @ CM set this all up and may be able to give you a hand!
-
-<br /><br/>
