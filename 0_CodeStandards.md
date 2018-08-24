@@ -25,13 +25,6 @@ Objective: This document has been written to create coding style standards to ad
 - [8. Portability](#8-portability)
 - [9. Repository](#9-repository)
 - [10. Best Practices](#10-best-practices)
-  - [10.1 Work out loud](#101-work-out-loud)
-  - [10.1 DRY - Don't repeat yourself](#101-dry---dont-repeat-yourself)
-  - [10.2 YAGNI - You ain't gonna need it](#102-yagni---you-aint-gonna-need-it)
-  - [10.3 KISS - Keep it simple silly](#103-kiss---keep-it-simple-silly)
-  - [10.4 Fail fast, fail often](#104-fail-fast-fail-often)
-  - [10.6 POLA - Principle of least astonishment](#106-pola---principle-of-least-astonishment)
-  - [10.7 Should I use cool new feature "X"?](#107-should-i-use-cool-new-feature-x)
   - [11 Types](#11-types)
   - [12 Null and Undefined](#12-null-and-undefined)
   - [General Assumptions](#general-assumptions)
@@ -189,26 +182,26 @@ itGroove has chosen the "documentation.js" framework to document it's code. All 
 * If you see the same code twice, wrap it in a function and maximize reusability. 
 * DRY matters much less in testing code then it does in production code. 
 
-### 10.2 YAGNI - You ain't gonna need it
+**YAGNI - You ain't gonna need it**
 * Don’t write code that you think you might need in the future but don't need yet - this is coding for imaginary future use cases. 
 * YAGNI code can easily become dead code or will need rewriting because the future case will always turn out different then you imagined it
 
-### 10.3 KISS - Keep it simple silly
+**KISS - Keep it simple silly**
 * Less is more! The simplest solution is more then sufficient.
 * Write as little code as possible, less to read, less to understand, less bugs to show up and have to fix.
 * Either code belongs in the app or doesn't - Don't leave commented out code, it will confuse people. 
 * Refactor whenever you see the need and have the chance. 
 
-### 10.4 Fail fast, fail often
+**Fail fast, fail often**
 * Write defensively - always think about what can go wrong, what will happen on invalid input, what might fail, what will help you catch many bugs before they happen
 * Check input on nonsensical input or invalid states as early as possible.
 * Use error response's or message's that will make the exact problem clear to your caller.
 
-### 10.6 POLA - Principle of least astonishment
+**POLA - Principle of least astonishment**
 * Choose a solution that everyone can understand.
 * A component of a system should behave in a way a user expects it to, users should not be astonished by it's behavior. 
 
-### 10.7 Should I use cool new feature "X"?
+**Should I use cool new feature "X"?**
 * Will everyone on my team understand the code? 
 * Does it replace another less readable feature?
 * Does it reduce redundancy/repetition?
