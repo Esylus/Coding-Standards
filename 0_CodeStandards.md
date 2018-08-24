@@ -52,14 +52,13 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 ## 2. Comments
 
 **We want code documentation to have some rules without being too suffocating. This means:**
-* Files should have a comment block at the top with a quick description and anything a reader might need to know. Not necessary for files like schemas and tests.
-* Functions that aren't self-explained will need a comment block on them.
-* Please verify that GraphQL requests are self-documented on GraphQL Playground, and that the REST endpoints have swagger documentation attached to them.
-* Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
-* Since devs can't be relied on to always accurately update comments, inevitably code comments become inaccurate.
-* Avoid obvious, self-evident and unnecessary comments. Never state the obvious!
+* Files should have a comment block at the top with a quick description and anything a reader might need to know. This is not necessary for files like schemas and tests.
+* All functions should be documented using JSDoc syntax for application documentation. See the itgroove Document Standards for details.
+* Functions that aren't self-evident will need a comment block describing the INTENT of the code. However, avoid obvious and unnecessary comments. Never state the obvious!
+* Please verify that [GraphQL](https://graphql.org/) requests are self-documented on [GraphQL Playground](https://github.com/prisma/graphql-playground), and that the REST endpoints have [Swagger](https://swagger.io/solutions/api-documentation/) documentation attached to them.
 * Multi-line comments should use // rather then /* */ to make commenting out large sections of code easier when debugging.
-* Comment the INTENT of the code, why it is doing something rather then what it is doing
+* Since future developers can't be relied on to always accurately update comments, inevitably code comments become inaccurate and misleading.
+* Before commenting, strive to make code readable and self-documenting through effective naming practices and known programming styles.
 
 ## Documentation.js
 
