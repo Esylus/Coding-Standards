@@ -75,15 +75,10 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 * Mention if there is heavy processing or side effects ex.. shutdown(), removeListener(), getWidth(), generateHistogram()
 * Append computational qualifiers (Avg, Sm, Min, Max etc..) to end of name where appropriate.
 
-### 3.3 Class Names
-
-* If you use patterns that people are familiar with, use the pattern name in your class name ex. Velocity_Listener
-* To help name a class, describe it to someone in less then 25 words without using if, and, or, but and find the name in that sentence somewhere.
 
 ## 4. General Style Choices
 
 * The indenting style of code conveys logical structure and flow.
-* Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
 * Consider arrays as immutable by default after creation.
 * Do not use for..in statements; instead, use ts.forEach, ts.forEachKey and ts.forEachValue. Be aware of their slightly different semantics.
 * Try to use ts.forEach, ts.map, and ts.filter instead of loops when it is not strongly inconvenient.
@@ -108,7 +103,7 @@ Note - Being that there is no right or wrong coding standard, a team has to "jus
 
 ### 4.2 Braces
 
-* Always surround loop and conditional bodies with curly braces. Statements on the same line are allowed to omit braces.
+* Always surround loop and conditional bodies with curly braces.
 * Open curly braces always go on the same line as whatever necessitates them.
 * else goes on a separate line from the closing curly brace.
 
