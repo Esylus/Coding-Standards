@@ -17,10 +17,10 @@ Objective: This document has been written to create itgroove standards surroundi
 - [6. End-To-End Testing](#6-end-to-end-testing)
   - [6.1 End-To-End Testing Guidelines](#61-end-to-end-testing-guidelines)
 - [7. User Acceptance Testing](#7-user-acceptance-testing)
-  - [8.1 User Acceptance Testing Guidlines](#81-user-acceptance-testing-guidlines)
-  - [8.2 User Acceptance Testing Deliverables](#82-user-acceptance-testing-deliverables)
-- [9. Regression Testing](#9-regression-testing)
-  - [9.1 Regression Testing Guidelines](#91-regression-testing-guidelines)
+  - [7.1 User Acceptance Testing Guidlines](#71-user-acceptance-testing-guidlines)
+  - [7.2 User Acceptance Testing Deliverables](#72-user-acceptance-testing-deliverables)
+- [8. Regression Testing](#8-regression-testing)
+  - [8.1 Regression Testing Guidelines](#81-regression-testing-guidelines)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -153,13 +153,13 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * It consists of test suites which involve multiple test cases and each test case contains input data as well as expected output. 
 * User Acceptance Testing is typically performed by the client, other business user or 3rd party testing company.
 
-### 8.1 User Acceptance Testing Guidlines
+### 7.1 User Acceptance Testing Guidlines
 
 * The official business requirements should be available and used to develop the the test cases around. 
 * Test cases should also be developed around real world scenarios of end users.
 * The actual testing should be carried out in a replica of the production environment using all external factors that the production environment will encounter. 
 
-### 8.2 User Acceptance Testing Deliverables
+### 7.2 User Acceptance Testing Deliverables
 
 * Test plan - To outline the testing strategy.
 * Test cases - The test cases help the team to effectively test the application in the acceptance test environment.
@@ -168,7 +168,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Documentation Materials - Tested and updated user documentation and training materials are finalized. 
 * User Acceptance Signoff - This is the final signoff that system, documentation and training materials have passed all tests.
 
-## 9. Regression Testing 
+## 8. Regression Testing 
 
 **Because when you fix one bug, you could introduce several new bugs** 
 
@@ -180,7 +180,7 @@ A car manufacturer does not produce a car as a whole car all at once. Each compo
 * Partial Regression - done to verify that the code works fine even when the changes have been done in the code and that the unit is integrated with the unchanged or already existing code.
 * Complete regression - done when a change in code is done on a number of modules and also if the change impact of a change in any other module is uncertain. Product as a whole is regressed to check any changes because of the changed code.
 
-### 9.1 Regression Testing Guidelines 
+### 8.1 Regression Testing Guidelines 
 
 * Analyze and determine what modules/parts of the software might be impacted – the development and BA teams can be instrumental in providing this information
 * Prepare a Test suite for Regression testing considering what kind of changes have been made to the software.
